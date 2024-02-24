@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.models.function-flow/src/main/java"
+    creationIcons="false" editorDirectory="" modelPluginID="org.nasdanika.models.function-flow"
+    modelName="FunctionFlow" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="17.0"
+    suppressGenModelAnnotations="false" copyrightFields="false" usedGenPackages="../../org.nasdanika.models.architecture/model/architecture.genmodel#//architecture ../../org.nasdanika.drawio.model/model/drawio.genmodel#//model ../../org.nasdanika.graph.model/model/graph.genmodel#//model ../../org.nasdanika.ncore/model/ncore.genmodel#//ncore ../../org.nasdanika.models.party/model/party.genmodel#//party"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>function-flow.ecore</foreignModel>
+  <genPackages prefix="FunctionFlow" basePackage="org.nasdanika.models" disposableProviderFactory="true"
+      ecorePackage="function-flow.ecore#/">
+    <genClasses ecoreClass="function-flow.ecore#//FlowElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//FlowElement/implementation"/>
+    </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//Start"/>
+    <genClasses ecoreClass="function-flow.ecore#//Supplier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Supplier/output"/>
+    </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//End"/>
+    <genClasses ecoreClass="function-flow.ecore#//Consumer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Consumer/input"/>
+    </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//Function"/>
+    <genClasses ecoreClass="function-flow.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Transition/input"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Transition/output"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Transition/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Transition/order"/>
+    </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//ErrorTransition"/>
+    <genClasses ecoreClass="function-flow.ecore#//Flow"/>
+    <genClasses ecoreClass="function-flow.ecore#//SupplierFlow"/>
+    <genClasses ecoreClass="function-flow.ecore#//ConsumerFlow"/>
+    <genClasses ecoreClass="function-flow.ecore#//FunctionFlow"/>
+    <genClasses image="false" ecoreClass="function-flow.ecore#//Source">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Source/source"/>
+    </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//SourceFlowElement"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceSupplier"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceConsumer"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceFunction"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceTransition"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceErrorTransition"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceFlow"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceSupplierFlow"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceConsumerFlow"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceFunctionFlow"/>
+  </genPackages>
+</genmodel:GenModel>

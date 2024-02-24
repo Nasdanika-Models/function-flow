@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="functionflow" nsURI="ecore://nasdanika.org/models/function-flow"
+    nsPrefix="org.nasdanika.models.function-flow">
+  <eClassifiers xsi:type="ecore:EClass" name="FlowElement" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//ArchitectureDescriptionElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Start" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipSource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Supplier" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipSource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="output" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Output type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipTarget"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Consumer" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipTarget">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Output type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Supplier #//Consumer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value=""/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//Relationship">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Output type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="output" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Output type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ErrorTransition" eSuperTypes="#//Transition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Flow" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//Domain"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SupplierFlow" eSuperTypes="#//Flow ../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeRelationshipSource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConsumerFlow" eSuperTypes="#//Flow ../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeRelationshipTarget"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionFlow" eSuperTypes="#//SupplierFlow #//ConsumerFlow"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceFlowElement" eSuperTypes="#//FlowElement #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceSupplier" eSuperTypes="#//Supplier #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceConsumer" eSuperTypes="#//Consumer #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceFunction" eSuperTypes="#//Function #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceTransition" eSuperTypes="#//Transition #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceErrorTransition" eSuperTypes="#//ErrorTransition #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceFlow" eSuperTypes="#//Flow #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceSupplierFlow" eSuperTypes="#//SupplierFlow #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceConsumerFlow" eSuperTypes="#//ConsumerFlow #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceFunctionFlow" eSuperTypes="#//FunctionFlow #//Source"/>
+</ecore:EPackage>
