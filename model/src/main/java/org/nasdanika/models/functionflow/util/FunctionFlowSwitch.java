@@ -640,6 +640,34 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FunctionFlowPackage.SOURCE_ERROR_HANDLER: {
+				SourceErrorHandler sourceErrorHandler = (SourceErrorHandler)theEObject;
+				T1 result = caseSourceErrorHandler(sourceErrorHandler);
+				if (result == null) result = caseErrorHandler(sourceErrorHandler);
+				if (result == null) result = caseSource(sourceErrorHandler);
+				if (result == null) result = caseFlowElement(sourceErrorHandler);
+				if (result == null) result = caseRelationshipSource(sourceErrorHandler);
+				if (result == null) result = caseArchitectureDescriptionElement(sourceErrorHandler);
+				if (result == null) result = caseDocumentedNamedConnectionSource(sourceErrorHandler);
+				if (result == null) result = caseDocumentedNamedGraphElement(sourceErrorHandler);
+				if (result == null) result = caseArchitectureElement(sourceErrorHandler);
+				if (result == null) result = caseUndergoer(sourceErrorHandler);
+				if (result == null) result = caseConnectionSource(sourceErrorHandler);
+				if (result == null) result = caseGraphElement(sourceErrorHandler);
+				if (result == null) result = caseDocumentedNamedStringIdentity(sourceErrorHandler);
+				if (result == null) result = casePeriod(sourceErrorHandler);
+				if (result == null) result = caseStringIdentity(sourceErrorHandler);
+				if (result == null) result = caseSemanticElement(sourceErrorHandler);
+				if (result == null) result = caseDocumentedNamedElement(sourceErrorHandler);
+				if (result == null) result = caseNamedElement(sourceErrorHandler);
+				if (result == null) result = caseDocumented(sourceErrorHandler);
+				if (result == null) result = caseModelElement(sourceErrorHandler);
+				if (result == null) result = caseMarked(sourceErrorHandler);
+				if (result == null) result = caseAdaptable(sourceErrorHandler);
+				if (result == null) result = caseIMarked(sourceErrorHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -926,6 +954,21 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseSourceErrorTransition(SourceErrorTransition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Source Error Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Source Error Handler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseSourceErrorHandler(SourceErrorHandler object) {
 		return null;
 	}
 

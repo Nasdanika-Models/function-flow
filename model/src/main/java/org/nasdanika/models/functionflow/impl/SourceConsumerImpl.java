@@ -17,6 +17,7 @@ import org.nasdanika.models.functionflow.SourceConsumer;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.functionflow.impl.SourceConsumerImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.impl.SourceConsumerImpl#getBaseURI <em>Base URI</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,6 +32,16 @@ public class SourceConsumerImpl extends ConsumerImpl implements SourceConsumer {
 	 * @ordered
 	 */
 	protected static final String SOURCE_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getBaseURI() <em>Base URI</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBaseURI()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BASE_URI_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,10 +88,32 @@ public class SourceConsumerImpl extends ConsumerImpl implements SourceConsumer {
 	 * @generated
 	 */
 	@Override
+	public String getBaseURI() {
+		return (String)eDynamicGet(FunctionFlowPackage.SOURCE_CONSUMER__BASE_URI, FunctionFlowPackage.Literals.SOURCE__BASE_URI, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBaseURI(String newBaseURI) {
+		eDynamicSet(FunctionFlowPackage.SOURCE_CONSUMER__BASE_URI, FunctionFlowPackage.Literals.SOURCE__BASE_URI, newBaseURI);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FunctionFlowPackage.SOURCE_CONSUMER__SOURCE:
 				return getSource();
+			case FunctionFlowPackage.SOURCE_CONSUMER__BASE_URI:
+				return getBaseURI();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -95,6 +128,9 @@ public class SourceConsumerImpl extends ConsumerImpl implements SourceConsumer {
 		switch (featureID) {
 			case FunctionFlowPackage.SOURCE_CONSUMER__SOURCE:
 				setSource((String)newValue);
+				return;
+			case FunctionFlowPackage.SOURCE_CONSUMER__BASE_URI:
+				setBaseURI((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -111,6 +147,9 @@ public class SourceConsumerImpl extends ConsumerImpl implements SourceConsumer {
 			case FunctionFlowPackage.SOURCE_CONSUMER__SOURCE:
 				setSource(SOURCE_EDEFAULT);
 				return;
+			case FunctionFlowPackage.SOURCE_CONSUMER__BASE_URI:
+				setBaseURI(BASE_URI_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -125,6 +164,8 @@ public class SourceConsumerImpl extends ConsumerImpl implements SourceConsumer {
 		switch (featureID) {
 			case FunctionFlowPackage.SOURCE_CONSUMER__SOURCE:
 				return SOURCE_EDEFAULT == null ? getSource() != null : !SOURCE_EDEFAULT.equals(getSource());
+			case FunctionFlowPackage.SOURCE_CONSUMER__BASE_URI:
+				return BASE_URI_EDEFAULT == null ? getBaseURI() != null : !BASE_URI_EDEFAULT.equals(getBaseURI());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -139,6 +180,7 @@ public class SourceConsumerImpl extends ConsumerImpl implements SourceConsumer {
 		if (baseClass == Source.class) {
 			switch (derivedFeatureID) {
 				case FunctionFlowPackage.SOURCE_CONSUMER__SOURCE: return FunctionFlowPackage.SOURCE__SOURCE;
+				case FunctionFlowPackage.SOURCE_CONSUMER__BASE_URI: return FunctionFlowPackage.SOURCE__BASE_URI;
 				default: return -1;
 			}
 		}
@@ -155,6 +197,7 @@ public class SourceConsumerImpl extends ConsumerImpl implements SourceConsumer {
 		if (baseClass == Source.class) {
 			switch (baseFeatureID) {
 				case FunctionFlowPackage.SOURCE__SOURCE: return FunctionFlowPackage.SOURCE_CONSUMER__SOURCE;
+				case FunctionFlowPackage.SOURCE__BASE_URI: return FunctionFlowPackage.SOURCE_CONSUMER__BASE_URI;
 				default: return -1;
 			}
 		}

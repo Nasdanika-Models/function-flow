@@ -3143,13 +3143,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE__SOURCE = FLOW_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Base URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE__BASE_URI = FLOW_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Source</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FEATURE_COUNT = FLOW_ELEMENT_FEATURE_COUNT + 1;
+	int SOURCE_FEATURE_COUNT = FLOW_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Source</em>' class.
@@ -3369,13 +3378,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_SUPPLIER__SOURCE = SUPPLIER_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Base URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_SUPPLIER__BASE_URI = SUPPLIER_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Source Supplier</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_SUPPLIER_FEATURE_COUNT = SUPPLIER_FEATURE_COUNT + 1;
+	int SOURCE_SUPPLIER_FEATURE_COUNT = SUPPLIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Source Supplier</em>' class.
@@ -3595,13 +3613,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_CONSUMER__SOURCE = CONSUMER_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Base URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_CONSUMER__BASE_URI = CONSUMER_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Source Consumer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_CONSUMER_FEATURE_COUNT = CONSUMER_FEATURE_COUNT + 1;
+	int SOURCE_CONSUMER_FEATURE_COUNT = CONSUMER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Source Consumer</em>' class.
@@ -3839,13 +3866,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_FUNCTION__SOURCE = FUNCTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Base URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_FUNCTION__BASE_URI = FUNCTION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Source Function</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FUNCTION_FEATURE_COUNT = FUNCTION_FEATURE_COUNT + 1;
+	int SOURCE_FUNCTION_FEATURE_COUNT = FUNCTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Source Function</em>' class.
@@ -4101,13 +4137,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_TRANSITION__SOURCE = TRANSITION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Base URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_TRANSITION__BASE_URI = TRANSITION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Source Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_TRANSITION_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 1;
+	int SOURCE_TRANSITION_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Source Transition</em>' class.
@@ -4363,13 +4408,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_ERROR_TRANSITION__SOURCE = ERROR_TRANSITION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Base URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_TRANSITION__BASE_URI = ERROR_TRANSITION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Source Error Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_ERROR_TRANSITION_FEATURE_COUNT = ERROR_TRANSITION_FEATURE_COUNT + 1;
+	int SOURCE_ERROR_TRANSITION_FEATURE_COUNT = ERROR_TRANSITION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Source Error Transition</em>' class.
@@ -4379,6 +4433,232 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOURCE_ERROR_TRANSITION_OPERATION_COUNT = ERROR_TRANSITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.SourceErrorHandlerImpl <em>Source Error Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.functionflow.impl.SourceErrorHandlerImpl
+	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceErrorHandler()
+	 * @generated
+	 */
+	int SOURCE_ERROR_HANDLER = 19;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__ID = ERROR_HANDLER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__SEMANTIC_MAPPINGS = ERROR_HANDLER__SEMANTIC_MAPPINGS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__MARKERS = ERROR_HANDLER__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__URIS = ERROR_HANDLER__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__DESCRIPTION = ERROR_HANDLER__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__UUID = ERROR_HANDLER__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__LABEL_PROTOTYPE = ERROR_HANDLER__LABEL_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__REPRESENTATIONS = ERROR_HANDLER__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__ANNOTATIONS = ERROR_HANDLER__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__NAME = ERROR_HANDLER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__DOCUMENTATION = ERROR_HANDLER__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__CONTEXT_HELP = ERROR_HANDLER__CONTEXT_HELP;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__START = ERROR_HANDLER__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__END = ERROR_HANDLER__END;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__DURATION = ERROR_HANDLER__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__ICON = ERROR_HANDLER__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__ROLES = ERROR_HANDLER__ROLES;
+
+	/**
+	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__IMPLEMENTATION = ERROR_HANDLER__IMPLEMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__ERRORS = ERROR_HANDLER__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__OUTGOING_CONNECTIONS = ERROR_HANDLER__OUTGOING_CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__SOURCE = ERROR_HANDLER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Base URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__BASE_URI = ERROR_HANDLER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Source Error Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER_FEATURE_COUNT = ERROR_HANDLER_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Source Error Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER_OPERATION_COUNT = ERROR_HANDLER_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.FlowElement <em>Flow Element</em>}'.
@@ -4653,6 +4933,17 @@ public interface FunctionFlowPackage extends EPackage {
 	EAttribute getSource_Source();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.functionflow.Source#getBaseURI <em>Base URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Base URI</em>'.
+	 * @see org.nasdanika.models.functionflow.Source#getBaseURI()
+	 * @see #getSource()
+	 * @generated
+	 */
+	EAttribute getSource_BaseURI();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.SourceSupplier <em>Source Supplier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4701,6 +4992,16 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSourceErrorTransition();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.SourceErrorHandler <em>Source Error Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Source Error Handler</em>'.
+	 * @see org.nasdanika.models.functionflow.SourceErrorHandler
+	 * @generated
+	 */
+	EClass getSourceErrorHandler();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4962,6 +5263,14 @@ public interface FunctionFlowPackage extends EPackage {
 		EAttribute SOURCE__SOURCE = eINSTANCE.getSource_Source();
 
 		/**
+		 * The meta object literal for the '<em><b>Base URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOURCE__BASE_URI = eINSTANCE.getSource_BaseURI();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SourceSupplierImpl <em>Source Supplier</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5010,6 +5319,16 @@ public interface FunctionFlowPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SOURCE_ERROR_TRANSITION = eINSTANCE.getSourceErrorTransition();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SourceErrorHandlerImpl <em>Source Error Handler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.functionflow.impl.SourceErrorHandlerImpl
+		 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceErrorHandler()
+		 * @generated
+		 */
+		EClass SOURCE_ERROR_HANDLER = eINSTANCE.getSourceErrorHandler();
 
 	}
 

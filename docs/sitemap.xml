@@ -2,1102 +2,987 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
   <url>
     <loc>https://function-flow.models.nasdanika.org/circular-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2024-02-24T13:49:57.342-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.037-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.334-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.028-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/classifiers.html</loc>
-    <lastmod>2024-02-24T13:49:57.323-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.015-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/default-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2024-02-24T13:49:57.339-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.034-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.332-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.025-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.330-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.022-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/force-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2024-02-24T13:49:57.344-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.040-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.336-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.031-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/glossary.html</loc>
-    <lastmod>2024-02-24T13:49:57.359-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.054-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.780-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.448-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:56.789-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.460-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.813-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.481-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.809-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.478-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:56.806-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.475-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.817-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.484-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.785-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.457-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:56.798-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.469-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:56.821-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.487-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/references/eStructuralFeatures/input/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.794-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.465-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Consumer/references.html</loc>
-    <lastmod>2024-02-24T13:49:56.802-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.472-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:56.829-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.492-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.847-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.506-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.844-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.504-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:56.841-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.501-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.851-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.508-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.825-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.489-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:56.833-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.494-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:56.854-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.510-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ConsumerFlow/references.html</loc>
-    <lastmod>2024-02-24T13:49:56.837-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.498-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:56.860-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.518-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.876-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.530-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.874-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.528-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:56.871-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.525-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.879-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.533-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.857-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.514-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:56.864-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.520-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:56.882-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.535-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/End/references.html</loc>
-    <lastmod>2024-02-24T13:49:56.868-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.523-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/attributes.html</loc>
+    <lastmod>2024-02-25T17:30:01.540-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/circular-layout-graph.html</loc>
+    <lastmod>2024-02-25T17:30:01.553-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/default-graph.html</loc>
+    <lastmod>2024-02-25T17:30:01.551-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/diagram.html</loc>
+    <lastmod>2024-02-25T17:30:01.549-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/force-layout-graph.html</loc>
+    <lastmod>2024-02-25T17:30:01.555-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/index.html</loc>
+    <lastmod>2024-02-25T17:30:01.538-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/inheritance.html</loc>
+    <lastmod>2024-02-25T17:30:01.542-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/load-specification.html</loc>
+    <lastmod>2024-02-25T17:30:01.557-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorHandler/references.html</loc>
+    <lastmod>2024-02-25T17:30:01.546-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:56.890-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.568-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.904-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.596-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.902-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.593-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:56.900-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.592-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.906-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.598-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.886-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.565-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:56.893-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.586-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:56.908-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.601-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/ErrorTransition/references.html</loc>
-    <lastmod>2024-02-24T13:49:56.896-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.588-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:56.913-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.606-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.926-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.618-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.924-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.616-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:56.922-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.614-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.928-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.621-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.911-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.604-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:56.915-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.608-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:56.931-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.623-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Flow/references.html</loc>
-    <lastmod>2024-02-24T13:49:56.919-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.611-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:56.937-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.632-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.950-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.656-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.948-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.653-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:56.945-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.650-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.954-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.658-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.934-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.626-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:56.939-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.642-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:56.957-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.661-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/references/eStructuralFeatures/errors/index.html</loc>
+    <lastmod>2024-02-25T17:30:01.640-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/references/eStructuralFeatures/implementation/index.html</loc>
+    <lastmod>2024-02-25T17:30:01.637-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FlowElement/references.html</loc>
-    <lastmod>2024-02-24T13:49:56.942-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.646-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:56.962-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.669-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.975-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.684-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.973-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.682-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:56.970-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.679-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.977-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.687-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.960-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.666-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:56.964-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.672-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:56.979-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.689-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Function/references.html</loc>
-    <lastmod>2024-02-24T13:49:56.967-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.675-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:56.984-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.694-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.996-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.715-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.994-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.710-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:56.992-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.707-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:56.998-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.718-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/index.html</loc>
-    <lastmod>2024-02-24T13:49:56.982-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.692-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:56.986-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.701-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.002-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.722-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/FunctionFlow/references.html</loc>
-    <lastmod>2024-02-24T13:49:56.990-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.704-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Source/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.007-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.731-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Source/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.016-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.748-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Source/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.014-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.743-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Source/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.012-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.740-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Source/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.018-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.750-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Source/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.005-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.726-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Source/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.008-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.734-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Source/references.html</loc>
+    <lastmod>2024-02-25T17:30:01.737-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.024-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.758-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.036-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.772-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.033-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.770-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.031-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.768-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.038-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.773-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.022-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.754-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.027-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.761-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.040-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.776-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumer/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.029-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.765-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.045-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/attributes.html</loc>
+    <lastmod>2024-02-25T17:30:01.784-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.057-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/circular-layout-graph.html</loc>
+    <lastmod>2024-02-25T17:30:01.797-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.055-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/default-graph.html</loc>
+    <lastmod>2024-02-25T17:30:01.794-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.053-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/diagram.html</loc>
+    <lastmod>2024-02-25T17:30:01.792-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.059-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/force-layout-graph.html</loc>
+    <lastmod>2024-02-25T17:30:01.799-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.043-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/index.html</loc>
+    <lastmod>2024-02-25T17:30:01.781-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.047-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/inheritance.html</loc>
+    <lastmod>2024-02-25T17:30:01.787-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.061-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/load-specification.html</loc>
+    <lastmod>2024-02-25T17:30:01.801-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceConsumerFlow/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.050-05:00</lastmod>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorHandler/references.html</loc>
+    <lastmod>2024-02-25T17:30:01.790-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.066-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.807-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.077-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.819-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.075-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.817-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.073-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.814-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.079-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.821-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.064-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.804-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.069-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.809-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.081-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.824-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceErrorTransition/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.071-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.087-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.098-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.096-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.094-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.100-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.085-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.089-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.103-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlow/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.091-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.108-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.118-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.116-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.115-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.120-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.106-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.110-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.122-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFlowElement/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.112-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.812-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.128-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.829-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.139-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.843-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.138-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.841-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.136-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.838-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.141-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.846-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.126-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.826-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.131-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.833-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.143-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.849-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunction/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.133-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.148-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.159-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.157-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.155-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.161-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.146-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.150-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.164-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceFunctionFlow/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.153-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.836-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.169-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.855-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.180-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.868-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.178-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.866-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.176-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.864-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.181-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.870-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.166-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.852-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.171-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.858-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.184-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.872-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplier/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.174-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.189-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.200-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.198-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.196-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.202-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.187-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.191-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.204-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceSupplierFlow/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.194-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.861-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.210-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.879-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.221-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.892-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.219-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.890-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.216-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.889-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.222-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.894-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.207-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.876-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.212-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.883-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.225-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.897-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SourceTransition/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.214-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.886-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.230-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.903-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.241-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.918-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.238-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.916-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.237-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.914-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.243-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.921-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.228-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.900-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.232-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.909-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.245-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.924-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/references/eStructuralFeatures/output/index.html</loc>
+    <lastmod>2024-02-25T17:30:01.907-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Start/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.235-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.912-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.250-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.931-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.266-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.950-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.264-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.948-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.262-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.945-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.268-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.952-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.248-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.927-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.257-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.939-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.271-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.955-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/references/eStructuralFeatures/output/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.254-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.936-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Supplier/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.259-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.942-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.276-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.964-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.288-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.976-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.286-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.974-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.284-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.972-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.290-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.978-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.274-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.960-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.278-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.966-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.292-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.981-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/SupplierFlow/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.281-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.969-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/attributes.html</loc>
-    <lastmod>2024-02-24T13:49:57.298-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.987-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/circular-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.316-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.007-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/default-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.314-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.005-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/diagram.html</loc>
-    <lastmod>2024-02-24T13:49:57.312-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.003-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/force-layout-graph.html</loc>
-    <lastmod>2024-02-24T13:49:57.318-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.010-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.296-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.985-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/inheritance.html</loc>
-    <lastmod>2024-02-24T13:49:57.307-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.997-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/load-specification.html</loc>
-    <lastmod>2024-02-24T13:49:57.321-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.013-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/input/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.302-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.992-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/references/eStructuralFeatures/output/index.html</loc>
-    <lastmod>2024-02-24T13:49:57.305-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:01.994-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/references/eClassifiers/Transition/references.html</loc>
-    <lastmod>2024-02-24T13:49:57.309-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://function-flow.models.nasdanika.org/search.html</loc>
-    <lastmod>2024-02-24T13:49:57.351-05:00</lastmod>
+    <lastmod>2024-02-25T17:30:02.046-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

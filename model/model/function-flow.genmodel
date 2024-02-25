@@ -40,11 +40,13 @@
     <genClasses ecoreClass="function-flow.ecore#//FunctionFlow"/>
     <genClasses image="false" ecoreClass="function-flow.ecore#//Source">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Source/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Source/baseURI"/>
     </genClasses>
     <genClasses ecoreClass="function-flow.ecore#//SourceSupplier"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceConsumer"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceFunction"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceTransition"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceErrorTransition"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceErrorHandler"/>
   </genPackages>
 </genmodel:GenModel>

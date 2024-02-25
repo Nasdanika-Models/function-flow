@@ -179,6 +179,17 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 			}
 		}
 		
+		if (semanticElement instanceof org.nasdanika.models.functionflow.Source) {
+			Source source = getSource(eObj);
+			if (source != null) {
+				((org.nasdanika.models.functionflow.Source) semanticElement).setSource(source.source());
+				String baseURI = ((org.nasdanika.models.functionflow.Source) semanticElement).getBaseURI();
+				if (baseURI != null) {
+					((org.nasdanika.models.functionflow.Source) semanticElement).setBaseURI(baseURI.toString());					
+				}
+			}
+		}
+		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.FlowElement) {
 			String errorsPropertyName = getErrorsPropertyName();
 			if (!Util.isBlank(errorsPropertyName)) {

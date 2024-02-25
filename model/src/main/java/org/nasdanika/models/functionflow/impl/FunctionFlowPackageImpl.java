@@ -25,6 +25,7 @@ import org.nasdanika.models.functionflow.FunctionFlowFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 import org.nasdanika.models.functionflow.Source;
 import org.nasdanika.models.functionflow.SourceConsumer;
+import org.nasdanika.models.functionflow.SourceErrorHandler;
 import org.nasdanika.models.functionflow.SourceErrorTransition;
 import org.nasdanika.models.functionflow.SourceFunction;
 import org.nasdanika.models.functionflow.SourceSupplier;
@@ -177,6 +178,13 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	private EClass sourceErrorTransitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sourceErrorHandlerEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -511,6 +519,16 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
+	public EAttribute getSource_BaseURI() {
+		return (EAttribute)sourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSourceSupplier() {
 		return sourceSupplierEClass;
 	}
@@ -553,6 +571,16 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	@Override
 	public EClass getSourceErrorTransition() {
 		return sourceErrorTransitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSourceErrorHandler() {
+		return sourceErrorHandlerEClass;
 	}
 
 	/**
@@ -623,6 +651,7 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 
 		sourceEClass = createEClass(SOURCE);
 		createEAttribute(sourceEClass, SOURCE__SOURCE);
+		createEAttribute(sourceEClass, SOURCE__BASE_URI);
 
 		sourceSupplierEClass = createEClass(SOURCE_SUPPLIER);
 
@@ -633,6 +662,8 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		sourceTransitionEClass = createEClass(SOURCE_TRANSITION);
 
 		sourceErrorTransitionEClass = createEClass(SOURCE_ERROR_TRANSITION);
+
+		sourceErrorHandlerEClass = createEClass(SOURCE_ERROR_HANDLER);
 	}
 
 	/**
@@ -701,6 +732,8 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		sourceTransitionEClass.getESuperTypes().add(this.getSource());
 		sourceErrorTransitionEClass.getESuperTypes().add(this.getErrorTransition());
 		sourceErrorTransitionEClass.getESuperTypes().add(this.getSource());
+		sourceErrorHandlerEClass.getESuperTypes().add(this.getErrorHandler());
+		sourceErrorHandlerEClass.getESuperTypes().add(this.getSource());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(flowElementEClass, FlowElement.class, "FlowElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -742,6 +775,7 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 
 		initEClass(sourceEClass, Source.class, "Source", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSource_Source(), ecorePackage.getEString(), "source", null, 0, 1, Source.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSource_BaseURI(), ecorePackage.getEString(), "baseURI", null, 0, 1, Source.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sourceSupplierEClass, SourceSupplier.class, "SourceSupplier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -752,6 +786,8 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		initEClass(sourceTransitionEClass, SourceTransition.class, "SourceTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(sourceErrorTransitionEClass, SourceErrorTransition.class, "SourceErrorTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sourceErrorHandlerEClass, SourceErrorHandler.class, "SourceErrorHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

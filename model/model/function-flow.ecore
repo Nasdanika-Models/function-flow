@@ -59,10 +59,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true" interface="true"
       eSuperTypes="#//FlowElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SourceSupplier" eSuperTypes="#//Supplier #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="SourceConsumer" eSuperTypes="#//Consumer #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="SourceFunction" eSuperTypes="#//Function #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="SourceTransition" eSuperTypes="#//Transition #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="SourceErrorTransition" eSuperTypes="#//ErrorTransition #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceErrorHandler" eSuperTypes="#//ErrorHandler #//Source"/>
 </ecore:EPackage>

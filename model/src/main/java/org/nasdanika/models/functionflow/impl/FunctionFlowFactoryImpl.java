@@ -74,6 +74,7 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 			case FunctionFlowPackage.SOURCE_FUNCTION: return createSourceFunction();
 			case FunctionFlowPackage.SOURCE_TRANSITION: return createSourceTransition();
 			case FunctionFlowPackage.SOURCE_ERROR_TRANSITION: return createSourceErrorTransition();
+			case FunctionFlowPackage.SOURCE_ERROR_HANDLER: return createSourceErrorHandler();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -275,6 +276,17 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 	public SourceErrorTransition createSourceErrorTransition() {
 		SourceErrorTransitionImpl sourceErrorTransition = new SourceErrorTransitionImpl();
 		return sourceErrorTransition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SourceErrorHandler createSourceErrorHandler() {
+		SourceErrorHandlerImpl sourceErrorHandler = new SourceErrorHandlerImpl();
+		return sourceErrorHandler;
 	}
 
 	/**

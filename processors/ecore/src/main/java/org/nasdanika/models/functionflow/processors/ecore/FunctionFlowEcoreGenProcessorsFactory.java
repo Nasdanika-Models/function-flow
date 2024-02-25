@@ -1,7 +1,15 @@
 package org.nasdanika.models.functionflow.processors.ecore;
 
+import java.util.function.BiConsumer;
+
 import org.nasdanika.common.Context;
+import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Reflector.Factory;
+import org.nasdanika.graph.processor.NodeProcessorConfig;
+import org.nasdanika.html.model.app.Action;
+import org.nasdanika.html.model.app.Label;
+import org.nasdanika.html.model.app.graph.WidgetFactory;
+import org.nasdanika.models.ecore.graph.processors.EPackageNodeProcessor;
 import org.nasdanika.models.ecore.graph.processors.EPackageNodeProcessorFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
@@ -41,10 +49,16 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 	public final SourceConsumerProcessorFactory sourceConsumerProcessorFactory;	
 	
 	@Factory
+	public final SourceErrorHandlerProcessorFactory sourceErrorHandlerProcessorFactory;	
+	
+	@Factory
 	public final SourceErrorTransitionProcessorFactory sourceErrorTransitionProcessorFactory;	
 	
 	@Factory
 	public final SourceFunctionProcessorFactory sourceFunctionProcessorFactory;	
+	
+	@Factory
+	public final SourceProcessorFactory sourceProcessorFactory;	
 	
 	@Factory
 	public final SourceSupplierProcessorFactory sourceSupplierProcessorFactory;	
@@ -57,6 +71,9 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 	
 	@Factory
 	public final SupplierProcessorFactory supplierProcessorFactory;	
+	
+	@Factory
+	public final SupplierFlowProcessorFactory supplierFlowProcessorFactory;	
 	
 	@Factory
 	public final TransitionProcessorFactory transitionProcessorFactory;		
@@ -73,60 +90,43 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 		flowElementProcessorFactory = new FlowElementProcessorFactory(context); 	
 		functionProcessorFactory = new FunctionProcessorFactory(context); 	
 		functionFlowProcessorFactory = new FunctionFlowProcessorFactory(context); 	
+		sourceProcessorFactory = new SourceProcessorFactory(context); 	
 		sourceConsumerProcessorFactory = new SourceConsumerProcessorFactory(context); 	
+		sourceErrorHandlerProcessorFactory = new SourceErrorHandlerProcessorFactory(context); 	
 		sourceErrorTransitionProcessorFactory = new SourceErrorTransitionProcessorFactory(context); 	
 		sourceFunctionProcessorFactory = new SourceFunctionProcessorFactory(context); 	
 		sourceSupplierProcessorFactory = new SourceSupplierProcessorFactory(context); 	
 		sourceTransitionProcessorFactory = new SourceTransitionProcessorFactory(context); 	
 		startProcessorFactory = new StartProcessorFactory(context); 	
 		supplierProcessorFactory = new SupplierProcessorFactory(context); 	
+		supplierFlowProcessorFactory = new SupplierFlowProcessorFactory(context); 	
 		transitionProcessorFactory = new TransitionProcessorFactory(context); 		
 	}
 	
-//	/**
-//	 * Test of different ways to configure action prototype.
-//	 * @param config
-//	 * @param prototypeProvider
-//	 * @param progressMonitor
-//	 * @return
-//	 */
-//	@EPackageNodeProcessorFactory(
-//			label = "Trum",
-//			//actionPrototypeRef = "test-package.yml",
-//			actionPrototype = """
-//                    app-action:
-//                        text: Param
-//                        icon: fas fa-user					
-//					
-//					
-//					""",
-//			icon = "fas fa-users",
-//			description = "My description",
-//			documentation =  """
-//				# Look at this!
-//				
-//				```drawio-resource
-//				aws.drawio
-//				```
-//						
-//				"""
-//	)
-//	public EPackageNodeProcessor createEPackageProcessor(
-//			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
-//			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
-//			BiConsumer<Label, ProgressMonitor> labelConfigurator,
-//			ProgressMonitor progressMonitor) {		
-//		return new EPackageNodeProcessor(config, context, prototypeProvider) {
-//			
-//			@Override
-//			protected void configureLabel(EObject eObject, Label label, ProgressMonitor progressMonitor) {
-//				super.configureLabel(eObject, label, progressMonitor);
-//				if (labelConfigurator != null) {
-//					labelConfigurator.accept(label, progressMonitor);
-//				}
-//			}
-//			
-//		};
-//	}	
+
+	@EPackageNodeProcessorFactory(
+			label = "Function Flow",
+			description = "A graph of functional elements - suppliers, functions, consumers - exchanging objects via transitions",
+			documentation =  """
+				TODO - demo diagram with all types of objects, description.			
+				"""
+	)
+	public EPackageNodeProcessor createEPackageProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
+			BiConsumer<Label, ProgressMonitor> labelConfigurator,
+			ProgressMonitor progressMonitor) {		
+		return new EPackageNodeProcessor(config, context, prototypeProvider) {
+			
+			@Override
+			public void configureLabel(Object source, Label label, ProgressMonitor progressMonitor) {
+				super.configureLabel(source, label, progressMonitor);
+				if (labelConfigurator != null) {
+					labelConfigurator.accept(label, progressMonitor);
+				}
+			}
+			
+		};
+	}	
 
 }
