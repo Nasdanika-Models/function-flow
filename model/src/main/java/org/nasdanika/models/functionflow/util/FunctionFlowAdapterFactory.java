@@ -162,10 +162,6 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 				return createSourceAdapter();
 			}
 			@Override
-			public Adapter caseSourceFlowElement(SourceFlowElement object) {
-				return createSourceFlowElementAdapter();
-			}
-			@Override
 			public Adapter caseSourceSupplier(SourceSupplier object) {
 				return createSourceSupplierAdapter();
 			}
@@ -184,22 +180,6 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSourceErrorTransition(SourceErrorTransition object) {
 				return createSourceErrorTransitionAdapter();
-			}
-			@Override
-			public Adapter caseSourceFlow(SourceFlow object) {
-				return createSourceFlowAdapter();
-			}
-			@Override
-			public Adapter caseSourceSupplierFlow(SourceSupplierFlow object) {
-				return createSourceSupplierFlowAdapter();
-			}
-			@Override
-			public Adapter caseSourceConsumerFlow(SourceConsumerFlow object) {
-				return createSourceConsumerFlowAdapter();
-			}
-			@Override
-			public Adapter caseSourceFunctionFlow(SourceFunctionFlow object) {
-				return createSourceFunctionFlowAdapter();
 			}
 			@Override
 			public Adapter caseStringIdentity(StringIdentity object) {
@@ -550,20 +530,6 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.functionflow.SourceFlowElement <em>Source Flow Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.functionflow.SourceFlowElement
-	 * @generated
-	 */
-	public Adapter createSourceFlowElementAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.functionflow.SourceSupplier <em>Source Supplier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -630,62 +596,6 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSourceErrorTransitionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.functionflow.SourceFlow <em>Source Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.functionflow.SourceFlow
-	 * @generated
-	 */
-	public Adapter createSourceFlowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.functionflow.SourceSupplierFlow <em>Source Supplier Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.functionflow.SourceSupplierFlow
-	 * @generated
-	 */
-	public Adapter createSourceSupplierFlowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.functionflow.SourceConsumerFlow <em>Source Consumer Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.functionflow.SourceConsumerFlow
-	 * @generated
-	 */
-	public Adapter createSourceConsumerFlowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.functionflow.SourceFunctionFlow <em>Source Function Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.functionflow.SourceFunctionFlow
-	 * @generated
-	 */
-	public Adapter createSourceFunctionFlowAdapter() {
 		return null;
 	}
 

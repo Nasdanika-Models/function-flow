@@ -1,6 +1,7 @@
 package org.nasdanika.models.functionflow.processors.ecore;
 
 import org.nasdanika.common.Context;
+import org.nasdanika.common.Reflector.Factory;
 import org.nasdanika.models.ecore.graph.processors.EPackageNodeProcessorFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
@@ -9,12 +10,77 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 
 	private Context context;
 	
-//	@Factory
-//	public final AccessLevelProcessorsFactory accessLevelFactory;
+	@Factory
+	public final ConsumerProcessorFactory consumerProcessorFactory;	
+	
+	@Factory
+	public final ConsumerFlowProcessorFactory consumerFlowProcessorFactory;	
+	
+	@Factory
+	public final EndProcessorFactory endProcessorFactory;	
+	
+	@Factory
+	public final ErrorHandlerProcessorFactory errorHandlerProcessorFactory;	
+	
+	@Factory
+	public final ErrorTransitionProcessorFactory errorTransitionProcessorFactory;	
+	
+	@Factory
+	public final FlowProcessorFactory flowProcessorFactory;	
+	
+	@Factory
+	public final FlowElementProcessorFactory flowElementProcessorFactory;	
+	
+	@Factory
+	public final FunctionProcessorFactory functionProcessorFactory;	
+	
+	@Factory
+	public final FunctionFlowProcessorFactory functionFlowProcessorFactory;	
+	
+	@Factory
+	public final SourceConsumerProcessorFactory sourceConsumerProcessorFactory;	
+	
+	@Factory
+	public final SourceErrorTransitionProcessorFactory sourceErrorTransitionProcessorFactory;	
+	
+	@Factory
+	public final SourceFunctionProcessorFactory sourceFunctionProcessorFactory;	
+	
+	@Factory
+	public final SourceSupplierProcessorFactory sourceSupplierProcessorFactory;	
+	
+	@Factory
+	public final SourceTransitionProcessorFactory sourceTransitionProcessorFactory;	
+	
+	@Factory
+	public final StartProcessorFactory startProcessorFactory;	
+	
+	@Factory
+	public final SupplierProcessorFactory supplierProcessorFactory;	
+	
+	@Factory
+	public final TransitionProcessorFactory transitionProcessorFactory;		
 
 	
 	public FunctionFlowEcoreGenProcessorsFactory(Context context) {
-//		accessLevelProcessorsFactory = new AccessLevelProcessorsFactory(context);
+		this.context = context;
+		consumerProcessorFactory = new ConsumerProcessorFactory(context);	
+		consumerFlowProcessorFactory = new ConsumerFlowProcessorFactory(context); 	
+		endProcessorFactory = new EndProcessorFactory(context); 	
+		errorHandlerProcessorFactory = new ErrorHandlerProcessorFactory(context); 	
+		errorTransitionProcessorFactory = new ErrorTransitionProcessorFactory(context); 	
+		flowProcessorFactory = new FlowProcessorFactory(context); 	
+		flowElementProcessorFactory = new FlowElementProcessorFactory(context); 	
+		functionProcessorFactory = new FunctionProcessorFactory(context); 	
+		functionFlowProcessorFactory = new FunctionFlowProcessorFactory(context); 	
+		sourceConsumerProcessorFactory = new SourceConsumerProcessorFactory(context); 	
+		sourceErrorTransitionProcessorFactory = new SourceErrorTransitionProcessorFactory(context); 	
+		sourceFunctionProcessorFactory = new SourceFunctionProcessorFactory(context); 	
+		sourceSupplierProcessorFactory = new SourceSupplierProcessorFactory(context); 	
+		sourceTransitionProcessorFactory = new SourceTransitionProcessorFactory(context); 	
+		startProcessorFactory = new StartProcessorFactory(context); 	
+		supplierProcessorFactory = new SupplierProcessorFactory(context); 	
+		transitionProcessorFactory = new TransitionProcessorFactory(context); 		
 	}
 	
 //	/**

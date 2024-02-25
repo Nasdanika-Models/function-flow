@@ -161,6 +161,24 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 			}
 		}
 		
+		if (semanticElement instanceof org.nasdanika.models.functionflow.Start) {
+			String orderPropertyName = getOrderPropertyName();
+			if (!Util.isBlank(orderPropertyName)) {
+				String order = getProperty(eObj, orderPropertyName);
+				if (!Util.isBlank(order)) {
+					((org.nasdanika.models.functionflow.Start) semanticElement).setOrder(Integer.parseInt(order));
+				}
+			}
+			
+			String conditionPropertyName = getConditionPropertyName();
+			if (!Util.isBlank(conditionPropertyName)) {
+				String condition = getProperty(eObj, conditionPropertyName);
+				if (!Util.isBlank(condition)) {
+					((org.nasdanika.models.functionflow.Start) semanticElement).setCondition(condition);
+				}
+			}
+		}
+		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.FlowElement) {
 			String errorsPropertyName = getErrorsPropertyName();
 			if (!Util.isBlank(errorsPropertyName)) {

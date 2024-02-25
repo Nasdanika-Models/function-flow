@@ -69,16 +69,11 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 			case FunctionFlowPackage.SUPPLIER_FLOW: return createSupplierFlow();
 			case FunctionFlowPackage.CONSUMER_FLOW: return createConsumerFlow();
 			case FunctionFlowPackage.FUNCTION_FLOW: return createFunctionFlow();
-			case FunctionFlowPackage.SOURCE_FLOW_ELEMENT: return createSourceFlowElement();
 			case FunctionFlowPackage.SOURCE_SUPPLIER: return createSourceSupplier();
 			case FunctionFlowPackage.SOURCE_CONSUMER: return createSourceConsumer();
 			case FunctionFlowPackage.SOURCE_FUNCTION: return createSourceFunction();
 			case FunctionFlowPackage.SOURCE_TRANSITION: return createSourceTransition();
 			case FunctionFlowPackage.SOURCE_ERROR_TRANSITION: return createSourceErrorTransition();
-			case FunctionFlowPackage.SOURCE_FLOW: return createSourceFlow();
-			case FunctionFlowPackage.SOURCE_SUPPLIER_FLOW: return createSourceSupplierFlow();
-			case FunctionFlowPackage.SOURCE_CONSUMER_FLOW: return createSourceConsumerFlow();
-			case FunctionFlowPackage.SOURCE_FUNCTION_FLOW: return createSourceFunctionFlow();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -233,17 +228,6 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
-	public SourceFlowElement createSourceFlowElement() {
-		SourceFlowElementImpl sourceFlowElement = new SourceFlowElementImpl();
-		return sourceFlowElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public SourceSupplier createSourceSupplier() {
 		SourceSupplierImpl sourceSupplier = new SourceSupplierImpl();
 		return sourceSupplier;
@@ -291,50 +275,6 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 	public SourceErrorTransition createSourceErrorTransition() {
 		SourceErrorTransitionImpl sourceErrorTransition = new SourceErrorTransitionImpl();
 		return sourceErrorTransition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SourceFlow createSourceFlow() {
-		SourceFlowImpl sourceFlow = new SourceFlowImpl();
-		return sourceFlow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SourceSupplierFlow createSourceSupplierFlow() {
-		SourceSupplierFlowImpl sourceSupplierFlow = new SourceSupplierFlowImpl();
-		return sourceSupplierFlow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SourceConsumerFlow createSourceConsumerFlow() {
-		SourceConsumerFlowImpl sourceConsumerFlow = new SourceConsumerFlowImpl();
-		return sourceConsumerFlow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SourceFunctionFlow createSourceFunctionFlow() {
-		SourceFunctionFlowImpl sourceFunctionFlow = new SourceFunctionFlowImpl();
-		return sourceFunctionFlow;
 	}
 
 	/**

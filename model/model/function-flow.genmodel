@@ -13,7 +13,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//FlowElement/implementation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//FlowElement/errors"/>
     </genClasses>
-    <genClasses ecoreClass="function-flow.ecore#//Start"/>
+    <genClasses ecoreClass="function-flow.ecore#//Start">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Start/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Start/order"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Start/output"/>
+    </genClasses>
     <genClasses ecoreClass="function-flow.ecore#//Supplier">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Supplier/output"/>
     </genClasses>
@@ -37,15 +41,10 @@
     <genClasses image="false" ecoreClass="function-flow.ecore#//Source">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Source/source"/>
     </genClasses>
-    <genClasses ecoreClass="function-flow.ecore#//SourceFlowElement"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceSupplier"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceConsumer"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceFunction"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceTransition"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceErrorTransition"/>
-    <genClasses ecoreClass="function-flow.ecore#//SourceFlow"/>
-    <genClasses ecoreClass="function-flow.ecore#//SourceSupplierFlow"/>
-    <genClasses ecoreClass="function-flow.ecore#//SourceConsumerFlow"/>
-    <genClasses ecoreClass="function-flow.ecore#//SourceFunctionFlow"/>
   </genPackages>
 </genmodel:GenModel>

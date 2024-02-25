@@ -2,8 +2,6 @@
  */
 package org.nasdanika.models.functionflow;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Source</b></em>'.
@@ -20,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface Source extends EObject {
+public interface Source extends FlowElement {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' attribute.
 	 * <!-- begin-user-doc -->

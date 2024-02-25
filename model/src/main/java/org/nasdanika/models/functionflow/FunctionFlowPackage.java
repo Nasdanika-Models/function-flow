@@ -429,13 +429,40 @@ public interface FunctionFlowPackage extends EPackage {
 	int START__ROLES = ArchitecturePackage.RELATIONSHIP_SOURCE__ROLES;
 
 	/**
+	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START__CONDITION = ArchitecturePackage.RELATIONSHIP_SOURCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START__ORDER = ArchitecturePackage.RELATIONSHIP_SOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START__OUTPUT = ArchitecturePackage.RELATIONSHIP_SOURCE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Start</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int START_FEATURE_COUNT = ArchitecturePackage.RELATIONSHIP_SOURCE_FEATURE_COUNT + 0;
+	int START_FEATURE_COUNT = ArchitecturePackage.RELATIONSHIP_SOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Start</em>' class.
@@ -2936,50 +2963,13 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE = 13;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE__SOURCE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Source</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Source</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.SourceFlowElementImpl <em>Source Flow Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.functionflow.impl.SourceFlowElementImpl
-	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFlowElement()
-	 * @generated
-	 */
-	int SOURCE_FLOW_ELEMENT = 14;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__ID = FLOW_ELEMENT__ID;
+	int SOURCE__ID = FLOW_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
@@ -2988,7 +2978,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__SEMANTIC_MAPPINGS = FLOW_ELEMENT__SEMANTIC_MAPPINGS;
+	int SOURCE__SEMANTIC_MAPPINGS = FLOW_ELEMENT__SEMANTIC_MAPPINGS;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2997,7 +2987,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__MARKERS = FLOW_ELEMENT__MARKERS;
+	int SOURCE__MARKERS = FLOW_ELEMENT__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -3006,7 +2996,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__URIS = FLOW_ELEMENT__URIS;
+	int SOURCE__URIS = FLOW_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3015,7 +3005,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__DESCRIPTION = FLOW_ELEMENT__DESCRIPTION;
+	int SOURCE__DESCRIPTION = FLOW_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -3024,7 +3014,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__UUID = FLOW_ELEMENT__UUID;
+	int SOURCE__UUID = FLOW_ELEMENT__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
@@ -3033,7 +3023,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__LABEL_PROTOTYPE = FLOW_ELEMENT__LABEL_PROTOTYPE;
+	int SOURCE__LABEL_PROTOTYPE = FLOW_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -3042,7 +3032,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__REPRESENTATIONS = FLOW_ELEMENT__REPRESENTATIONS;
+	int SOURCE__REPRESENTATIONS = FLOW_ELEMENT__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -3051,7 +3041,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__ANNOTATIONS = FLOW_ELEMENT__ANNOTATIONS;
+	int SOURCE__ANNOTATIONS = FLOW_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3060,7 +3050,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__NAME = FLOW_ELEMENT__NAME;
+	int SOURCE__NAME = FLOW_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -3069,7 +3059,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+	int SOURCE__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
@@ -3078,7 +3068,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__CONTEXT_HELP = FLOW_ELEMENT__CONTEXT_HELP;
+	int SOURCE__CONTEXT_HELP = FLOW_ELEMENT__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -3087,7 +3077,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__START = FLOW_ELEMENT__START;
+	int SOURCE__START = FLOW_ELEMENT__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -3096,7 +3086,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__END = FLOW_ELEMENT__END;
+	int SOURCE__END = FLOW_ELEMENT__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -3105,7 +3095,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__DURATION = FLOW_ELEMENT__DURATION;
+	int SOURCE__DURATION = FLOW_ELEMENT__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
@@ -3114,7 +3104,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__ICON = FLOW_ELEMENT__ICON;
+	int SOURCE__ICON = FLOW_ELEMENT__ICON;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
@@ -3123,7 +3113,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__ROLES = FLOW_ELEMENT__ROLES;
+	int SOURCE__ROLES = FLOW_ELEMENT__ROLES;
 
 	/**
 	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
@@ -3132,7 +3122,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__IMPLEMENTATION = FLOW_ELEMENT__IMPLEMENTATION;
+	int SOURCE__IMPLEMENTATION = FLOW_ELEMENT__IMPLEMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
@@ -3141,7 +3131,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__ERRORS = FLOW_ELEMENT__ERRORS;
+	int SOURCE__ERRORS = FLOW_ELEMENT__ERRORS;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
@@ -3150,25 +3140,25 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT__SOURCE = FLOW_ELEMENT_FEATURE_COUNT + 0;
+	int SOURCE__SOURCE = FLOW_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Source Flow Element</em>' class.
+	 * The number of structural features of the '<em>Source</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT_FEATURE_COUNT = FLOW_ELEMENT_FEATURE_COUNT + 1;
+	int SOURCE_FEATURE_COUNT = FLOW_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Source Flow Element</em>' class.
+	 * The number of operations of the '<em>Source</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FLOW_ELEMENT_OPERATION_COUNT = FLOW_ELEMENT_OPERATION_COUNT + 0;
+	int SOURCE_OPERATION_COUNT = FLOW_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.SourceSupplierImpl <em>Source Supplier</em>}' class.
@@ -3178,7 +3168,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceSupplier()
 	 * @generated
 	 */
-	int SOURCE_SUPPLIER = 15;
+	int SOURCE_SUPPLIER = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3404,7 +3394,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceConsumer()
 	 * @generated
 	 */
-	int SOURCE_CONSUMER = 16;
+	int SOURCE_CONSUMER = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3630,7 +3620,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFunction()
 	 * @generated
 	 */
-	int SOURCE_FUNCTION = 17;
+	int SOURCE_FUNCTION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3874,7 +3864,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceTransition()
 	 * @generated
 	 */
-	int SOURCE_TRANSITION = 18;
+	int SOURCE_TRANSITION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4136,7 +4126,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceErrorTransition()
 	 * @generated
 	 */
-	int SOURCE_ERROR_TRANSITION = 19;
+	int SOURCE_ERROR_TRANSITION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4391,947 +4381,6 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_ERROR_TRANSITION_OPERATION_COUNT = ERROR_TRANSITION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.SourceFlowImpl <em>Source Flow</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.functionflow.impl.SourceFlowImpl
-	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFlow()
-	 * @generated
-	 */
-	int SOURCE_FLOW = 20;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__ID = FLOW__ID;
-
-	/**
-	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__SEMANTIC_MAPPINGS = FLOW__SEMANTIC_MAPPINGS;
-
-	/**
-	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__MARKERS = FLOW__MARKERS;
-
-	/**
-	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__URIS = FLOW__URIS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__DESCRIPTION = FLOW__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__UUID = FLOW__UUID;
-
-	/**
-	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__LABEL_PROTOTYPE = FLOW__LABEL_PROTOTYPE;
-
-	/**
-	 * The feature id for the '<em><b>Representations</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__REPRESENTATIONS = FLOW__REPRESENTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__ANNOTATIONS = FLOW__ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__NAME = FLOW__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__DOCUMENTATION = FLOW__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__CONTEXT_HELP = FLOW__CONTEXT_HELP;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__START = FLOW__START;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__END = FLOW__END;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__DURATION = FLOW__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Icon</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__ICON = FLOW__ICON;
-
-	/**
-	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__ROLES = FLOW__ROLES;
-
-	/**
-	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__IMPLEMENTATION = FLOW__IMPLEMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__ERRORS = FLOW__ERRORS;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__ELEMENTS = FLOW__ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__ACTORS = FLOW__ACTORS;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW__SOURCE = FLOW_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Source Flow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Source Flow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FLOW_OPERATION_COUNT = FLOW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.SourceSupplierFlowImpl <em>Source Supplier Flow</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.functionflow.impl.SourceSupplierFlowImpl
-	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceSupplierFlow()
-	 * @generated
-	 */
-	int SOURCE_SUPPLIER_FLOW = 21;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__ID = SUPPLIER_FLOW__ID;
-
-	/**
-	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__SEMANTIC_MAPPINGS = SUPPLIER_FLOW__SEMANTIC_MAPPINGS;
-
-	/**
-	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__MARKERS = SUPPLIER_FLOW__MARKERS;
-
-	/**
-	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__URIS = SUPPLIER_FLOW__URIS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__DESCRIPTION = SUPPLIER_FLOW__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__UUID = SUPPLIER_FLOW__UUID;
-
-	/**
-	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__LABEL_PROTOTYPE = SUPPLIER_FLOW__LABEL_PROTOTYPE;
-
-	/**
-	 * The feature id for the '<em><b>Representations</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__REPRESENTATIONS = SUPPLIER_FLOW__REPRESENTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__ANNOTATIONS = SUPPLIER_FLOW__ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__NAME = SUPPLIER_FLOW__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__DOCUMENTATION = SUPPLIER_FLOW__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__CONTEXT_HELP = SUPPLIER_FLOW__CONTEXT_HELP;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__START = SUPPLIER_FLOW__START;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__END = SUPPLIER_FLOW__END;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__DURATION = SUPPLIER_FLOW__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Icon</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__ICON = SUPPLIER_FLOW__ICON;
-
-	/**
-	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__ROLES = SUPPLIER_FLOW__ROLES;
-
-	/**
-	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__IMPLEMENTATION = SUPPLIER_FLOW__IMPLEMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__ERRORS = SUPPLIER_FLOW__ERRORS;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__ELEMENTS = SUPPLIER_FLOW__ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__ACTORS = SUPPLIER_FLOW__ACTORS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__OUTGOING_CONNECTIONS = SUPPLIER_FLOW__OUTGOING_CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW__SOURCE = SUPPLIER_FLOW_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Source Supplier Flow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW_FEATURE_COUNT = SUPPLIER_FLOW_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Source Supplier Flow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_SUPPLIER_FLOW_OPERATION_COUNT = SUPPLIER_FLOW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.SourceConsumerFlowImpl <em>Source Consumer Flow</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.functionflow.impl.SourceConsumerFlowImpl
-	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceConsumerFlow()
-	 * @generated
-	 */
-	int SOURCE_CONSUMER_FLOW = 22;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__ID = CONSUMER_FLOW__ID;
-
-	/**
-	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__SEMANTIC_MAPPINGS = CONSUMER_FLOW__SEMANTIC_MAPPINGS;
-
-	/**
-	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__MARKERS = CONSUMER_FLOW__MARKERS;
-
-	/**
-	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__URIS = CONSUMER_FLOW__URIS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__DESCRIPTION = CONSUMER_FLOW__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__UUID = CONSUMER_FLOW__UUID;
-
-	/**
-	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__LABEL_PROTOTYPE = CONSUMER_FLOW__LABEL_PROTOTYPE;
-
-	/**
-	 * The feature id for the '<em><b>Representations</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__REPRESENTATIONS = CONSUMER_FLOW__REPRESENTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__ANNOTATIONS = CONSUMER_FLOW__ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__NAME = CONSUMER_FLOW__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__DOCUMENTATION = CONSUMER_FLOW__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__CONTEXT_HELP = CONSUMER_FLOW__CONTEXT_HELP;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__START = CONSUMER_FLOW__START;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__END = CONSUMER_FLOW__END;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__DURATION = CONSUMER_FLOW__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Icon</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__ICON = CONSUMER_FLOW__ICON;
-
-	/**
-	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__ROLES = CONSUMER_FLOW__ROLES;
-
-	/**
-	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__IMPLEMENTATION = CONSUMER_FLOW__IMPLEMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__ERRORS = CONSUMER_FLOW__ERRORS;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__ELEMENTS = CONSUMER_FLOW__ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__ACTORS = CONSUMER_FLOW__ACTORS;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__INCOMING_CONNECTIONS = CONSUMER_FLOW__INCOMING_CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW__SOURCE = CONSUMER_FLOW_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Source Consumer Flow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW_FEATURE_COUNT = CONSUMER_FLOW_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Source Consumer Flow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_CONSUMER_FLOW_OPERATION_COUNT = CONSUMER_FLOW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.SourceFunctionFlowImpl <em>Source Function Flow</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.functionflow.impl.SourceFunctionFlowImpl
-	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFunctionFlow()
-	 * @generated
-	 */
-	int SOURCE_FUNCTION_FLOW = 23;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__ID = FUNCTION_FLOW__ID;
-
-	/**
-	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__SEMANTIC_MAPPINGS = FUNCTION_FLOW__SEMANTIC_MAPPINGS;
-
-	/**
-	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__MARKERS = FUNCTION_FLOW__MARKERS;
-
-	/**
-	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__URIS = FUNCTION_FLOW__URIS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__DESCRIPTION = FUNCTION_FLOW__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__UUID = FUNCTION_FLOW__UUID;
-
-	/**
-	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__LABEL_PROTOTYPE = FUNCTION_FLOW__LABEL_PROTOTYPE;
-
-	/**
-	 * The feature id for the '<em><b>Representations</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__REPRESENTATIONS = FUNCTION_FLOW__REPRESENTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__ANNOTATIONS = FUNCTION_FLOW__ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__NAME = FUNCTION_FLOW__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__DOCUMENTATION = FUNCTION_FLOW__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__CONTEXT_HELP = FUNCTION_FLOW__CONTEXT_HELP;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__START = FUNCTION_FLOW__START;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__END = FUNCTION_FLOW__END;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__DURATION = FUNCTION_FLOW__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Icon</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__ICON = FUNCTION_FLOW__ICON;
-
-	/**
-	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__ROLES = FUNCTION_FLOW__ROLES;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__ELEMENTS = FUNCTION_FLOW__ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__ACTORS = FUNCTION_FLOW__ACTORS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__OUTGOING_CONNECTIONS = FUNCTION_FLOW__OUTGOING_CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__INCOMING_CONNECTIONS = FUNCTION_FLOW__INCOMING_CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__IMPLEMENTATION = FUNCTION_FLOW__IMPLEMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__ERRORS = FUNCTION_FLOW__ERRORS;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__SOURCE = FUNCTION_FLOW_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Source Function Flow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW_FEATURE_COUNT = FUNCTION_FLOW_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Source Function Flow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW_OPERATION_COUNT = FUNCTION_FLOW_OPERATION_COUNT + 0;
-
-
-	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.FlowElement <em>Flow Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5372,6 +4421,39 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getStart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.functionflow.Start#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Condition</em>'.
+	 * @see org.nasdanika.models.functionflow.Start#getCondition()
+	 * @see #getStart()
+	 * @generated
+	 */
+	EAttribute getStart_Condition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.functionflow.Start#getOrder <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order</em>'.
+	 * @see org.nasdanika.models.functionflow.Start#getOrder()
+	 * @see #getStart()
+	 * @generated
+	 */
+	EAttribute getStart_Order();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.functionflow.Start#getOutput <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Output</em>'.
+	 * @see org.nasdanika.models.functionflow.Start#getOutput()
+	 * @see #getStart()
+	 * @generated
+	 */
+	EAttribute getStart_Output();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.Supplier <em>Supplier</em>}'.
@@ -5571,16 +4653,6 @@ public interface FunctionFlowPackage extends EPackage {
 	EAttribute getSource_Source();
 
 	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.SourceFlowElement <em>Source Flow Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Source Flow Element</em>'.
-	 * @see org.nasdanika.models.functionflow.SourceFlowElement
-	 * @generated
-	 */
-	EClass getSourceFlowElement();
-
-	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.SourceSupplier <em>Source Supplier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5629,46 +4701,6 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSourceErrorTransition();
-
-	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.SourceFlow <em>Source Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Source Flow</em>'.
-	 * @see org.nasdanika.models.functionflow.SourceFlow
-	 * @generated
-	 */
-	EClass getSourceFlow();
-
-	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.SourceSupplierFlow <em>Source Supplier Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Source Supplier Flow</em>'.
-	 * @see org.nasdanika.models.functionflow.SourceSupplierFlow
-	 * @generated
-	 */
-	EClass getSourceSupplierFlow();
-
-	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.SourceConsumerFlow <em>Source Consumer Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Source Consumer Flow</em>'.
-	 * @see org.nasdanika.models.functionflow.SourceConsumerFlow
-	 * @generated
-	 */
-	EClass getSourceConsumerFlow();
-
-	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.SourceFunctionFlow <em>Source Function Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Source Function Flow</em>'.
-	 * @see org.nasdanika.models.functionflow.SourceFunctionFlow
-	 * @generated
-	 */
-	EClass getSourceFunctionFlow();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5728,6 +4760,30 @@ public interface FunctionFlowPackage extends EPackage {
 		 * @generated
 		 */
 		EClass START = eINSTANCE.getStart();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute START__CONDITION = eINSTANCE.getStart_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute START__ORDER = eINSTANCE.getStart_Order();
+
+		/**
+		 * The meta object literal for the '<em><b>Output</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute START__OUTPUT = eINSTANCE.getStart_Output();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SupplierImpl <em>Supplier</em>}' class.
@@ -5906,16 +4962,6 @@ public interface FunctionFlowPackage extends EPackage {
 		EAttribute SOURCE__SOURCE = eINSTANCE.getSource_Source();
 
 		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SourceFlowElementImpl <em>Source Flow Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.functionflow.impl.SourceFlowElementImpl
-		 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFlowElement()
-		 * @generated
-		 */
-		EClass SOURCE_FLOW_ELEMENT = eINSTANCE.getSourceFlowElement();
-
-		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SourceSupplierImpl <em>Source Supplier</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5964,46 +5010,6 @@ public interface FunctionFlowPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SOURCE_ERROR_TRANSITION = eINSTANCE.getSourceErrorTransition();
-
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SourceFlowImpl <em>Source Flow</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.functionflow.impl.SourceFlowImpl
-		 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFlow()
-		 * @generated
-		 */
-		EClass SOURCE_FLOW = eINSTANCE.getSourceFlow();
-
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SourceSupplierFlowImpl <em>Source Supplier Flow</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.functionflow.impl.SourceSupplierFlowImpl
-		 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceSupplierFlow()
-		 * @generated
-		 */
-		EClass SOURCE_SUPPLIER_FLOW = eINSTANCE.getSourceSupplierFlow();
-
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SourceConsumerFlowImpl <em>Source Consumer Flow</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.functionflow.impl.SourceConsumerFlowImpl
-		 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceConsumerFlow()
-		 * @generated
-		 */
-		EClass SOURCE_CONSUMER_FLOW = eINSTANCE.getSourceConsumerFlow();
-
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.SourceFunctionFlowImpl <em>Source Function Flow</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.functionflow.impl.SourceFunctionFlowImpl
-		 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFunctionFlow()
-		 * @generated
-		 */
-		EClass SOURCE_FUNCTION_FLOW = eINSTANCE.getSourceFunctionFlow();
 
 	}
 

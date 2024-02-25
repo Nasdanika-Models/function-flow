@@ -473,30 +473,23 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 			case FunctionFlowPackage.SOURCE: {
 				Source source = (Source)theEObject;
 				T1 result = caseSource(source);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FunctionFlowPackage.SOURCE_FLOW_ELEMENT: {
-				SourceFlowElement sourceFlowElement = (SourceFlowElement)theEObject;
-				T1 result = caseSourceFlowElement(sourceFlowElement);
-				if (result == null) result = caseFlowElement(sourceFlowElement);
-				if (result == null) result = caseSource(sourceFlowElement);
-				if (result == null) result = caseArchitectureDescriptionElement(sourceFlowElement);
-				if (result == null) result = caseDocumentedNamedGraphElement(sourceFlowElement);
-				if (result == null) result = caseArchitectureElement(sourceFlowElement);
-				if (result == null) result = caseUndergoer(sourceFlowElement);
-				if (result == null) result = caseGraphElement(sourceFlowElement);
-				if (result == null) result = caseDocumentedNamedStringIdentity(sourceFlowElement);
-				if (result == null) result = casePeriod(sourceFlowElement);
-				if (result == null) result = caseStringIdentity(sourceFlowElement);
-				if (result == null) result = caseSemanticElement(sourceFlowElement);
-				if (result == null) result = caseDocumentedNamedElement(sourceFlowElement);
-				if (result == null) result = caseNamedElement(sourceFlowElement);
-				if (result == null) result = caseDocumented(sourceFlowElement);
-				if (result == null) result = caseModelElement(sourceFlowElement);
-				if (result == null) result = caseMarked(sourceFlowElement);
-				if (result == null) result = caseAdaptable(sourceFlowElement);
-				if (result == null) result = caseIMarked(sourceFlowElement);
+				if (result == null) result = caseFlowElement(source);
+				if (result == null) result = caseArchitectureDescriptionElement(source);
+				if (result == null) result = caseDocumentedNamedGraphElement(source);
+				if (result == null) result = caseArchitectureElement(source);
+				if (result == null) result = caseUndergoer(source);
+				if (result == null) result = caseGraphElement(source);
+				if (result == null) result = caseDocumentedNamedStringIdentity(source);
+				if (result == null) result = casePeriod(source);
+				if (result == null) result = caseStringIdentity(source);
+				if (result == null) result = caseSemanticElement(source);
+				if (result == null) result = caseDocumentedNamedElement(source);
+				if (result == null) result = caseNamedElement(source);
+				if (result == null) result = caseDocumented(source);
+				if (result == null) result = caseModelElement(source);
+				if (result == null) result = caseMarked(source);
+				if (result == null) result = caseAdaptable(source);
+				if (result == null) result = caseIMarked(source);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -644,145 +637,6 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				if (result == null) result = caseMarked(sourceErrorTransition);
 				if (result == null) result = caseAdaptable(sourceErrorTransition);
 				if (result == null) result = caseIMarked(sourceErrorTransition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FunctionFlowPackage.SOURCE_FLOW: {
-				SourceFlow sourceFlow = (SourceFlow)theEObject;
-				T1 result = caseSourceFlow(sourceFlow);
-				if (result == null) result = caseFlow(sourceFlow);
-				if (result == null) result = caseSource(sourceFlow);
-				if (result == null) result = caseFlowElement(sourceFlow);
-				if (result == null) result = caseDomain(sourceFlow);
-				if (result == null) result = caseArchitectureDescriptionElement(sourceFlow);
-				if (result == null) result = caseArchitectureDescription(sourceFlow);
-				if (result == null) result = caseDocumentedNamedGraphElement(sourceFlow);
-				if (result == null) result = caseArchitectureElement(sourceFlow);
-				if (result == null) result = caseUndergoer(sourceFlow);
-				if (result == null) result = caseDocumentedNamedGraph(sourceFlow);
-				if (result == null) result = caseGraphElement(sourceFlow);
-				if (result == null) result = caseDocumentedNamedStringIdentity(sourceFlow);
-				if (result == null) result = casePeriod(sourceFlow);
-				if (result == null) result = caseGraph(sourceFlow);
-				if (result == null) result = caseStringIdentity(sourceFlow);
-				if (result == null) result = caseSemanticElement(sourceFlow);
-				if (result == null) result = caseDocumentedNamedElement(sourceFlow);
-				if (result == null) result = caseNamedElement(sourceFlow);
-				if (result == null) result = caseDocumented(sourceFlow);
-				if (result == null) result = caseModelElement(sourceFlow);
-				if (result == null) result = caseMarked(sourceFlow);
-				if (result == null) result = caseAdaptable(sourceFlow);
-				if (result == null) result = caseIMarked(sourceFlow);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FunctionFlowPackage.SOURCE_SUPPLIER_FLOW: {
-				SourceSupplierFlow sourceSupplierFlow = (SourceSupplierFlow)theEObject;
-				T1 result = caseSourceSupplierFlow(sourceSupplierFlow);
-				if (result == null) result = caseSupplierFlow(sourceSupplierFlow);
-				if (result == null) result = caseSource(sourceSupplierFlow);
-				if (result == null) result = caseFlow(sourceSupplierFlow);
-				if (result == null) result = caseCompositeRelationshipSource(sourceSupplierFlow);
-				if (result == null) result = caseFlowElement(sourceSupplierFlow);
-				if (result == null) result = caseDomain(sourceSupplierFlow);
-				if (result == null) result = caseRelationshipSource(sourceSupplierFlow);
-				if (result == null) result = caseArchitectureDescriptionElement(sourceSupplierFlow);
-				if (result == null) result = caseArchitectureDescription(sourceSupplierFlow);
-				if (result == null) result = caseDocumentedNamedConnectionSource(sourceSupplierFlow);
-				if (result == null) result = caseDocumentedNamedGraphElement(sourceSupplierFlow);
-				if (result == null) result = caseArchitectureElement(sourceSupplierFlow);
-				if (result == null) result = caseUndergoer(sourceSupplierFlow);
-				if (result == null) result = caseDocumentedNamedGraph(sourceSupplierFlow);
-				if (result == null) result = caseConnectionSource(sourceSupplierFlow);
-				if (result == null) result = caseGraphElement(sourceSupplierFlow);
-				if (result == null) result = caseDocumentedNamedStringIdentity(sourceSupplierFlow);
-				if (result == null) result = casePeriod(sourceSupplierFlow);
-				if (result == null) result = caseGraph(sourceSupplierFlow);
-				if (result == null) result = caseStringIdentity(sourceSupplierFlow);
-				if (result == null) result = caseSemanticElement(sourceSupplierFlow);
-				if (result == null) result = caseDocumentedNamedElement(sourceSupplierFlow);
-				if (result == null) result = caseNamedElement(sourceSupplierFlow);
-				if (result == null) result = caseDocumented(sourceSupplierFlow);
-				if (result == null) result = caseModelElement(sourceSupplierFlow);
-				if (result == null) result = caseMarked(sourceSupplierFlow);
-				if (result == null) result = caseAdaptable(sourceSupplierFlow);
-				if (result == null) result = caseIMarked(sourceSupplierFlow);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FunctionFlowPackage.SOURCE_CONSUMER_FLOW: {
-				SourceConsumerFlow sourceConsumerFlow = (SourceConsumerFlow)theEObject;
-				T1 result = caseSourceConsumerFlow(sourceConsumerFlow);
-				if (result == null) result = caseConsumerFlow(sourceConsumerFlow);
-				if (result == null) result = caseSource(sourceConsumerFlow);
-				if (result == null) result = caseFlow(sourceConsumerFlow);
-				if (result == null) result = caseCompositeRelationshipTarget(sourceConsumerFlow);
-				if (result == null) result = caseFlowElement(sourceConsumerFlow);
-				if (result == null) result = caseDomain(sourceConsumerFlow);
-				if (result == null) result = caseRelationshipTarget(sourceConsumerFlow);
-				if (result == null) result = caseArchitectureDescriptionElement(sourceConsumerFlow);
-				if (result == null) result = caseArchitectureDescription(sourceConsumerFlow);
-				if (result == null) result = caseDocumentedNamedConnectionTarget(sourceConsumerFlow);
-				if (result == null) result = caseDocumentedNamedGraphElement(sourceConsumerFlow);
-				if (result == null) result = caseArchitectureElement(sourceConsumerFlow);
-				if (result == null) result = caseUndergoer(sourceConsumerFlow);
-				if (result == null) result = caseDocumentedNamedGraph(sourceConsumerFlow);
-				if (result == null) result = caseConnectionTarget(sourceConsumerFlow);
-				if (result == null) result = caseGraphElement(sourceConsumerFlow);
-				if (result == null) result = caseDocumentedNamedStringIdentity(sourceConsumerFlow);
-				if (result == null) result = casePeriod(sourceConsumerFlow);
-				if (result == null) result = caseGraph(sourceConsumerFlow);
-				if (result == null) result = caseStringIdentity(sourceConsumerFlow);
-				if (result == null) result = caseSemanticElement(sourceConsumerFlow);
-				if (result == null) result = caseDocumentedNamedElement(sourceConsumerFlow);
-				if (result == null) result = caseNamedElement(sourceConsumerFlow);
-				if (result == null) result = caseDocumented(sourceConsumerFlow);
-				if (result == null) result = caseModelElement(sourceConsumerFlow);
-				if (result == null) result = caseMarked(sourceConsumerFlow);
-				if (result == null) result = caseAdaptable(sourceConsumerFlow);
-				if (result == null) result = caseIMarked(sourceConsumerFlow);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FunctionFlowPackage.SOURCE_FUNCTION_FLOW: {
-				SourceFunctionFlow sourceFunctionFlow = (SourceFunctionFlow)theEObject;
-				T1 result = caseSourceFunctionFlow(sourceFunctionFlow);
-				if (result == null) result = caseFunctionFlow(sourceFunctionFlow);
-				if (result == null) result = caseSource(sourceFunctionFlow);
-				if (result == null) result = caseCompositeNode(sourceFunctionFlow);
-				if (result == null) result = caseSupplierFlow(sourceFunctionFlow);
-				if (result == null) result = caseConsumerFlow(sourceFunctionFlow);
-				if (result == null) result = caseNode(sourceFunctionFlow);
-				if (result == null) result = caseFlow(sourceFunctionFlow);
-				if (result == null) result = caseCompositeRelationshipSource(sourceFunctionFlow);
-				if (result == null) result = caseCompositeRelationshipTarget(sourceFunctionFlow);
-				if (result == null) result = caseDomain(sourceFunctionFlow);
-				if (result == null) result = caseArchitectureDescription(sourceFunctionFlow);
-				if (result == null) result = caseRelationshipSource(sourceFunctionFlow);
-				if (result == null) result = caseRelationshipTarget(sourceFunctionFlow);
-				if (result == null) result = caseFlowElement(sourceFunctionFlow);
-				if (result == null) result = caseArchitectureDescriptionElement(sourceFunctionFlow);
-				if (result == null) result = caseArchitectureElement(sourceFunctionFlow);
-				if (result == null) result = caseUndergoer(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedGraph(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedConnectionSource(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedConnectionTarget(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedGraphElement(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedStringIdentity(sourceFunctionFlow);
-				if (result == null) result = casePeriod(sourceFunctionFlow);
-				if (result == null) result = caseGraph(sourceFunctionFlow);
-				if (result == null) result = caseConnectionSource(sourceFunctionFlow);
-				if (result == null) result = caseConnectionTarget(sourceFunctionFlow);
-				if (result == null) result = caseGraphElement(sourceFunctionFlow);
-				if (result == null) result = caseStringIdentity(sourceFunctionFlow);
-				if (result == null) result = caseSemanticElement(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedElement(sourceFunctionFlow);
-				if (result == null) result = caseNamedElement(sourceFunctionFlow);
-				if (result == null) result = caseDocumented(sourceFunctionFlow);
-				if (result == null) result = caseModelElement(sourceFunctionFlow);
-				if (result == null) result = caseMarked(sourceFunctionFlow);
-				if (result == null) result = caseAdaptable(sourceFunctionFlow);
-				if (result == null) result = caseIMarked(sourceFunctionFlow);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1001,21 +855,6 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Source Flow Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Source Flow Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseSourceFlowElement(SourceFlowElement object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Source Supplier</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1087,66 +926,6 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseSourceErrorTransition(SourceErrorTransition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Source Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Source Flow</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseSourceFlow(SourceFlow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Source Supplier Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Source Supplier Flow</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseSourceSupplierFlow(SourceSupplierFlow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Source Consumer Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Source Consumer Flow</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseSourceConsumerFlow(SourceConsumerFlow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Source Function Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Source Function Flow</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseSourceFunctionFlow(SourceFunctionFlow object) {
 		return null;
 	}
 

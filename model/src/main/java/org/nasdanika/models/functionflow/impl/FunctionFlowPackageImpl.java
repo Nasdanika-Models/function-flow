@@ -25,14 +25,9 @@ import org.nasdanika.models.functionflow.FunctionFlowFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 import org.nasdanika.models.functionflow.Source;
 import org.nasdanika.models.functionflow.SourceConsumer;
-import org.nasdanika.models.functionflow.SourceConsumerFlow;
 import org.nasdanika.models.functionflow.SourceErrorTransition;
-import org.nasdanika.models.functionflow.SourceFlow;
-import org.nasdanika.models.functionflow.SourceFlowElement;
 import org.nasdanika.models.functionflow.SourceFunction;
-import org.nasdanika.models.functionflow.SourceFunctionFlow;
 import org.nasdanika.models.functionflow.SourceSupplier;
-import org.nasdanika.models.functionflow.SourceSupplierFlow;
 import org.nasdanika.models.functionflow.SourceTransition;
 import org.nasdanika.models.functionflow.Start;
 import org.nasdanika.models.functionflow.Supplier;
@@ -153,13 +148,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass sourceFlowElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass sourceSupplierEClass = null;
 
 	/**
@@ -189,34 +177,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	private EClass sourceErrorTransitionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sourceFlowEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sourceSupplierFlowEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sourceConsumerFlowEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sourceFunctionFlowEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -323,6 +283,36 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	@Override
 	public EClass getStart() {
 		return startEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStart_Condition() {
+		return (EAttribute)startEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStart_Order() {
+		return (EAttribute)startEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStart_Output() {
+		return (EAttribute)startEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -521,16 +511,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
-	public EClass getSourceFlowElement() {
-		return sourceFlowElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getSourceSupplier() {
 		return sourceSupplierEClass;
 	}
@@ -581,46 +561,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
-	public EClass getSourceFlow() {
-		return sourceFlowEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSourceSupplierFlow() {
-		return sourceSupplierFlowEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSourceConsumerFlow() {
-		return sourceConsumerFlowEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSourceFunctionFlow() {
-		return sourceFunctionFlowEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public FunctionFlowFactory getFunctionFlowFactory() {
 		return (FunctionFlowFactory)getEFactoryInstance();
 	}
@@ -649,6 +589,9 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		createEAttribute(flowElementEClass, FLOW_ELEMENT__ERRORS);
 
 		startEClass = createEClass(START);
+		createEAttribute(startEClass, START__CONDITION);
+		createEAttribute(startEClass, START__ORDER);
+		createEAttribute(startEClass, START__OUTPUT);
 
 		supplierEClass = createEClass(SUPPLIER);
 		createEAttribute(supplierEClass, SUPPLIER__OUTPUT);
@@ -681,8 +624,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		sourceEClass = createEClass(SOURCE);
 		createEAttribute(sourceEClass, SOURCE__SOURCE);
 
-		sourceFlowElementEClass = createEClass(SOURCE_FLOW_ELEMENT);
-
 		sourceSupplierEClass = createEClass(SOURCE_SUPPLIER);
 
 		sourceConsumerEClass = createEClass(SOURCE_CONSUMER);
@@ -692,14 +633,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		sourceTransitionEClass = createEClass(SOURCE_TRANSITION);
 
 		sourceErrorTransitionEClass = createEClass(SOURCE_ERROR_TRANSITION);
-
-		sourceFlowEClass = createEClass(SOURCE_FLOW);
-
-		sourceSupplierFlowEClass = createEClass(SOURCE_SUPPLIER_FLOW);
-
-		sourceConsumerFlowEClass = createEClass(SOURCE_CONSUMER_FLOW);
-
-		sourceFunctionFlowEClass = createEClass(SOURCE_FUNCTION_FLOW);
 	}
 
 	/**
@@ -757,8 +690,7 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		functionFlowEClass.getESuperTypes().add(theArchitecturePackage.getCompositeNode());
 		functionFlowEClass.getESuperTypes().add(this.getSupplierFlow());
 		functionFlowEClass.getESuperTypes().add(this.getConsumerFlow());
-		sourceFlowElementEClass.getESuperTypes().add(this.getFlowElement());
-		sourceFlowElementEClass.getESuperTypes().add(this.getSource());
+		sourceEClass.getESuperTypes().add(this.getFlowElement());
 		sourceSupplierEClass.getESuperTypes().add(this.getSupplier());
 		sourceSupplierEClass.getESuperTypes().add(this.getSource());
 		sourceConsumerEClass.getESuperTypes().add(this.getConsumer());
@@ -769,14 +701,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		sourceTransitionEClass.getESuperTypes().add(this.getSource());
 		sourceErrorTransitionEClass.getESuperTypes().add(this.getErrorTransition());
 		sourceErrorTransitionEClass.getESuperTypes().add(this.getSource());
-		sourceFlowEClass.getESuperTypes().add(this.getFlow());
-		sourceFlowEClass.getESuperTypes().add(this.getSource());
-		sourceSupplierFlowEClass.getESuperTypes().add(this.getSupplierFlow());
-		sourceSupplierFlowEClass.getESuperTypes().add(this.getSource());
-		sourceConsumerFlowEClass.getESuperTypes().add(this.getConsumerFlow());
-		sourceConsumerFlowEClass.getESuperTypes().add(this.getSource());
-		sourceFunctionFlowEClass.getESuperTypes().add(this.getFunctionFlow());
-		sourceFunctionFlowEClass.getESuperTypes().add(this.getSource());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(flowElementEClass, FlowElement.class, "FlowElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -784,6 +708,9 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		initEAttribute(getFlowElement_Errors(), ecorePackage.getEString(), "errors", null, 0, -1, FlowElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(startEClass, Start.class, "Start", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStart_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Start.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStart_Order(), ecorePackage.getEInt(), "order", null, 0, 1, Start.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStart_Output(), ecorePackage.getEString(), "output", null, 0, 1, Start.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(supplierEClass, Supplier.class, "Supplier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSupplier_Output(), ecorePackage.getEString(), "output", null, 0, 1, Supplier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -816,8 +743,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		initEClass(sourceEClass, Source.class, "Source", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSource_Source(), ecorePackage.getEString(), "source", null, 0, 1, Source.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(sourceFlowElementEClass, SourceFlowElement.class, "SourceFlowElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(sourceSupplierEClass, SourceSupplier.class, "SourceSupplier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(sourceConsumerEClass, SourceConsumer.class, "SourceConsumer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -827,14 +752,6 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		initEClass(sourceTransitionEClass, SourceTransition.class, "SourceTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(sourceErrorTransitionEClass, SourceErrorTransition.class, "SourceErrorTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(sourceFlowEClass, SourceFlow.class, "SourceFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(sourceSupplierFlowEClass, SourceSupplierFlow.class, "SourceSupplierFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(sourceConsumerFlowEClass, SourceConsumerFlow.class, "SourceConsumerFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(sourceFunctionFlowEClass, SourceFunctionFlow.class, "SourceFunctionFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -852,6 +769,12 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 */
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";
+		addAnnotation
+		  (getStart_Output(),
+		   source,
+		   new String[] {
+			   "documentation", "Output type"
+		   });
 		addAnnotation
 		  (getSupplier_Output(),
 		   source,

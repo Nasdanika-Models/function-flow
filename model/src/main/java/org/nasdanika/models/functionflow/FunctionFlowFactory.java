@@ -139,15 +139,6 @@ public interface FunctionFlowFactory extends EFactory {
 	FunctionFlow createFunctionFlow();
 
 	/**
-	 * Returns a new object of class '<em>Source Flow Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Source Flow Element</em>'.
-	 * @generated
-	 */
-	SourceFlowElement createSourceFlowElement();
-
-	/**
 	 * Returns a new object of class '<em>Source Supplier</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -191,42 +182,6 @@ public interface FunctionFlowFactory extends EFactory {
 	 * @generated
 	 */
 	SourceErrorTransition createSourceErrorTransition();
-
-	/**
-	 * Returns a new object of class '<em>Source Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Source Flow</em>'.
-	 * @generated
-	 */
-	SourceFlow createSourceFlow();
-
-	/**
-	 * Returns a new object of class '<em>Source Supplier Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Source Supplier Flow</em>'.
-	 * @generated
-	 */
-	SourceSupplierFlow createSourceSupplierFlow();
-
-	/**
-	 * Returns a new object of class '<em>Source Consumer Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Source Consumer Flow</em>'.
-	 * @generated
-	 */
-	SourceConsumerFlow createSourceConsumerFlow();
-
-	/**
-	 * Returns a new object of class '<em>Source Function Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Source Function Flow</em>'.
-	 * @generated
-	 */
-	SourceFunctionFlow createSourceFunctionFlow();
 
 	/**
 	 * Returns the package supported by this factory.
