@@ -15,6 +15,7 @@ import org.nasdanika.models.architecture.ArchitecturePackage;
 import org.nasdanika.models.functionflow.Consumer;
 import org.nasdanika.models.functionflow.ConsumerFlow;
 import org.nasdanika.models.functionflow.End;
+import org.nasdanika.models.functionflow.ErrorHandler;
 import org.nasdanika.models.functionflow.ErrorTransition;
 import org.nasdanika.models.functionflow.Flow;
 import org.nasdanika.models.functionflow.FlowElement;
@@ -69,6 +70,13 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	private EClass supplierEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass errorHandlerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -303,6 +311,16 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFlowElement_Errors() {
+		return (EAttribute)flowElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getStart() {
 		return startEClass;
 	}
@@ -325,6 +343,16 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	@Override
 	public EAttribute getSupplier_Output() {
 		return (EAttribute)supplierEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getErrorHandler() {
+		return errorHandlerEClass;
 	}
 
 	/**
@@ -618,11 +646,14 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		// Create classes and their features
 		flowElementEClass = createEClass(FLOW_ELEMENT);
 		createEAttribute(flowElementEClass, FLOW_ELEMENT__IMPLEMENTATION);
+		createEAttribute(flowElementEClass, FLOW_ELEMENT__ERRORS);
 
 		startEClass = createEClass(START);
 
 		supplierEClass = createEClass(SUPPLIER);
 		createEAttribute(supplierEClass, SUPPLIER__OUTPUT);
+
+		errorHandlerEClass = createEClass(ERROR_HANDLER);
 
 		endEClass = createEClass(END);
 
@@ -706,9 +737,12 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		startEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipSource());
 		supplierEClass.getESuperTypes().add(this.getFlowElement());
 		supplierEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipSource());
+		errorHandlerEClass.getESuperTypes().add(this.getFlowElement());
+		errorHandlerEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipSource());
 		endEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipTarget());
 		consumerEClass.getESuperTypes().add(this.getFlowElement());
 		consumerEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipTarget());
+		functionEClass.getESuperTypes().add(theArchitecturePackage.getNode());
 		functionEClass.getESuperTypes().add(this.getSupplier());
 		functionEClass.getESuperTypes().add(this.getConsumer());
 		transitionEClass.getESuperTypes().add(this.getFlowElement());
@@ -720,6 +754,7 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		supplierFlowEClass.getESuperTypes().add(theArchitecturePackage.getCompositeRelationshipSource());
 		consumerFlowEClass.getESuperTypes().add(this.getFlow());
 		consumerFlowEClass.getESuperTypes().add(theArchitecturePackage.getCompositeRelationshipTarget());
+		functionFlowEClass.getESuperTypes().add(theArchitecturePackage.getCompositeNode());
 		functionFlowEClass.getESuperTypes().add(this.getSupplierFlow());
 		functionFlowEClass.getESuperTypes().add(this.getConsumerFlow());
 		sourceFlowElementEClass.getESuperTypes().add(this.getFlowElement());
@@ -746,11 +781,14 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		// Initialize classes, features, and operations; add parameters
 		initEClass(flowElementEClass, FlowElement.class, "FlowElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFlowElement_Implementation(), ecorePackage.getEString(), "implementation", null, 0, 1, FlowElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFlowElement_Errors(), ecorePackage.getEString(), "errors", null, 0, -1, FlowElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(startEClass, Start.class, "Start", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(supplierEClass, Supplier.class, "Supplier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSupplier_Output(), ecorePackage.getEString(), "output", null, 0, 1, Supplier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(errorHandlerEClass, ErrorHandler.class, "ErrorHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(endEClass, End.class, "End", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -4,6 +4,8 @@
     nsPrefix="org.nasdanika.models.function-flow">
   <eClassifiers xsi:type="ecore:EClass" name="FlowElement" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//ArchitectureDescriptionElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errors" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Start" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipSource"/>
   <eClassifiers xsi:type="ecore:EClass" name="Supplier" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipSource">
@@ -13,6 +15,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ErrorHandler" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipSource"/>
   <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipTarget"/>
   <eClassifiers xsi:type="ecore:EClass" name="Consumer" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipTarget">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
@@ -21,7 +24,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Supplier #//Consumer">
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//Node #//Supplier #//Consumer">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value=""/>
     </eAnnotations>
@@ -44,7 +47,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Flow" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//Domain"/>
   <eClassifiers xsi:type="ecore:EClass" name="SupplierFlow" eSuperTypes="#//Flow ../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeRelationshipSource"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConsumerFlow" eSuperTypes="#//Flow ../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeRelationshipTarget"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionFlow" eSuperTypes="#//SupplierFlow #//ConsumerFlow"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionFlow" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeNode #//SupplierFlow #//ConsumerFlow"/>
   <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

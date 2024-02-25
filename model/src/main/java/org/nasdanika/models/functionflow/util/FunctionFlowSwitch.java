@@ -25,9 +25,11 @@ import org.nasdanika.graph.model.GraphElement;
 import org.nasdanika.models.architecture.ArchitectureDescription;
 import org.nasdanika.models.architecture.ArchitectureDescriptionElement;
 import org.nasdanika.models.architecture.ArchitectureElement;
+import org.nasdanika.models.architecture.CompositeNode;
 import org.nasdanika.models.architecture.CompositeRelationshipSource;
 import org.nasdanika.models.architecture.CompositeRelationshipTarget;
 import org.nasdanika.models.architecture.Domain;
+import org.nasdanika.models.architecture.Node;
 import org.nasdanika.models.architecture.Relationship;
 import org.nasdanika.models.architecture.RelationshipSource;
 import org.nasdanika.models.architecture.RelationshipTarget;
@@ -175,6 +177,32 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FunctionFlowPackage.ERROR_HANDLER: {
+				ErrorHandler errorHandler = (ErrorHandler)theEObject;
+				T1 result = caseErrorHandler(errorHandler);
+				if (result == null) result = caseFlowElement(errorHandler);
+				if (result == null) result = caseRelationshipSource(errorHandler);
+				if (result == null) result = caseArchitectureDescriptionElement(errorHandler);
+				if (result == null) result = caseDocumentedNamedConnectionSource(errorHandler);
+				if (result == null) result = caseDocumentedNamedGraphElement(errorHandler);
+				if (result == null) result = caseArchitectureElement(errorHandler);
+				if (result == null) result = caseUndergoer(errorHandler);
+				if (result == null) result = caseConnectionSource(errorHandler);
+				if (result == null) result = caseGraphElement(errorHandler);
+				if (result == null) result = caseDocumentedNamedStringIdentity(errorHandler);
+				if (result == null) result = casePeriod(errorHandler);
+				if (result == null) result = caseStringIdentity(errorHandler);
+				if (result == null) result = caseSemanticElement(errorHandler);
+				if (result == null) result = caseDocumentedNamedElement(errorHandler);
+				if (result == null) result = caseNamedElement(errorHandler);
+				if (result == null) result = caseDocumented(errorHandler);
+				if (result == null) result = caseModelElement(errorHandler);
+				if (result == null) result = caseMarked(errorHandler);
+				if (result == null) result = caseAdaptable(errorHandler);
+				if (result == null) result = caseIMarked(errorHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case FunctionFlowPackage.END: {
 				End end = (End)theEObject;
 				T1 result = caseEnd(end);
@@ -229,18 +257,19 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 			case FunctionFlowPackage.FUNCTION: {
 				Function function = (Function)theEObject;
 				T1 result = caseFunction(function);
+				if (result == null) result = caseNode(function);
 				if (result == null) result = caseSupplier(function);
 				if (result == null) result = caseConsumer(function);
-				if (result == null) result = caseFlowElement(function);
 				if (result == null) result = caseRelationshipSource(function);
 				if (result == null) result = caseRelationshipTarget(function);
-				if (result == null) result = caseArchitectureDescriptionElement(function);
+				if (result == null) result = caseFlowElement(function);
 				if (result == null) result = caseDocumentedNamedConnectionSource(function);
+				if (result == null) result = caseArchitectureDescriptionElement(function);
 				if (result == null) result = caseDocumentedNamedConnectionTarget(function);
 				if (result == null) result = caseDocumentedNamedGraphElement(function);
+				if (result == null) result = caseConnectionSource(function);
 				if (result == null) result = caseArchitectureElement(function);
 				if (result == null) result = caseUndergoer(function);
-				if (result == null) result = caseConnectionSource(function);
 				if (result == null) result = caseConnectionTarget(function);
 				if (result == null) result = caseGraphElement(function);
 				if (result == null) result = caseDocumentedNamedStringIdentity(function);
@@ -404,29 +433,31 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 			case FunctionFlowPackage.FUNCTION_FLOW: {
 				FunctionFlow functionFlow = (FunctionFlow)theEObject;
 				T1 result = caseFunctionFlow(functionFlow);
+				if (result == null) result = caseCompositeNode(functionFlow);
 				if (result == null) result = caseSupplierFlow(functionFlow);
 				if (result == null) result = caseConsumerFlow(functionFlow);
+				if (result == null) result = caseNode(functionFlow);
 				if (result == null) result = caseFlow(functionFlow);
 				if (result == null) result = caseCompositeRelationshipSource(functionFlow);
 				if (result == null) result = caseCompositeRelationshipTarget(functionFlow);
-				if (result == null) result = caseFlowElement(functionFlow);
 				if (result == null) result = caseDomain(functionFlow);
+				if (result == null) result = caseArchitectureDescription(functionFlow);
 				if (result == null) result = caseRelationshipSource(functionFlow);
 				if (result == null) result = caseRelationshipTarget(functionFlow);
+				if (result == null) result = caseFlowElement(functionFlow);
 				if (result == null) result = caseArchitectureDescriptionElement(functionFlow);
-				if (result == null) result = caseArchitectureDescription(functionFlow);
-				if (result == null) result = caseDocumentedNamedConnectionSource(functionFlow);
-				if (result == null) result = caseDocumentedNamedConnectionTarget(functionFlow);
-				if (result == null) result = caseDocumentedNamedGraphElement(functionFlow);
 				if (result == null) result = caseArchitectureElement(functionFlow);
 				if (result == null) result = caseUndergoer(functionFlow);
 				if (result == null) result = caseDocumentedNamedGraph(functionFlow);
-				if (result == null) result = caseConnectionSource(functionFlow);
-				if (result == null) result = caseConnectionTarget(functionFlow);
-				if (result == null) result = caseGraphElement(functionFlow);
+				if (result == null) result = caseDocumentedNamedConnectionSource(functionFlow);
+				if (result == null) result = caseDocumentedNamedConnectionTarget(functionFlow);
+				if (result == null) result = caseDocumentedNamedGraphElement(functionFlow);
 				if (result == null) result = caseDocumentedNamedStringIdentity(functionFlow);
 				if (result == null) result = casePeriod(functionFlow);
 				if (result == null) result = caseGraph(functionFlow);
+				if (result == null) result = caseConnectionSource(functionFlow);
+				if (result == null) result = caseConnectionTarget(functionFlow);
+				if (result == null) result = caseGraphElement(functionFlow);
 				if (result == null) result = caseStringIdentity(functionFlow);
 				if (result == null) result = caseSemanticElement(functionFlow);
 				if (result == null) result = caseDocumentedNamedElement(functionFlow);
@@ -530,18 +561,19 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				T1 result = caseSourceFunction(sourceFunction);
 				if (result == null) result = caseFunction(sourceFunction);
 				if (result == null) result = caseSource(sourceFunction);
+				if (result == null) result = caseNode(sourceFunction);
 				if (result == null) result = caseSupplier(sourceFunction);
 				if (result == null) result = caseConsumer(sourceFunction);
-				if (result == null) result = caseFlowElement(sourceFunction);
 				if (result == null) result = caseRelationshipSource(sourceFunction);
 				if (result == null) result = caseRelationshipTarget(sourceFunction);
-				if (result == null) result = caseArchitectureDescriptionElement(sourceFunction);
+				if (result == null) result = caseFlowElement(sourceFunction);
 				if (result == null) result = caseDocumentedNamedConnectionSource(sourceFunction);
+				if (result == null) result = caseArchitectureDescriptionElement(sourceFunction);
 				if (result == null) result = caseDocumentedNamedConnectionTarget(sourceFunction);
 				if (result == null) result = caseDocumentedNamedGraphElement(sourceFunction);
+				if (result == null) result = caseConnectionSource(sourceFunction);
 				if (result == null) result = caseArchitectureElement(sourceFunction);
 				if (result == null) result = caseUndergoer(sourceFunction);
-				if (result == null) result = caseConnectionSource(sourceFunction);
 				if (result == null) result = caseConnectionTarget(sourceFunction);
 				if (result == null) result = caseGraphElement(sourceFunction);
 				if (result == null) result = caseDocumentedNamedStringIdentity(sourceFunction);
@@ -717,29 +749,31 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				T1 result = caseSourceFunctionFlow(sourceFunctionFlow);
 				if (result == null) result = caseFunctionFlow(sourceFunctionFlow);
 				if (result == null) result = caseSource(sourceFunctionFlow);
+				if (result == null) result = caseCompositeNode(sourceFunctionFlow);
 				if (result == null) result = caseSupplierFlow(sourceFunctionFlow);
 				if (result == null) result = caseConsumerFlow(sourceFunctionFlow);
+				if (result == null) result = caseNode(sourceFunctionFlow);
 				if (result == null) result = caseFlow(sourceFunctionFlow);
 				if (result == null) result = caseCompositeRelationshipSource(sourceFunctionFlow);
 				if (result == null) result = caseCompositeRelationshipTarget(sourceFunctionFlow);
-				if (result == null) result = caseFlowElement(sourceFunctionFlow);
 				if (result == null) result = caseDomain(sourceFunctionFlow);
+				if (result == null) result = caseArchitectureDescription(sourceFunctionFlow);
 				if (result == null) result = caseRelationshipSource(sourceFunctionFlow);
 				if (result == null) result = caseRelationshipTarget(sourceFunctionFlow);
+				if (result == null) result = caseFlowElement(sourceFunctionFlow);
 				if (result == null) result = caseArchitectureDescriptionElement(sourceFunctionFlow);
-				if (result == null) result = caseArchitectureDescription(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedConnectionSource(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedConnectionTarget(sourceFunctionFlow);
-				if (result == null) result = caseDocumentedNamedGraphElement(sourceFunctionFlow);
 				if (result == null) result = caseArchitectureElement(sourceFunctionFlow);
 				if (result == null) result = caseUndergoer(sourceFunctionFlow);
 				if (result == null) result = caseDocumentedNamedGraph(sourceFunctionFlow);
-				if (result == null) result = caseConnectionSource(sourceFunctionFlow);
-				if (result == null) result = caseConnectionTarget(sourceFunctionFlow);
-				if (result == null) result = caseGraphElement(sourceFunctionFlow);
+				if (result == null) result = caseDocumentedNamedConnectionSource(sourceFunctionFlow);
+				if (result == null) result = caseDocumentedNamedConnectionTarget(sourceFunctionFlow);
+				if (result == null) result = caseDocumentedNamedGraphElement(sourceFunctionFlow);
 				if (result == null) result = caseDocumentedNamedStringIdentity(sourceFunctionFlow);
 				if (result == null) result = casePeriod(sourceFunctionFlow);
 				if (result == null) result = caseGraph(sourceFunctionFlow);
+				if (result == null) result = caseConnectionSource(sourceFunctionFlow);
+				if (result == null) result = caseConnectionTarget(sourceFunctionFlow);
+				if (result == null) result = caseGraphElement(sourceFunctionFlow);
 				if (result == null) result = caseStringIdentity(sourceFunctionFlow);
 				if (result == null) result = caseSemanticElement(sourceFunctionFlow);
 				if (result == null) result = caseDocumentedNamedElement(sourceFunctionFlow);
@@ -798,6 +832,21 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseSupplier(Supplier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Error Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Error Handler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseErrorHandler(ErrorHandler object) {
 		return null;
 	}
 
@@ -1432,6 +1481,21 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseNode(Node object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1563,6 +1627,21 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseCompositeRelationshipTarget(CompositeRelationshipTarget object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseCompositeNode(CompositeNode object) {
 		return null;
 	}
 

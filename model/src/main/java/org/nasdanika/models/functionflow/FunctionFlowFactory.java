@@ -49,6 +49,15 @@ public interface FunctionFlowFactory extends EFactory {
 	Supplier createSupplier();
 
 	/**
+	 * Returns a new object of class '<em>Error Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Error Handler</em>'.
+	 * @generated
+	 */
+	ErrorHandler createErrorHandler();
+
+	/**
 	 * Returns a new object of class '<em>End</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

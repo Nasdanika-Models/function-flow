@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.functionflow;
 
+import org.nasdanika.models.architecture.Node;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -17,5 +19,5 @@ package org.nasdanika.models.functionflow;
  * @model
  * @generated
  */
-public interface Function extends Supplier, Consumer {
+public interface Function extends Node, Supplier, Consumer {
 } // Function

@@ -3,27 +3,18 @@
 package org.nasdanika.models.functionflow.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.nasdanika.graph.model.ConnectionTarget;
-import org.nasdanika.graph.model.DocumentedNamedConnectionTarget;
-import org.nasdanika.graph.model.ModelPackage;
-
+import org.nasdanika.models.architecture.CompositeRelationshipSource;
 import org.nasdanika.models.architecture.CompositeRelationshipTarget;
-import org.nasdanika.models.architecture.Relationship;
-import org.nasdanika.models.architecture.RelationshipTarget;
-
+import org.nasdanika.models.architecture.impl.CompositeNodeImpl;
 import org.nasdanika.models.functionflow.ConsumerFlow;
+import org.nasdanika.models.functionflow.Flow;
+import org.nasdanika.models.functionflow.FlowElement;
 import org.nasdanika.models.functionflow.FunctionFlow;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
+import org.nasdanika.models.functionflow.SupplierFlow;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,12 +24,23 @@ import org.nasdanika.models.functionflow.FunctionFlowPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.functionflow.impl.FunctionFlowImpl#getIncomingConnections <em>Incoming Connections</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.impl.FunctionFlowImpl#getImplementation <em>Implementation</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.impl.FunctionFlowImpl#getErrors <em>Errors</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
+public class FunctionFlowImpl extends CompositeNodeImpl implements FunctionFlow {
+	/**
+	 * The default value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplementation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMPLEMENTATION_EDEFAULT = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,10 +65,19 @@ public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Relationship> getIncomingConnections() {
-		return (EList<Relationship>)eDynamicGet(FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS, ModelPackage.Literals.CONNECTION_TARGET__INCOMING_CONNECTIONS, true, true);
+	public String getImplementation() {
+		return (String)eDynamicGet(FunctionFlowPackage.FUNCTION_FLOW__IMPLEMENTATION, FunctionFlowPackage.Literals.FLOW_ELEMENT__IMPLEMENTATION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImplementation(String newImplementation) {
+		eDynamicSet(FunctionFlowPackage.FUNCTION_FLOW__IMPLEMENTATION, FunctionFlowPackage.Literals.FLOW_ELEMENT__IMPLEMENTATION, newImplementation);
 	}
 
 	/**
@@ -76,26 +87,8 @@ public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingConnections()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS:
-				return ((InternalEList<?>)getIncomingConnections()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public EList<String> getErrors() {
+		return (EList<String>)eDynamicGet(FunctionFlowPackage.FUNCTION_FLOW__ERRORS, FunctionFlowPackage.Literals.FLOW_ELEMENT__ERRORS, true, true);
 	}
 
 	/**
@@ -106,8 +99,10 @@ public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS:
-				return getIncomingConnections();
+			case FunctionFlowPackage.FUNCTION_FLOW__IMPLEMENTATION:
+				return getImplementation();
+			case FunctionFlowPackage.FUNCTION_FLOW__ERRORS:
+				return getErrors();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -121,9 +116,12 @@ public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS:
-				getIncomingConnections().clear();
-				getIncomingConnections().addAll((Collection<? extends Relationship>)newValue);
+			case FunctionFlowPackage.FUNCTION_FLOW__IMPLEMENTATION:
+				setImplementation((String)newValue);
+				return;
+			case FunctionFlowPackage.FUNCTION_FLOW__ERRORS:
+				getErrors().clear();
+				getErrors().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,8 +135,11 @@ public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS:
-				getIncomingConnections().clear();
+			case FunctionFlowPackage.FUNCTION_FLOW__IMPLEMENTATION:
+				setImplementation(IMPLEMENTATION_EDEFAULT);
+				return;
+			case FunctionFlowPackage.FUNCTION_FLOW__ERRORS:
+				getErrors().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -152,8 +153,10 @@ public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS:
-				return !getIncomingConnections().isEmpty();
+			case FunctionFlowPackage.FUNCTION_FLOW__IMPLEMENTATION:
+				return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null : !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
+			case FunctionFlowPackage.FUNCTION_FLOW__ERRORS:
+				return !getErrors().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -165,18 +168,24 @@ public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ConnectionTarget.class) {
+		if (baseClass == FlowElement.class) {
 			switch (derivedFeatureID) {
-				case FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS: return ModelPackage.CONNECTION_TARGET__INCOMING_CONNECTIONS;
+				case FunctionFlowPackage.FUNCTION_FLOW__IMPLEMENTATION: return FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION;
+				case FunctionFlowPackage.FUNCTION_FLOW__ERRORS: return FunctionFlowPackage.FLOW_ELEMENT__ERRORS;
 				default: return -1;
 			}
 		}
-		if (baseClass == DocumentedNamedConnectionTarget.class) {
+		if (baseClass == Flow.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
 		}
-		if (baseClass == RelationshipTarget.class) {
+		if (baseClass == CompositeRelationshipSource.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == SupplierFlow.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
@@ -201,18 +210,24 @@ public class FunctionFlowImpl extends SupplierFlowImpl implements FunctionFlow {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ConnectionTarget.class) {
+		if (baseClass == FlowElement.class) {
 			switch (baseFeatureID) {
-				case ModelPackage.CONNECTION_TARGET__INCOMING_CONNECTIONS: return FunctionFlowPackage.FUNCTION_FLOW__INCOMING_CONNECTIONS;
+				case FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION: return FunctionFlowPackage.FUNCTION_FLOW__IMPLEMENTATION;
+				case FunctionFlowPackage.FLOW_ELEMENT__ERRORS: return FunctionFlowPackage.FUNCTION_FLOW__ERRORS;
 				default: return -1;
 			}
 		}
-		if (baseClass == DocumentedNamedConnectionTarget.class) {
+		if (baseClass == Flow.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}
-		if (baseClass == RelationshipTarget.class) {
+		if (baseClass == CompositeRelationshipSource.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == SupplierFlow.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}

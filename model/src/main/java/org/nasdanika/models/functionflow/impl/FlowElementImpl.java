@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.functionflow.impl;
 
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.models.architecture.impl.ArchitectureDescriptionElementImpl;
@@ -18,6 +20,7 @@ import org.nasdanika.models.functionflow.FunctionFlowPackage;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.functionflow.impl.FlowElementImpl#getImplementation <em>Implementation</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.impl.FlowElementImpl#getErrors <em>Errors</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,11 +80,24 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<String> getErrors() {
+		return (EList<String>)eDynamicGet(FunctionFlowPackage.FLOW_ELEMENT__ERRORS, FunctionFlowPackage.Literals.FLOW_ELEMENT__ERRORS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION:
 				return getImplementation();
+			case FunctionFlowPackage.FLOW_ELEMENT__ERRORS:
+				return getErrors();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -91,11 +107,16 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION:
 				setImplementation((String)newValue);
+				return;
+			case FunctionFlowPackage.FLOW_ELEMENT__ERRORS:
+				getErrors().clear();
+				getErrors().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -112,6 +133,9 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 			case FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION:
 				setImplementation(IMPLEMENTATION_EDEFAULT);
 				return;
+			case FunctionFlowPackage.FLOW_ELEMENT__ERRORS:
+				getErrors().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -126,6 +150,8 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 		switch (featureID) {
 			case FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION:
 				return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null : !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
+			case FunctionFlowPackage.FLOW_ELEMENT__ERRORS:
+				return !getErrors().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

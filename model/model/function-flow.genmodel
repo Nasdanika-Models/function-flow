@@ -11,11 +11,13 @@
       ecorePackage="function-flow.ecore#/">
     <genClasses ecoreClass="function-flow.ecore#//FlowElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//FlowElement/implementation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//FlowElement/errors"/>
     </genClasses>
     <genClasses ecoreClass="function-flow.ecore#//Start"/>
     <genClasses ecoreClass="function-flow.ecore#//Supplier">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Supplier/output"/>
     </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//ErrorHandler"/>
     <genClasses ecoreClass="function-flow.ecore#//End"/>
     <genClasses ecoreClass="function-flow.ecore#//Consumer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Consumer/input"/>

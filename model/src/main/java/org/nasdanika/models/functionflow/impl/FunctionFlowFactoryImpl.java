@@ -59,6 +59,7 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 			case FunctionFlowPackage.FLOW_ELEMENT: return createFlowElement();
 			case FunctionFlowPackage.START: return createStart();
 			case FunctionFlowPackage.SUPPLIER: return createSupplier();
+			case FunctionFlowPackage.ERROR_HANDLER: return createErrorHandler();
 			case FunctionFlowPackage.END: return createEnd();
 			case FunctionFlowPackage.CONSUMER: return createConsumer();
 			case FunctionFlowPackage.FUNCTION: return createFunction();
@@ -114,6 +115,17 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 	public Supplier createSupplier() {
 		SupplierImpl supplier = new SupplierImpl();
 		return supplier;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ErrorHandler createErrorHandler() {
+		ErrorHandlerImpl errorHandler = new ErrorHandlerImpl();
+		return errorHandler;
 	}
 
 	/**

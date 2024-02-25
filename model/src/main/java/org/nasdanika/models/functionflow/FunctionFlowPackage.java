@@ -230,13 +230,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int FLOW_ELEMENT__IMPLEMENTATION = ArchitecturePackage.ARCHITECTURE_DESCRIPTION_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_ELEMENT__ERRORS = ArchitecturePackage.ARCHITECTURE_DESCRIPTION_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Flow Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW_ELEMENT_FEATURE_COUNT = ArchitecturePackage.ARCHITECTURE_DESCRIPTION_ELEMENT_FEATURE_COUNT + 1;
+	int FLOW_ELEMENT_FEATURE_COUNT = ArchitecturePackage.ARCHITECTURE_DESCRIPTION_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Flow Element</em>' class.
@@ -610,6 +619,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SUPPLIER__IMPLEMENTATION = FLOW_ELEMENT__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLIER__ERRORS = FLOW_ELEMENT__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -646,6 +664,214 @@ public interface FunctionFlowPackage extends EPackage {
 	int SUPPLIER_OPERATION_COUNT = FLOW_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.ErrorHandlerImpl <em>Error Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.functionflow.impl.ErrorHandlerImpl
+	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getErrorHandler()
+	 * @generated
+	 */
+	int ERROR_HANDLER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__ID = FLOW_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__SEMANTIC_MAPPINGS = FLOW_ELEMENT__SEMANTIC_MAPPINGS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__MARKERS = FLOW_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__URIS = FLOW_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__DESCRIPTION = FLOW_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__UUID = FLOW_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__LABEL_PROTOTYPE = FLOW_ELEMENT__LABEL_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__REPRESENTATIONS = FLOW_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__ANNOTATIONS = FLOW_ELEMENT__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__NAME = FLOW_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__CONTEXT_HELP = FLOW_ELEMENT__CONTEXT_HELP;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__START = FLOW_ELEMENT__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__END = FLOW_ELEMENT__END;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__DURATION = FLOW_ELEMENT__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__ICON = FLOW_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__ROLES = FLOW_ELEMENT__ROLES;
+
+	/**
+	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__IMPLEMENTATION = FLOW_ELEMENT__IMPLEMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__ERRORS = FLOW_ELEMENT__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__OUTGOING_CONNECTIONS = FLOW_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Error Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER_FEATURE_COUNT = FLOW_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Error Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER_OPERATION_COUNT = FLOW_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.nasdanika.models.functionflow.impl.EndImpl <em>End</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -653,7 +879,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getEnd()
 	 * @generated
 	 */
-	int END = 3;
+	int END = 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -843,7 +1069,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getConsumer()
 	 * @generated
 	 */
-	int CONSUMER = 4;
+	int CONSUMER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1008,6 +1234,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int CONSUMER__IMPLEMENTATION = FLOW_ELEMENT__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER__ERRORS = FLOW_ELEMENT__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1051,7 +1286,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getFunction()
 	 * @generated
 	 */
-	int FUNCTION = 5;
+	int FUNCTION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1060,7 +1295,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__ID = SUPPLIER__ID;
+	int FUNCTION__ID = ArchitecturePackage.NODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
@@ -1069,7 +1304,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__SEMANTIC_MAPPINGS = SUPPLIER__SEMANTIC_MAPPINGS;
+	int FUNCTION__SEMANTIC_MAPPINGS = ArchitecturePackage.NODE__SEMANTIC_MAPPINGS;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1078,7 +1313,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__MARKERS = SUPPLIER__MARKERS;
+	int FUNCTION__MARKERS = ArchitecturePackage.NODE__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -1087,7 +1322,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__URIS = SUPPLIER__URIS;
+	int FUNCTION__URIS = ArchitecturePackage.NODE__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1096,7 +1331,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__DESCRIPTION = SUPPLIER__DESCRIPTION;
+	int FUNCTION__DESCRIPTION = ArchitecturePackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -1105,7 +1340,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__UUID = SUPPLIER__UUID;
+	int FUNCTION__UUID = ArchitecturePackage.NODE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
@@ -1114,7 +1349,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__LABEL_PROTOTYPE = SUPPLIER__LABEL_PROTOTYPE;
+	int FUNCTION__LABEL_PROTOTYPE = ArchitecturePackage.NODE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1123,7 +1358,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__REPRESENTATIONS = SUPPLIER__REPRESENTATIONS;
+	int FUNCTION__REPRESENTATIONS = ArchitecturePackage.NODE__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -1132,7 +1367,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__ANNOTATIONS = SUPPLIER__ANNOTATIONS;
+	int FUNCTION__ANNOTATIONS = ArchitecturePackage.NODE__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1141,7 +1376,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__NAME = SUPPLIER__NAME;
+	int FUNCTION__NAME = ArchitecturePackage.NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -1150,7 +1385,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__DOCUMENTATION = SUPPLIER__DOCUMENTATION;
+	int FUNCTION__DOCUMENTATION = ArchitecturePackage.NODE__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
@@ -1159,61 +1394,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__CONTEXT_HELP = SUPPLIER__CONTEXT_HELP;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__START = SUPPLIER__START;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__END = SUPPLIER__END;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__DURATION = SUPPLIER__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Icon</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__ICON = SUPPLIER__ICON;
-
-	/**
-	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__ROLES = SUPPLIER__ROLES;
-
-	/**
-	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__IMPLEMENTATION = SUPPLIER__IMPLEMENTATION;
+	int FUNCTION__CONTEXT_HELP = ArchitecturePackage.NODE__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
@@ -1222,16 +1403,52 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__OUTGOING_CONNECTIONS = SUPPLIER__OUTGOING_CONNECTIONS;
+	int FUNCTION__OUTGOING_CONNECTIONS = ArchitecturePackage.NODE__OUTGOING_CONNECTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Output</b></em>' attribute.
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__OUTPUT = SUPPLIER__OUTPUT;
+	int FUNCTION__START = ArchitecturePackage.NODE__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__END = ArchitecturePackage.NODE__END;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__DURATION = ArchitecturePackage.NODE__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__ICON = ArchitecturePackage.NODE__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__ROLES = ArchitecturePackage.NODE__ROLES;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
@@ -1240,7 +1457,34 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__INCOMING_CONNECTIONS = SUPPLIER_FEATURE_COUNT + 0;
+	int FUNCTION__INCOMING_CONNECTIONS = ArchitecturePackage.NODE__INCOMING_CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__IMPLEMENTATION = ArchitecturePackage.NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__ERRORS = ArchitecturePackage.NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__OUTPUT = ArchitecturePackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -1249,7 +1493,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__INPUT = SUPPLIER_FEATURE_COUNT + 1;
+	int FUNCTION__INPUT = ArchitecturePackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Function</em>' class.
@@ -1258,7 +1502,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = SUPPLIER_FEATURE_COUNT + 2;
+	int FUNCTION_FEATURE_COUNT = ArchitecturePackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -1267,7 +1511,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_OPERATION_COUNT = SUPPLIER_OPERATION_COUNT + 0;
+	int FUNCTION_OPERATION_COUNT = ArchitecturePackage.NODE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1278,7 +1522,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getTransition()
 	 * @generated
 	 */
-	int TRANSITION = 6;
+	int TRANSITION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1443,6 +1687,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int TRANSITION__IMPLEMENTATION = FLOW_ELEMENT__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__ERRORS = FLOW_ELEMENT__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1522,7 +1775,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getErrorTransition()
 	 * @generated
 	 */
-	int ERROR_TRANSITION = 7;
+	int ERROR_TRANSITION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1687,6 +1940,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int ERROR_TRANSITION__IMPLEMENTATION = TRANSITION__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_TRANSITION__ERRORS = TRANSITION__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1766,7 +2028,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getFlow()
 	 * @generated
 	 */
-	int FLOW = 8;
+	int FLOW = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1931,6 +2193,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int FLOW__IMPLEMENTATION = FLOW_ELEMENT__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW__ERRORS = FLOW_ELEMENT__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1974,7 +2245,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSupplierFlow()
 	 * @generated
 	 */
-	int SUPPLIER_FLOW = 9;
+	int SUPPLIER_FLOW = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2139,6 +2410,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SUPPLIER_FLOW__IMPLEMENTATION = FLOW__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLIER_FLOW__ERRORS = FLOW__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2191,7 +2471,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getConsumerFlow()
 	 * @generated
 	 */
-	int CONSUMER_FLOW = 10;
+	int CONSUMER_FLOW = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2356,6 +2636,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int CONSUMER_FLOW__IMPLEMENTATION = FLOW__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER_FLOW__ERRORS = FLOW__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2408,7 +2697,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getFunctionFlow()
 	 * @generated
 	 */
-	int FUNCTION_FLOW = 11;
+	int FUNCTION_FLOW = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2417,7 +2706,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ID = SUPPLIER_FLOW__ID;
+	int FUNCTION_FLOW__ID = ArchitecturePackage.COMPOSITE_NODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
@@ -2426,7 +2715,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__SEMANTIC_MAPPINGS = SUPPLIER_FLOW__SEMANTIC_MAPPINGS;
+	int FUNCTION_FLOW__SEMANTIC_MAPPINGS = ArchitecturePackage.COMPOSITE_NODE__SEMANTIC_MAPPINGS;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2435,7 +2724,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__MARKERS = SUPPLIER_FLOW__MARKERS;
+	int FUNCTION_FLOW__MARKERS = ArchitecturePackage.COMPOSITE_NODE__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -2444,7 +2733,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__URIS = SUPPLIER_FLOW__URIS;
+	int FUNCTION_FLOW__URIS = ArchitecturePackage.COMPOSITE_NODE__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2453,7 +2742,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__DESCRIPTION = SUPPLIER_FLOW__DESCRIPTION;
+	int FUNCTION_FLOW__DESCRIPTION = ArchitecturePackage.COMPOSITE_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -2462,7 +2751,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__UUID = SUPPLIER_FLOW__UUID;
+	int FUNCTION_FLOW__UUID = ArchitecturePackage.COMPOSITE_NODE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
@@ -2471,7 +2760,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__LABEL_PROTOTYPE = SUPPLIER_FLOW__LABEL_PROTOTYPE;
+	int FUNCTION_FLOW__LABEL_PROTOTYPE = ArchitecturePackage.COMPOSITE_NODE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2480,7 +2769,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__REPRESENTATIONS = SUPPLIER_FLOW__REPRESENTATIONS;
+	int FUNCTION_FLOW__REPRESENTATIONS = ArchitecturePackage.COMPOSITE_NODE__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -2489,7 +2778,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ANNOTATIONS = SUPPLIER_FLOW__ANNOTATIONS;
+	int FUNCTION_FLOW__ANNOTATIONS = ArchitecturePackage.COMPOSITE_NODE__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2498,7 +2787,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__NAME = SUPPLIER_FLOW__NAME;
+	int FUNCTION_FLOW__NAME = ArchitecturePackage.COMPOSITE_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -2507,7 +2796,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__DOCUMENTATION = SUPPLIER_FLOW__DOCUMENTATION;
+	int FUNCTION_FLOW__DOCUMENTATION = ArchitecturePackage.COMPOSITE_NODE__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
@@ -2516,7 +2805,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__CONTEXT_HELP = SUPPLIER_FLOW__CONTEXT_HELP;
+	int FUNCTION_FLOW__CONTEXT_HELP = ArchitecturePackage.COMPOSITE_NODE__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -2525,7 +2814,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__START = SUPPLIER_FLOW__START;
+	int FUNCTION_FLOW__START = ArchitecturePackage.COMPOSITE_NODE__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -2534,7 +2823,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__END = SUPPLIER_FLOW__END;
+	int FUNCTION_FLOW__END = ArchitecturePackage.COMPOSITE_NODE__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -2543,7 +2832,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__DURATION = SUPPLIER_FLOW__DURATION;
+	int FUNCTION_FLOW__DURATION = ArchitecturePackage.COMPOSITE_NODE__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
@@ -2552,7 +2841,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ICON = SUPPLIER_FLOW__ICON;
+	int FUNCTION_FLOW__ICON = ArchitecturePackage.COMPOSITE_NODE__ICON;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
@@ -2561,16 +2850,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ROLES = SUPPLIER_FLOW__ROLES;
-
-	/**
-	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FLOW__IMPLEMENTATION = SUPPLIER_FLOW__IMPLEMENTATION;
+	int FUNCTION_FLOW__ROLES = ArchitecturePackage.COMPOSITE_NODE__ROLES;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -2579,7 +2859,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ELEMENTS = SUPPLIER_FLOW__ELEMENTS;
+	int FUNCTION_FLOW__ELEMENTS = ArchitecturePackage.COMPOSITE_NODE__ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
@@ -2588,7 +2868,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ACTORS = SUPPLIER_FLOW__ACTORS;
+	int FUNCTION_FLOW__ACTORS = ArchitecturePackage.COMPOSITE_NODE__ACTORS;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
@@ -2597,7 +2877,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__OUTGOING_CONNECTIONS = SUPPLIER_FLOW__OUTGOING_CONNECTIONS;
+	int FUNCTION_FLOW__OUTGOING_CONNECTIONS = ArchitecturePackage.COMPOSITE_NODE__OUTGOING_CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
@@ -2606,7 +2886,25 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__INCOMING_CONNECTIONS = SUPPLIER_FLOW_FEATURE_COUNT + 0;
+	int FUNCTION_FLOW__INCOMING_CONNECTIONS = ArchitecturePackage.COMPOSITE_NODE__INCOMING_CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__IMPLEMENTATION = ArchitecturePackage.COMPOSITE_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__ERRORS = ArchitecturePackage.COMPOSITE_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Function Flow</em>' class.
@@ -2615,7 +2913,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW_FEATURE_COUNT = SUPPLIER_FLOW_FEATURE_COUNT + 1;
+	int FUNCTION_FLOW_FEATURE_COUNT = ArchitecturePackage.COMPOSITE_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Function Flow</em>' class.
@@ -2624,7 +2922,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW_OPERATION_COUNT = SUPPLIER_FLOW_OPERATION_COUNT + 0;
+	int FUNCTION_FLOW_OPERATION_COUNT = ArchitecturePackage.COMPOSITE_NODE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -2635,7 +2933,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSource()
 	 * @generated
 	 */
-	int SOURCE = 12;
+	int SOURCE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
@@ -2672,7 +2970,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFlowElement()
 	 * @generated
 	 */
-	int SOURCE_FLOW_ELEMENT = 13;
+	int SOURCE_FLOW_ELEMENT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2837,6 +3135,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_FLOW_ELEMENT__IMPLEMENTATION = FLOW_ELEMENT__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_FLOW_ELEMENT__ERRORS = FLOW_ELEMENT__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2871,7 +3178,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceSupplier()
 	 * @generated
 	 */
-	int SOURCE_SUPPLIER = 14;
+	int SOURCE_SUPPLIER = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3036,6 +3343,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_SUPPLIER__IMPLEMENTATION = SUPPLIER__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_SUPPLIER__ERRORS = SUPPLIER__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3088,7 +3404,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceConsumer()
 	 * @generated
 	 */
-	int SOURCE_CONSUMER = 15;
+	int SOURCE_CONSUMER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3253,6 +3569,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_CONSUMER__IMPLEMENTATION = CONSUMER__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_CONSUMER__ERRORS = CONSUMER__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3305,7 +3630,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFunction()
 	 * @generated
 	 */
-	int SOURCE_FUNCTION = 16;
+	int SOURCE_FUNCTION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3416,6 +3741,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_FUNCTION__CONTEXT_HELP = FUNCTION__CONTEXT_HELP;
 
 	/**
+	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_FUNCTION__OUTGOING_CONNECTIONS = FUNCTION__OUTGOING_CONNECTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3461,6 +3795,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_FUNCTION__ROLES = FUNCTION__ROLES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_FUNCTION__INCOMING_CONNECTIONS = FUNCTION__INCOMING_CONNECTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3470,13 +3813,13 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_FUNCTION__IMPLEMENTATION = FUNCTION__IMPLEMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOURCE_FUNCTION__OUTGOING_CONNECTIONS = FUNCTION__OUTGOING_CONNECTIONS;
+	int SOURCE_FUNCTION__ERRORS = FUNCTION__ERRORS;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -3486,15 +3829,6 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOURCE_FUNCTION__OUTPUT = FUNCTION__OUTPUT;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION__INCOMING_CONNECTIONS = FUNCTION__INCOMING_CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -3540,7 +3874,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceTransition()
 	 * @generated
 	 */
-	int SOURCE_TRANSITION = 17;
+	int SOURCE_TRANSITION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3705,6 +4039,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_TRANSITION__IMPLEMENTATION = TRANSITION__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_TRANSITION__ERRORS = TRANSITION__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3793,7 +4136,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceErrorTransition()
 	 * @generated
 	 */
-	int SOURCE_ERROR_TRANSITION = 18;
+	int SOURCE_ERROR_TRANSITION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3958,6 +4301,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_ERROR_TRANSITION__IMPLEMENTATION = ERROR_TRANSITION__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_TRANSITION__ERRORS = ERROR_TRANSITION__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4046,7 +4398,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFlow()
 	 * @generated
 	 */
-	int SOURCE_FLOW = 19;
+	int SOURCE_FLOW = 20;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4211,6 +4563,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_FLOW__IMPLEMENTATION = FLOW__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_FLOW__ERRORS = FLOW__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4263,7 +4624,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceSupplierFlow()
 	 * @generated
 	 */
-	int SOURCE_SUPPLIER_FLOW = 20;
+	int SOURCE_SUPPLIER_FLOW = 21;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4428,6 +4789,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_SUPPLIER_FLOW__IMPLEMENTATION = SUPPLIER_FLOW__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_SUPPLIER_FLOW__ERRORS = SUPPLIER_FLOW__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4489,7 +4859,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceConsumerFlow()
 	 * @generated
 	 */
-	int SOURCE_CONSUMER_FLOW = 21;
+	int SOURCE_CONSUMER_FLOW = 22;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4654,6 +5024,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_CONSUMER_FLOW__IMPLEMENTATION = CONSUMER_FLOW__IMPLEMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_CONSUMER_FLOW__ERRORS = CONSUMER_FLOW__ERRORS;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4715,7 +5094,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getSourceFunctionFlow()
 	 * @generated
 	 */
-	int SOURCE_FUNCTION_FLOW = 22;
+	int SOURCE_FUNCTION_FLOW = 23;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4871,15 +5250,6 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_FUNCTION_FLOW__ROLES = FUNCTION_FLOW__ROLES;
 
 	/**
-	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOURCE_FUNCTION_FLOW__IMPLEMENTATION = FUNCTION_FLOW__IMPLEMENTATION;
-
-	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4914,6 +5284,24 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOURCE_FUNCTION_FLOW__INCOMING_CONNECTIONS = FUNCTION_FLOW__INCOMING_CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_FUNCTION_FLOW__IMPLEMENTATION = FUNCTION_FLOW__IMPLEMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_FUNCTION_FLOW__ERRORS = FUNCTION_FLOW__ERRORS;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
@@ -4965,6 +5353,17 @@ public interface FunctionFlowPackage extends EPackage {
 	EAttribute getFlowElement_Implementation();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.functionflow.FlowElement#getErrors <em>Errors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Errors</em>'.
+	 * @see org.nasdanika.models.functionflow.FlowElement#getErrors()
+	 * @see #getFlowElement()
+	 * @generated
+	 */
+	EAttribute getFlowElement_Errors();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.Start <em>Start</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4994,6 +5393,16 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSupplier_Output();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.ErrorHandler <em>Error Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Error Handler</em>'.
+	 * @see org.nasdanika.models.functionflow.ErrorHandler
+	 * @generated
+	 */
+	EClass getErrorHandler();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.End <em>End</em>}'.
@@ -5303,6 +5712,14 @@ public interface FunctionFlowPackage extends EPackage {
 		EAttribute FLOW_ELEMENT__IMPLEMENTATION = eINSTANCE.getFlowElement_Implementation();
 
 		/**
+		 * The meta object literal for the '<em><b>Errors</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FLOW_ELEMENT__ERRORS = eINSTANCE.getFlowElement_Errors();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.StartImpl <em>Start</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5329,6 +5746,16 @@ public interface FunctionFlowPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SUPPLIER__OUTPUT = eINSTANCE.getSupplier_Output();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.ErrorHandlerImpl <em>Error Handler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.functionflow.impl.ErrorHandlerImpl
+		 * @see org.nasdanika.models.functionflow.impl.FunctionFlowPackageImpl#getErrorHandler()
+		 * @generated
+		 */
+		EClass ERROR_HANDLER = eINSTANCE.getErrorHandler();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.EndImpl <em>End</em>}' class.

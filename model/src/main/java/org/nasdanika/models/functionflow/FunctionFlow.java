@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.functionflow;
 
+import org.nasdanika.models.architecture.CompositeNode;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,5 +15,5 @@ package org.nasdanika.models.functionflow;
  * @model
  * @generated
  */
-public interface FunctionFlow extends SupplierFlow, ConsumerFlow {
+public interface FunctionFlow extends CompositeNode, SupplierFlow, ConsumerFlow {
 } // FunctionFlow

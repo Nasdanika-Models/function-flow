@@ -27,9 +27,11 @@ import org.nasdanika.graph.model.GraphElement;
 import org.nasdanika.models.architecture.ArchitectureDescription;
 import org.nasdanika.models.architecture.ArchitectureDescriptionElement;
 import org.nasdanika.models.architecture.ArchitectureElement;
+import org.nasdanika.models.architecture.CompositeNode;
 import org.nasdanika.models.architecture.CompositeRelationshipSource;
 import org.nasdanika.models.architecture.CompositeRelationshipTarget;
 import org.nasdanika.models.architecture.Domain;
+import org.nasdanika.models.architecture.Node;
 import org.nasdanika.models.architecture.Relationship;
 import org.nasdanika.models.architecture.RelationshipSource;
 import org.nasdanika.models.architecture.RelationshipTarget;
@@ -114,6 +116,10 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSupplier(Supplier object) {
 				return createSupplierAdapter();
+			}
+			@Override
+			public Adapter caseErrorHandler(ErrorHandler object) {
+				return createErrorHandlerAdapter();
 			}
 			@Override
 			public Adapter caseEnd(End object) {
@@ -284,6 +290,10 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 				return createRelationshipTargetAdapter();
 			}
 			@Override
+			public Adapter caseNode(Node object) {
+				return createNodeAdapter();
+			}
+			@Override
 			public <T extends ConnectionTarget<?>> Adapter caseConnection(Connection<T> object) {
 				return createConnectionAdapter();
 			}
@@ -318,6 +328,10 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCompositeRelationshipTarget(CompositeRelationshipTarget object) {
 				return createCompositeRelationshipTargetAdapter();
+			}
+			@Override
+			public Adapter caseCompositeNode(CompositeNode object) {
+				return createCompositeNodeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -378,6 +392,20 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSupplierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.functionflow.ErrorHandler <em>Error Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.functionflow.ErrorHandler
+	 * @generated
+	 */
+	public Adapter createErrorHandlerAdapter() {
 		return null;
 	}
 
@@ -970,6 +998,20 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.architecture.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.architecture.Node
+	 * @generated
+	 */
+	public Adapter createNodeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.graph.model.Connection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1092,6 +1134,20 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCompositeRelationshipTargetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.architecture.CompositeNode <em>Composite Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.architecture.CompositeNode
+	 * @generated
+	 */
+	public Adapter createCompositeNodeAdapter() {
 		return null;
 	}
 

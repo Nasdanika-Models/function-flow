@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.functionflow;
 
+import org.eclipse.emf.common.util.EList;
 import org.nasdanika.models.architecture.ArchitectureDescriptionElement;
 
 /**
@@ -14,6 +15,7 @@ import org.nasdanika.models.architecture.ArchitectureDescriptionElement;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.functionflow.FlowElement#getImplementation <em>Implementation</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.FlowElement#getErrors <em>Errors</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.functionflow.FunctionFlowPackage#getFlowElement()
@@ -42,5 +44,17 @@ public interface FlowElement extends ArchitectureDescriptionElement {
 	 * @generated
 	 */
 	void setImplementation(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Errors</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Errors</em>' attribute list.
+	 * @see org.nasdanika.models.functionflow.FunctionFlowPackage#getFlowElement_Errors()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getErrors();
 
 } // FlowElement
