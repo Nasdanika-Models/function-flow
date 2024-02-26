@@ -16,15 +16,15 @@ import org.nasdanika.models.ecore.graph.processors.EClassifierNodeProcessorFacto
 import org.nasdanika.models.ecore.graph.processors.EStructuralFeatureNodeProcessorFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
-@EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.TRANSITION)
-public class TransitionProcessorFactory extends FlowElementProcessorFactory {
+@EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.CALL)
+public class CallProcessorFactory extends FlowElementProcessorFactory {
 	
-	public TransitionProcessorFactory(Context context) {
+	public CallProcessorFactory(Context context) {
 		super(context);
 	}
 	
 	@EClassifierNodeProcessorFactory(
-			description = "Passes source output to target input possibly transforming it",
+			description = "Passes source output to target input possible transforming it",
 			documentation = 
                     """
 					Transisitions are functions which take source output as their input. 
@@ -60,9 +60,9 @@ public class TransitionProcessorFactory extends FlowElementProcessorFactory {
 	
 	@EStructuralFeatureNodeProcessorFactory(
 			nsURI = FunctionFlowPackage.eNS_URI,
-			classID = FunctionFlowPackage.TRANSITION,
-			featureID = FunctionFlowPackage.TRANSITION__INPUT,
-			description = "Input type"
+			classID = FunctionFlowPackage.CALL,
+			featureID = FunctionFlowPackage.CALL__TARGET_INPUT,
+			description = "Target input type"
 	)
 	public EAttributeNodeProcessor createInputProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
@@ -84,9 +84,9 @@ public class TransitionProcessorFactory extends FlowElementProcessorFactory {
 	
 	@EStructuralFeatureNodeProcessorFactory(
 			nsURI = FunctionFlowPackage.eNS_URI,
-			classID = FunctionFlowPackage.TRANSITION,
-			featureID = FunctionFlowPackage.TRANSITION__OUTPUT,
-			description = "Output type"
+			classID = FunctionFlowPackage.CALL,
+			featureID = FunctionFlowPackage.CALL__TARGET_OUTPUT,
+			description = "Target output type"
 	)
 	public EAttributeNodeProcessor createOutputProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 

@@ -21,10 +21,16 @@
     <genClasses ecoreClass="function-flow.ecore#//Supplier">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Supplier/output"/>
     </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//Subscriber">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Subscriber/condition"/>
+    </genClasses>
     <genClasses ecoreClass="function-flow.ecore#//ErrorHandler"/>
     <genClasses ecoreClass="function-flow.ecore#//End"/>
     <genClasses ecoreClass="function-flow.ecore#//Consumer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Consumer/input"/>
+    </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//Publisher">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Publisher/condition"/>
     </genClasses>
     <genClasses ecoreClass="function-flow.ecore#//Function"/>
     <genClasses ecoreClass="function-flow.ecore#//Transition">
@@ -32,6 +38,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Transition/output"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Transition/condition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Transition/order"/>
+    </genClasses>
+    <genClasses ecoreClass="function-flow.ecore#//Call">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Call/targetInput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Call/targetOutput"/>
     </genClasses>
     <genClasses ecoreClass="function-flow.ecore#//ErrorTransition"/>
     <genClasses ecoreClass="function-flow.ecore#//Flow"/>
@@ -46,6 +56,7 @@
     <genClasses ecoreClass="function-flow.ecore#//SourceConsumer"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceFunction"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceTransition"/>
+    <genClasses ecoreClass="function-flow.ecore#//SourceCall"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceErrorTransition"/>
     <genClasses ecoreClass="function-flow.ecore#//SourceErrorHandler"/>
   </genPackages>

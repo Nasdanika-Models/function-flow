@@ -23,6 +23,9 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Subscriber" eSuperTypes="#//Supplier">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ErrorHandler" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipSource"/>
   <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipTarget"/>
   <eClassifiers xsi:type="ecore:EClass" name="Consumer" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//RelationshipTarget">
@@ -31,6 +34,9 @@
         <details key="documentation" value="Output type"/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Publisher" eSuperTypes="#//Consumer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//Node #//Supplier #//Consumer">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -51,6 +57,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Call" eSuperTypes="#//Transition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetInput" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Output type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetOutput" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Output type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ErrorTransition" eSuperTypes="#//Transition"/>
   <eClassifiers xsi:type="ecore:EClass" name="Flow" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//Domain"/>
   <eClassifiers xsi:type="ecore:EClass" name="SupplierFlow" eSuperTypes="#//Flow ../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeRelationshipSource"/>
@@ -65,6 +83,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SourceConsumer" eSuperTypes="#//Consumer #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="SourceFunction" eSuperTypes="#//Function #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="SourceTransition" eSuperTypes="#//Transition #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceCall" eSuperTypes="#//Call #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="SourceErrorTransition" eSuperTypes="#//ErrorTransition #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="SourceErrorHandler" eSuperTypes="#//ErrorHandler #//Source"/>
 </ecore:EPackage>

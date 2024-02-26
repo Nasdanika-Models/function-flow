@@ -39,7 +39,15 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 	}
 	
 	protected String getOutputPropertyName() {
-	return getPropertyNamespace() + "output";
+		return getPropertyNamespace() + "output";
+	}
+	
+	protected String getTargetInputPropertyName() {
+		return getPropertyNamespace() + "target-input";
+	}
+	
+	protected String getTargetOutputPropertyName() {
+		return getPropertyNamespace() + "target-output";
 	}
 	
 	protected String getErrorsPropertyName() {
@@ -160,6 +168,24 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 				}
 			}
 		}
+						
+		if (semanticElement instanceof org.nasdanika.models.functionflow.Call) {
+			String targetInputPropertyName = getTargetInputPropertyName();
+			if (!Util.isBlank(targetInputPropertyName)) {
+				String targetInput = getProperty(eObj, targetInputPropertyName);
+				if (!Util.isBlank(targetInput)) {
+					((org.nasdanika.models.functionflow.Call) semanticElement).setTargetInput(targetInput);
+				}
+			}
+			
+			String targetOutputPropertyName = getTargetOutputPropertyName();
+			if (!Util.isBlank(targetOutputPropertyName)) {
+				String targetOutput = getProperty(eObj, targetOutputPropertyName);
+				if (!Util.isBlank(targetOutput)) {
+					((org.nasdanika.models.functionflow.Call) semanticElement).setTargetOutput(targetOutput);
+				}
+			}
+		}
 		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.Start) {
 			String orderPropertyName = getOrderPropertyName();
@@ -215,8 +241,28 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 					((org.nasdanika.models.functionflow.Transition) semanticElement).setImplementation(implementation);
 				}
 			}
+		}	
+		
+		if (semanticElement instanceof org.nasdanika.models.functionflow.Subscriber) {
+			String conditionPropertyName = getConditionPropertyName();
+			if (!Util.isBlank(conditionPropertyName)) {
+				String condition = getProperty(eObj, conditionPropertyName);
+				if (!Util.isBlank(condition)) {
+					((org.nasdanika.models.functionflow.Subscriber) semanticElement).setCondition(condition);
+				}
+			}
 		}
 		
+		if (semanticElement instanceof org.nasdanika.models.functionflow.Publisher) {
+			String conditionPropertyName = getConditionPropertyName();
+			if (!Util.isBlank(conditionPropertyName)) {
+				String condition = getProperty(eObj, conditionPropertyName);
+				if (!Util.isBlank(condition)) {
+					((org.nasdanika.models.functionflow.Publisher) semanticElement).setCondition(condition);
+				}
+			}
+		}
+				
 	}
 
 }

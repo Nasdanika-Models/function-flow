@@ -59,11 +59,14 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 			case FunctionFlowPackage.FLOW_ELEMENT: return createFlowElement();
 			case FunctionFlowPackage.START: return createStart();
 			case FunctionFlowPackage.SUPPLIER: return createSupplier();
+			case FunctionFlowPackage.SUBSCRIBER: return createSubscriber();
 			case FunctionFlowPackage.ERROR_HANDLER: return createErrorHandler();
 			case FunctionFlowPackage.END: return createEnd();
 			case FunctionFlowPackage.CONSUMER: return createConsumer();
+			case FunctionFlowPackage.PUBLISHER: return createPublisher();
 			case FunctionFlowPackage.FUNCTION: return createFunction();
 			case FunctionFlowPackage.TRANSITION: return createTransition();
+			case FunctionFlowPackage.CALL: return createCall();
 			case FunctionFlowPackage.ERROR_TRANSITION: return createErrorTransition();
 			case FunctionFlowPackage.FLOW: return createFlow();
 			case FunctionFlowPackage.SUPPLIER_FLOW: return createSupplierFlow();
@@ -73,6 +76,7 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 			case FunctionFlowPackage.SOURCE_CONSUMER: return createSourceConsumer();
 			case FunctionFlowPackage.SOURCE_FUNCTION: return createSourceFunction();
 			case FunctionFlowPackage.SOURCE_TRANSITION: return createSourceTransition();
+			case FunctionFlowPackage.SOURCE_CALL: return createSourceCall();
 			case FunctionFlowPackage.SOURCE_ERROR_TRANSITION: return createSourceErrorTransition();
 			case FunctionFlowPackage.SOURCE_ERROR_HANDLER: return createSourceErrorHandler();
 			default:
@@ -119,6 +123,17 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
+	public Subscriber createSubscriber() {
+		SubscriberImpl subscriber = new SubscriberImpl();
+		return subscriber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ErrorHandler createErrorHandler() {
 		ErrorHandlerImpl errorHandler = new ErrorHandlerImpl();
 		return errorHandler;
@@ -152,6 +167,17 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
+	public Publisher createPublisher() {
+		PublisherImpl publisher = new PublisherImpl();
+		return publisher;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Function createFunction() {
 		FunctionImpl function = new FunctionImpl();
 		return function;
@@ -166,6 +192,17 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Call createCall() {
+		CallImpl call = new CallImpl();
+		return call;
 	}
 
 	/**
@@ -265,6 +302,17 @@ public class FunctionFlowFactoryImpl extends EFactoryImpl implements FunctionFlo
 	public SourceTransition createSourceTransition() {
 		SourceTransitionImpl sourceTransition = new SourceTransitionImpl();
 		return sourceTransition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SourceCall createSourceCall() {
+		SourceCallImpl sourceCall = new SourceCallImpl();
+		return sourceCall;
 	}
 
 	/**

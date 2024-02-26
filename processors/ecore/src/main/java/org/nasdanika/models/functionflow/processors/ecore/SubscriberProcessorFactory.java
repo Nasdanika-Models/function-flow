@@ -17,14 +17,14 @@ import org.nasdanika.models.ecore.graph.processors.EStructuralFeatureNodeProcess
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
 @EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.TRANSITION)
-public class TransitionProcessorFactory extends FlowElementProcessorFactory {
+public class SubscriberProcessorFactory extends FlowElementProcessorFactory {
 	
-	public TransitionProcessorFactory(Context context) {
+	public SubscriberProcessorFactory(Context context) {
 		super(context);
 	}
 	
 	@EClassifierNodeProcessorFactory(
-			description = "Passes source output to target input possibly transforming it",
+			description = "Passes source output to target input possible transforming it",
 			documentation = 
                     """
 					Transisitions are functions which take source output as their input. 

@@ -177,6 +177,33 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FunctionFlowPackage.SUBSCRIBER: {
+				Subscriber subscriber = (Subscriber)theEObject;
+				T1 result = caseSubscriber(subscriber);
+				if (result == null) result = caseSupplier(subscriber);
+				if (result == null) result = caseFlowElement(subscriber);
+				if (result == null) result = caseRelationshipSource(subscriber);
+				if (result == null) result = caseArchitectureDescriptionElement(subscriber);
+				if (result == null) result = caseDocumentedNamedConnectionSource(subscriber);
+				if (result == null) result = caseDocumentedNamedGraphElement(subscriber);
+				if (result == null) result = caseArchitectureElement(subscriber);
+				if (result == null) result = caseUndergoer(subscriber);
+				if (result == null) result = caseConnectionSource(subscriber);
+				if (result == null) result = caseGraphElement(subscriber);
+				if (result == null) result = caseDocumentedNamedStringIdentity(subscriber);
+				if (result == null) result = casePeriod(subscriber);
+				if (result == null) result = caseStringIdentity(subscriber);
+				if (result == null) result = caseSemanticElement(subscriber);
+				if (result == null) result = caseDocumentedNamedElement(subscriber);
+				if (result == null) result = caseNamedElement(subscriber);
+				if (result == null) result = caseDocumented(subscriber);
+				if (result == null) result = caseModelElement(subscriber);
+				if (result == null) result = caseMarked(subscriber);
+				if (result == null) result = caseAdaptable(subscriber);
+				if (result == null) result = caseIMarked(subscriber);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case FunctionFlowPackage.ERROR_HANDLER: {
 				ErrorHandler errorHandler = (ErrorHandler)theEObject;
 				T1 result = caseErrorHandler(errorHandler);
@@ -254,6 +281,33 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FunctionFlowPackage.PUBLISHER: {
+				Publisher publisher = (Publisher)theEObject;
+				T1 result = casePublisher(publisher);
+				if (result == null) result = caseConsumer(publisher);
+				if (result == null) result = caseFlowElement(publisher);
+				if (result == null) result = caseRelationshipTarget(publisher);
+				if (result == null) result = caseArchitectureDescriptionElement(publisher);
+				if (result == null) result = caseDocumentedNamedConnectionTarget(publisher);
+				if (result == null) result = caseDocumentedNamedGraphElement(publisher);
+				if (result == null) result = caseArchitectureElement(publisher);
+				if (result == null) result = caseUndergoer(publisher);
+				if (result == null) result = caseConnectionTarget(publisher);
+				if (result == null) result = caseGraphElement(publisher);
+				if (result == null) result = caseDocumentedNamedStringIdentity(publisher);
+				if (result == null) result = casePeriod(publisher);
+				if (result == null) result = caseStringIdentity(publisher);
+				if (result == null) result = caseSemanticElement(publisher);
+				if (result == null) result = caseDocumentedNamedElement(publisher);
+				if (result == null) result = caseNamedElement(publisher);
+				if (result == null) result = caseDocumented(publisher);
+				if (result == null) result = caseModelElement(publisher);
+				if (result == null) result = caseMarked(publisher);
+				if (result == null) result = caseAdaptable(publisher);
+				if (result == null) result = caseIMarked(publisher);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case FunctionFlowPackage.FUNCTION: {
 				Function function = (Function)theEObject;
 				T1 result = caseFunction(function);
@@ -309,6 +363,33 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				if (result == null) result = caseMarked(transition);
 				if (result == null) result = caseAdaptable(transition);
 				if (result == null) result = caseIMarked(transition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FunctionFlowPackage.CALL: {
+				Call call = (Call)theEObject;
+				T1 result = caseCall(call);
+				if (result == null) result = caseTransition(call);
+				if (result == null) result = caseFlowElement(call);
+				if (result == null) result = caseRelationship(call);
+				if (result == null) result = caseArchitectureDescriptionElement(call);
+				if (result == null) result = caseDocumentedNamedConnection(call);
+				if (result == null) result = caseDocumentedNamedGraphElement(call);
+				if (result == null) result = caseArchitectureElement(call);
+				if (result == null) result = caseUndergoer(call);
+				if (result == null) result = caseConnection(call);
+				if (result == null) result = caseGraphElement(call);
+				if (result == null) result = caseDocumentedNamedStringIdentity(call);
+				if (result == null) result = casePeriod(call);
+				if (result == null) result = caseStringIdentity(call);
+				if (result == null) result = caseSemanticElement(call);
+				if (result == null) result = caseDocumentedNamedElement(call);
+				if (result == null) result = caseNamedElement(call);
+				if (result == null) result = caseDocumented(call);
+				if (result == null) result = caseModelElement(call);
+				if (result == null) result = caseMarked(call);
+				if (result == null) result = caseAdaptable(call);
+				if (result == null) result = caseIMarked(call);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -611,6 +692,35 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FunctionFlowPackage.SOURCE_CALL: {
+				SourceCall sourceCall = (SourceCall)theEObject;
+				T1 result = caseSourceCall(sourceCall);
+				if (result == null) result = caseCall(sourceCall);
+				if (result == null) result = caseSource(sourceCall);
+				if (result == null) result = caseTransition(sourceCall);
+				if (result == null) result = caseFlowElement(sourceCall);
+				if (result == null) result = caseRelationship(sourceCall);
+				if (result == null) result = caseArchitectureDescriptionElement(sourceCall);
+				if (result == null) result = caseDocumentedNamedConnection(sourceCall);
+				if (result == null) result = caseDocumentedNamedGraphElement(sourceCall);
+				if (result == null) result = caseArchitectureElement(sourceCall);
+				if (result == null) result = caseUndergoer(sourceCall);
+				if (result == null) result = caseConnection(sourceCall);
+				if (result == null) result = caseGraphElement(sourceCall);
+				if (result == null) result = caseDocumentedNamedStringIdentity(sourceCall);
+				if (result == null) result = casePeriod(sourceCall);
+				if (result == null) result = caseStringIdentity(sourceCall);
+				if (result == null) result = caseSemanticElement(sourceCall);
+				if (result == null) result = caseDocumentedNamedElement(sourceCall);
+				if (result == null) result = caseNamedElement(sourceCall);
+				if (result == null) result = caseDocumented(sourceCall);
+				if (result == null) result = caseModelElement(sourceCall);
+				if (result == null) result = caseMarked(sourceCall);
+				if (result == null) result = caseAdaptable(sourceCall);
+				if (result == null) result = caseIMarked(sourceCall);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case FunctionFlowPackage.SOURCE_ERROR_TRANSITION: {
 				SourceErrorTransition sourceErrorTransition = (SourceErrorTransition)theEObject;
 				T1 result = caseSourceErrorTransition(sourceErrorTransition);
@@ -718,6 +828,21 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Subscriber</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Subscriber</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseSubscriber(Subscriber object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Error Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -763,6 +888,21 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Publisher</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Publisher</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 casePublisher(Publisher object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -789,6 +929,21 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseTransition(Transition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Call</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Call</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseCall(Call object) {
 		return null;
 	}
 
@@ -939,6 +1094,21 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseSourceTransition(SourceTransition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Source Call</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Source Call</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseSourceCall(SourceCall object) {
 		return null;
 	}
 

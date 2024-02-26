@@ -49,6 +49,15 @@ public interface FunctionFlowFactory extends EFactory {
 	Supplier createSupplier();
 
 	/**
+	 * Returns a new object of class '<em>Subscriber</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subscriber</em>'.
+	 * @generated
+	 */
+	Subscriber createSubscriber();
+
+	/**
 	 * Returns a new object of class '<em>Error Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,6 +85,15 @@ public interface FunctionFlowFactory extends EFactory {
 	Consumer createConsumer();
 
 	/**
+	 * Returns a new object of class '<em>Publisher</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Publisher</em>'.
+	 * @generated
+	 */
+	Publisher createPublisher();
+
+	/**
 	 * Returns a new object of class '<em>Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +110,15 @@ public interface FunctionFlowFactory extends EFactory {
 	 * @generated
 	 */
 	Transition createTransition();
+
+	/**
+	 * Returns a new object of class '<em>Call</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Call</em>'.
+	 * @generated
+	 */
+	Call createCall();
 
 	/**
 	 * Returns a new object of class '<em>Error Transition</em>'.
@@ -173,6 +200,15 @@ public interface FunctionFlowFactory extends EFactory {
 	 * @generated
 	 */
 	SourceTransition createSourceTransition();
+
+	/**
+	 * Returns a new object of class '<em>Source Call</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Source Call</em>'.
+	 * @generated
+	 */
+	SourceCall createSourceCall();
 
 	/**
 	 * Returns a new object of class '<em>Source Error Transition</em>'.

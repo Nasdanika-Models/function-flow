@@ -77,6 +77,15 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 	
 	@Factory
 	public final TransitionProcessorFactory transitionProcessorFactory;		
+	
+	@Factory
+	public final CallProcessorFactory callProcessorFactory;		
+	
+	@Factory
+	public final PublisherProcessorFactory publisherProcessorFactory;		
+	
+	@Factory
+	public final SubscriberProcessorFactory subscriberProcessorFactory;		
 
 	
 	public FunctionFlowEcoreGenProcessorsFactory(Context context) {
@@ -101,15 +110,23 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 		supplierProcessorFactory = new SupplierProcessorFactory(context); 	
 		supplierFlowProcessorFactory = new SupplierFlowProcessorFactory(context); 	
 		transitionProcessorFactory = new TransitionProcessorFactory(context); 		
+		callProcessorFactory = new CallProcessorFactory(context); 		
+		publisherProcessorFactory = new PublisherProcessorFactory(context); 		
+		subscriberProcessorFactory = new SubscriberProcessorFactory(context); 		
 	}
 	
 
 	@EPackageNodeProcessorFactory(
 			label = "Function Flow",
 			description = "A graph of functional elements - suppliers, functions, consumers - exchanging objects via transitions",
-			documentation =  """
-				TODO - demo diagram with all types of objects, description.			
-				"""
+			actionPrototype = """
+            app-action:
+              content:
+                content-markdown:
+                  source:
+                    content-resource:
+                      location: function-flow.md
+			"""
 	)
 	public EPackageNodeProcessor createEPackageProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 

@@ -12,6 +12,7 @@ import org.nasdanika.drawio.model.ModelPackage;
 
 import org.nasdanika.models.architecture.ArchitecturePackage;
 
+import org.nasdanika.models.functionflow.Call;
 import org.nasdanika.models.functionflow.Consumer;
 import org.nasdanika.models.functionflow.ConsumerFlow;
 import org.nasdanika.models.functionflow.End;
@@ -23,7 +24,9 @@ import org.nasdanika.models.functionflow.Function;
 import org.nasdanika.models.functionflow.FunctionFlow;
 import org.nasdanika.models.functionflow.FunctionFlowFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
+import org.nasdanika.models.functionflow.Publisher;
 import org.nasdanika.models.functionflow.Source;
+import org.nasdanika.models.functionflow.SourceCall;
 import org.nasdanika.models.functionflow.SourceConsumer;
 import org.nasdanika.models.functionflow.SourceErrorHandler;
 import org.nasdanika.models.functionflow.SourceErrorTransition;
@@ -31,6 +34,7 @@ import org.nasdanika.models.functionflow.SourceFunction;
 import org.nasdanika.models.functionflow.SourceSupplier;
 import org.nasdanika.models.functionflow.SourceTransition;
 import org.nasdanika.models.functionflow.Start;
+import org.nasdanika.models.functionflow.Subscriber;
 import org.nasdanika.models.functionflow.Supplier;
 
 import org.nasdanika.models.functionflow.SupplierFlow;
@@ -72,6 +76,13 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass subscriberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass errorHandlerEClass = null;
 
 	/**
@@ -93,6 +104,13 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass publisherEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass functionEClass = null;
 
 	/**
@@ -101,6 +119,13 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	private EClass transitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass callEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,6 +196,13 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	private EClass sourceTransitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sourceCallEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -349,6 +381,26 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
+	public EClass getSubscriber() {
+		return subscriberEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSubscriber_Condition() {
+		return (EAttribute)subscriberEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getErrorHandler() {
 		return errorHandlerEClass;
 	}
@@ -381,6 +433,26 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	@Override
 	public EAttribute getConsumer_Input() {
 		return (EAttribute)consumerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPublisher() {
+		return publisherEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPublisher_Condition() {
+		return (EAttribute)publisherEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -441,6 +513,36 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	@Override
 	public EAttribute getTransition_Order() {
 		return (EAttribute)transitionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCall() {
+		return callEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCall_TargetInput() {
+		return (EAttribute)callEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCall_TargetOutput() {
+		return (EAttribute)callEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -569,6 +671,16 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
+	public EClass getSourceCall() {
+		return sourceCallEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSourceErrorTransition() {
 		return sourceErrorTransitionEClass;
 	}
@@ -624,12 +736,18 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		supplierEClass = createEClass(SUPPLIER);
 		createEAttribute(supplierEClass, SUPPLIER__OUTPUT);
 
+		subscriberEClass = createEClass(SUBSCRIBER);
+		createEAttribute(subscriberEClass, SUBSCRIBER__CONDITION);
+
 		errorHandlerEClass = createEClass(ERROR_HANDLER);
 
 		endEClass = createEClass(END);
 
 		consumerEClass = createEClass(CONSUMER);
 		createEAttribute(consumerEClass, CONSUMER__INPUT);
+
+		publisherEClass = createEClass(PUBLISHER);
+		createEAttribute(publisherEClass, PUBLISHER__CONDITION);
 
 		functionEClass = createEClass(FUNCTION);
 
@@ -638,6 +756,10 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		createEAttribute(transitionEClass, TRANSITION__OUTPUT);
 		createEAttribute(transitionEClass, TRANSITION__CONDITION);
 		createEAttribute(transitionEClass, TRANSITION__ORDER);
+
+		callEClass = createEClass(CALL);
+		createEAttribute(callEClass, CALL__TARGET_INPUT);
+		createEAttribute(callEClass, CALL__TARGET_OUTPUT);
 
 		errorTransitionEClass = createEClass(ERROR_TRANSITION);
 
@@ -660,6 +782,8 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		sourceFunctionEClass = createEClass(SOURCE_FUNCTION);
 
 		sourceTransitionEClass = createEClass(SOURCE_TRANSITION);
+
+		sourceCallEClass = createEClass(SOURCE_CALL);
 
 		sourceErrorTransitionEClass = createEClass(SOURCE_ERROR_TRANSITION);
 
@@ -701,16 +825,19 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		startEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipSource());
 		supplierEClass.getESuperTypes().add(this.getFlowElement());
 		supplierEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipSource());
+		subscriberEClass.getESuperTypes().add(this.getSupplier());
 		errorHandlerEClass.getESuperTypes().add(this.getFlowElement());
 		errorHandlerEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipSource());
 		endEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipTarget());
 		consumerEClass.getESuperTypes().add(this.getFlowElement());
 		consumerEClass.getESuperTypes().add(theArchitecturePackage.getRelationshipTarget());
+		publisherEClass.getESuperTypes().add(this.getConsumer());
 		functionEClass.getESuperTypes().add(theArchitecturePackage.getNode());
 		functionEClass.getESuperTypes().add(this.getSupplier());
 		functionEClass.getESuperTypes().add(this.getConsumer());
 		transitionEClass.getESuperTypes().add(this.getFlowElement());
 		transitionEClass.getESuperTypes().add(theArchitecturePackage.getRelationship());
+		callEClass.getESuperTypes().add(this.getTransition());
 		errorTransitionEClass.getESuperTypes().add(this.getTransition());
 		flowEClass.getESuperTypes().add(this.getFlowElement());
 		flowEClass.getESuperTypes().add(theArchitecturePackage.getDomain());
@@ -730,6 +857,8 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		sourceFunctionEClass.getESuperTypes().add(this.getSource());
 		sourceTransitionEClass.getESuperTypes().add(this.getTransition());
 		sourceTransitionEClass.getESuperTypes().add(this.getSource());
+		sourceCallEClass.getESuperTypes().add(this.getCall());
+		sourceCallEClass.getESuperTypes().add(this.getSource());
 		sourceErrorTransitionEClass.getESuperTypes().add(this.getErrorTransition());
 		sourceErrorTransitionEClass.getESuperTypes().add(this.getSource());
 		sourceErrorHandlerEClass.getESuperTypes().add(this.getErrorHandler());
@@ -748,12 +877,18 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		initEClass(supplierEClass, Supplier.class, "Supplier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSupplier_Output(), ecorePackage.getEString(), "output", null, 0, 1, Supplier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(subscriberEClass, Subscriber.class, "Subscriber", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSubscriber_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Subscriber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(errorHandlerEClass, ErrorHandler.class, "ErrorHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(endEClass, End.class, "End", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(consumerEClass, Consumer.class, "Consumer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConsumer_Input(), ecorePackage.getEString(), "input", null, 0, 1, Consumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(publisherEClass, Publisher.class, "Publisher", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPublisher_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Publisher.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -762,6 +897,10 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		initEAttribute(getTransition_Output(), ecorePackage.getEString(), "output", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_Order(), ecorePackage.getEInt(), "order", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(callEClass, Call.class, "Call", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCall_TargetInput(), ecorePackage.getEString(), "targetInput", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCall_TargetOutput(), ecorePackage.getEString(), "targetOutput", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(errorTransitionEClass, ErrorTransition.class, "ErrorTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -784,6 +923,8 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		initEClass(sourceFunctionEClass, SourceFunction.class, "SourceFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(sourceTransitionEClass, SourceTransition.class, "SourceTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sourceCallEClass, SourceCall.class, "SourceCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(sourceErrorTransitionEClass, SourceErrorTransition.class, "SourceErrorTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -837,6 +978,18 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		   });
 		addAnnotation
 		  (getTransition_Output(),
+		   source,
+		   new String[] {
+			   "documentation", "Output type"
+		   });
+		addAnnotation
+		  (getCall_TargetInput(),
+		   source,
+		   new String[] {
+			   "documentation", "Output type"
+		   });
+		addAnnotation
+		  (getCall_TargetOutput(),
 		   source,
 		   new String[] {
 			   "documentation", "Output type"
