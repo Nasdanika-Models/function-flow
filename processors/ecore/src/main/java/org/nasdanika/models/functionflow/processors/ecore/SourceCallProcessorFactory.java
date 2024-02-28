@@ -15,7 +15,7 @@ import org.nasdanika.models.ecore.graph.processors.EClassifierNodeProcessorFacto
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
 @EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.SOURCE_CALL)
-public class SourceCallProcessorFactory extends TransitionProcessorFactory {
+public class SourceCallProcessorFactory extends CallProcessorFactory {
 	
 	public SourceCallProcessorFactory(Context context) {
 		super(context);

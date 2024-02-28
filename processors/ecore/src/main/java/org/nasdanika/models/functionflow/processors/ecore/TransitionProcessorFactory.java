@@ -36,8 +36,6 @@ public class TransitionProcessorFactory extends FlowElementProcessorFactory {
 					Transitions within the same order are ordered by type specificity, if it is supported.
 					Within the same type (or absense of thereof) transitions with conditions are evaluated before 
 					transition(s) without conditions. 
-					
-					``errors`` is not applicable to transitions, only to [error transitions)(../ErrorTransition/index.html).										
                     """
 	)
 	public EClassNodeProcessor createTransitionProcessor(
@@ -110,7 +108,7 @@ public class TransitionProcessorFactory extends FlowElementProcessorFactory {
 			nsURI = FunctionFlowPackage.eNS_URI,
 			classID = FunctionFlowPackage.TRANSITION,
 			featureID = FunctionFlowPackage.TRANSITION__CONDITION,
-			description = "Transition condition shall be blank or evaluate to true for condition to activate"
+			description = "Transition condition shall be blank or evaluate to true for the transition to activate"
 	)
 	public EAttributeNodeProcessor createConditionProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 

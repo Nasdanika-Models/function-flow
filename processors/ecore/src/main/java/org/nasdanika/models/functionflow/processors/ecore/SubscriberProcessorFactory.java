@@ -16,7 +16,7 @@ import org.nasdanika.models.ecore.graph.processors.EClassifierNodeProcessorFacto
 import org.nasdanika.models.ecore.graph.processors.EStructuralFeatureNodeProcessorFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
-@EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.TRANSITION)
+@EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.SUBSCRIBER)
 public class SubscriberProcessorFactory extends FlowElementProcessorFactory {
 	
 	public SubscriberProcessorFactory(Context context) {
@@ -24,7 +24,7 @@ public class SubscriberProcessorFactory extends FlowElementProcessorFactory {
 	}
 	
 	@EClassifierNodeProcessorFactory(
-			description = "Passes source output to target input possible transforming it",
+			description = "Receives inputs from publishers matching the subscriber input type and condition",
 			documentation = 
                     """
 					Transisitions are functions which take source output as their input. 
@@ -60,83 +60,11 @@ public class SubscriberProcessorFactory extends FlowElementProcessorFactory {
 	
 	@EStructuralFeatureNodeProcessorFactory(
 			nsURI = FunctionFlowPackage.eNS_URI,
-			classID = FunctionFlowPackage.TRANSITION,
-			featureID = FunctionFlowPackage.TRANSITION__INPUT,
-			description = "Input type"
-	)
-	public EAttributeNodeProcessor createInputProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
-			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
-			BiConsumer<Label, ProgressMonitor> labelConfigurator,
-			ProgressMonitor progressMonitor) {		
-		return new EAttributeNodeProcessor(config, context, prototypeProvider) {
-			
-			@Override
-			public void configureLabel(Object source, Label label, ProgressMonitor progressMonitor) {
-				super.configureLabel(source, label, progressMonitor);
-				if (labelConfigurator != null) {
-					labelConfigurator.accept(label, progressMonitor);
-				}
-			}
-			
-		};
-	}
-	
-	@EStructuralFeatureNodeProcessorFactory(
-			nsURI = FunctionFlowPackage.eNS_URI,
-			classID = FunctionFlowPackage.TRANSITION,
-			featureID = FunctionFlowPackage.TRANSITION__OUTPUT,
-			description = "Output type"
-	)
-	public EAttributeNodeProcessor createOutputProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
-			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
-			BiConsumer<Label, ProgressMonitor> labelConfigurator,
-			ProgressMonitor progressMonitor) {		
-		return new EAttributeNodeProcessor(config, context, prototypeProvider) {
-			
-			@Override
-			public void configureLabel(Object source, Label label, ProgressMonitor progressMonitor) {
-				super.configureLabel(source, label, progressMonitor);
-				if (labelConfigurator != null) {
-					labelConfigurator.accept(label, progressMonitor);
-				}
-			}
-			
-		};
-	}
-
-	@EStructuralFeatureNodeProcessorFactory(
-			nsURI = FunctionFlowPackage.eNS_URI,
-			classID = FunctionFlowPackage.TRANSITION,
-			featureID = FunctionFlowPackage.TRANSITION__CONDITION,
+			classID = FunctionFlowPackage.SUBSCRIBER,
+			featureID = FunctionFlowPackage.SUBSCRIBER__CONDITION,
 			description = "Transition condition shall be blank or evaluate to true for condition to activate"
 	)
 	public EAttributeNodeProcessor createConditionProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
-			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
-			BiConsumer<Label, ProgressMonitor> labelConfigurator,
-			ProgressMonitor progressMonitor) {		
-		return new EAttributeNodeProcessor(config, context, prototypeProvider) {
-			
-			@Override
-			public void configureLabel(Object source, Label label, ProgressMonitor progressMonitor) {
-				super.configureLabel(source, label, progressMonitor);
-				if (labelConfigurator != null) {
-					labelConfigurator.accept(label, progressMonitor);
-				}
-			}
-			
-		};
-	}
-	
-	@EStructuralFeatureNodeProcessorFactory(
-			nsURI = FunctionFlowPackage.eNS_URI,
-			classID = FunctionFlowPackage.TRANSITION,
-			featureID = FunctionFlowPackage.TRANSITION__ORDER,
-			description = "Transitions are sorted by order, transitions with smaller order values are evaluated for matching before transitions with larger order value"
-	)
-	public EAttributeNodeProcessor createOrderProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
 			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,

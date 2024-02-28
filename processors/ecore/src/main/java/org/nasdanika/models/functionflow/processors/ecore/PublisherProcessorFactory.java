@@ -16,21 +16,24 @@ import org.nasdanika.models.ecore.graph.processors.EClassifierNodeProcessorFacto
 import org.nasdanika.models.ecore.graph.processors.EStructuralFeatureNodeProcessorFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
-@EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.CALL)
-public class CallProcessorFactory extends TransitionProcessorFactory {
+@EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.PUBLISHER)
+public class PublisherProcessorFactory extends FlowElementProcessorFactory {
 	
-	public CallProcessorFactory(Context context) {
+	public PublisherProcessorFactory(Context context) {
 		super(context);
 	}
 	
 	@EClassifierNodeProcessorFactory(
-			description = "Passes source output to target input possible transforming it",
+			description = "Publishes input matching the condition for consumption by subscribers",
 			documentation = 
                     """
-					Calls a function node and returns result to the caller. 
-					It may be thought of as two transitions - to the calling function and back to the caller.
+					Publisher passes inputs matching the condition to subscribers with matching
+					input type and condition. 
 					
-					Condition and order attributes can be used for aggregating multiple call in one as in if - else if - else chain. 
+					Implementation attribute may be used for refining publishing functionality.
+					E.g. it can be used as a name of a "channel". 
+					Or it may be a composite configuration and also specify delivery multiplicity 
+					- one recipient, all recipients, anything in between. 									
                     """
 	)
 	public EClassNodeProcessor createTransitionProcessor(
@@ -50,38 +53,14 @@ public class CallProcessorFactory extends TransitionProcessorFactory {
 			
 		};
 	}
-	
+
 	@EStructuralFeatureNodeProcessorFactory(
 			nsURI = FunctionFlowPackage.eNS_URI,
-			classID = FunctionFlowPackage.CALL,
-			featureID = FunctionFlowPackage.CALL__TARGET_INPUT,
-			description = "Target input type"
+			classID = FunctionFlowPackage.PUBLISHER,
+			featureID = FunctionFlowPackage.PUBLISHER__CONDITION,
+			description = "Publisher input is passesed to subscribers if condition is blank or evaluates to true"
 	)
-	public EAttributeNodeProcessor createInputProcessor(
-			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
-			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
-			BiConsumer<Label, ProgressMonitor> labelConfigurator,
-			ProgressMonitor progressMonitor) {		
-		return new EAttributeNodeProcessor(config, context, prototypeProvider) {
-			
-			@Override
-			public void configureLabel(Object source, Label label, ProgressMonitor progressMonitor) {
-				super.configureLabel(source, label, progressMonitor);
-				if (labelConfigurator != null) {
-					labelConfigurator.accept(label, progressMonitor);
-				}
-			}
-			
-		};
-	}
-	
-	@EStructuralFeatureNodeProcessorFactory(
-			nsURI = FunctionFlowPackage.eNS_URI,
-			classID = FunctionFlowPackage.CALL,
-			featureID = FunctionFlowPackage.CALL__TARGET_OUTPUT,
-			description = "Target output type"
-	)
-	public EAttributeNodeProcessor createOutputProcessor(
+	public EAttributeNodeProcessor createConditionProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
 			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
 			BiConsumer<Label, ProgressMonitor> labelConfigurator,
@@ -99,4 +78,4 @@ public class CallProcessorFactory extends TransitionProcessorFactory {
 		};
 	}
 
-} // Transition
+} 
