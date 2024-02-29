@@ -27,17 +27,10 @@ public class SubscriberProcessorFactory extends FlowElementProcessorFactory {
 			description = "Receives inputs from publishers matching the subscriber input type and condition",
 			documentation = 
                     """
-					Transisitions are functions which take source output as their input. 
-					Transition output is passes to its target as input.
-					
-					Only one transition is activated by the source output.
-					Transitions are evauated for activation in the the order defined by the
-					``order`` property.
-					Transitions within the same order are ordered by type specificity, if it is supported.
-					Within the same type (or absense of thereof) transitions with conditions are evaluated before 
-					transition(s) without conditions. 
-					
-					``errors`` is not applicable to transitions, only to [error transitions)(../ErrorTransition/index.html).										
+					Subscribers receive inputs from publishers which match their input type and condition.
+					Implementation attriute can be used for further refinement.
+					For example, it can be used as a name of a "channel" or 
+					specify both channel name and priority (order).  										
                     """
 	)
 	public EClassNodeProcessor createTransitionProcessor(
@@ -62,7 +55,7 @@ public class SubscriberProcessorFactory extends FlowElementProcessorFactory {
 			nsURI = FunctionFlowPackage.eNS_URI,
 			classID = FunctionFlowPackage.SUBSCRIBER,
 			featureID = FunctionFlowPackage.SUBSCRIBER__CONDITION,
-			description = "Transition condition shall be blank or evaluate to true for condition to activate"
+			description = "Subscriber condition shall be blank or evaluate to true for the subscriber to receive published input"
 	)
 	public EAttributeNodeProcessor createConditionProcessor(
 			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
