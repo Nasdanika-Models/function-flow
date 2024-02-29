@@ -1,15 +1,12 @@
 package org.nasdanika.models.functionflow.util;
 
-import java.io.IOException;
-import java.io.Reader;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.nasdanika.common.DefaultConverter;
 import org.nasdanika.common.ProgressMonitor;
+import org.nasdanika.common.SourceRecord;
 import org.nasdanika.common.Util;
 import org.nasdanika.models.architecture.util.ArchitectureDrawioFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
@@ -38,72 +35,92 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 		return getPropertyNamespace() + "input";
 	}
 	
+	protected String getInput(EObject eObj) {
+		SourceRecord source = loadSource(eObj, getInputPropertyName());
+		if (source == null) {
+			return null;
+		}
+		return source.source();		
+	}
+	
 	protected String getOutputPropertyName() {
 		return getPropertyNamespace() + "output";
+	}
+	
+	protected String getOutput(EObject eObj) {
+		SourceRecord source = loadSource(eObj, getOutputPropertyName());
+		if (source == null) {
+			return null;
+		}
+		return source.source();		
 	}
 	
 	protected String getTargetInputPropertyName() {
 		return getPropertyNamespace() + "target-input";
 	}
 	
+	protected String getTargetInput(EObject eObj) {
+		SourceRecord source = loadSource(eObj, getTargetInputPropertyName());
+		if (source == null) {
+			return null;
+		}
+		return source.source();		
+	}
+	
 	protected String getTargetOutputPropertyName() {
 		return getPropertyNamespace() + "target-output";
 	}
 	
+	protected String getTargetOutput(EObject eObj) {
+		SourceRecord source = loadSource(eObj, getTargetOutputPropertyName());
+		if (source == null) {
+			return null;
+		}
+		return source.source();		
+	}
+	
 	protected String getErrorsPropertyName() {
-	return getPropertyNamespace() + "errors";
+		return getPropertyNamespace() + "errors";
+	}
+	
+	protected String getErrors(EObject eObj) {
+		SourceRecord source = loadSource(eObj, getErrorsPropertyName());
+		if (source == null) {
+			return null;
+		}
+		return source.source();		
 	}
 	
 	protected String getImplementationPropertyName() {
-	return getPropertyNamespace() + "implementation";
+		return getPropertyNamespace() + "implementation";
+	}
+	
+	protected String getImplementation(EObject eObj) {
+		SourceRecord source = loadSource(eObj, getImplementationPropertyName());
+		if (source == null) {
+			return null;
+		}
+		return source.source();		
 	}
 	
 	protected String getConditionPropertyName() {
-	return getPropertyNamespace() + "condition";
+		return getPropertyNamespace() + "condition";
+	}
+	
+	protected String getCondition(EObject eObj) {
+		SourceRecord source = loadSource(eObj, getConditionPropertyName());
+		if (source == null) {
+			return null;
+		}
+		return source.source();		
 	}
 	
 	protected String getOrderPropertyName() {
-	return getPropertyNamespace() + "order";
+		return getPropertyNamespace() + "order";
 	}
 		
 	protected String getSourcePropertyName() {
 		return getPropertyNamespace() + "source";
-	}
-	
-	protected String getSourceRefPropertyName() {
-		return getPropertyNamespace() + "source-ref";
-	}
-		
-	protected static record Source(URI uri, String source) {};
-	
-	protected Source getSource(EObject source) {
-		String spn = getSourcePropertyName();
-		if (!Util.isBlank(spn)) {
-			String src = getProperty(source, spn);
-			if (!Util.isBlank(src)) {
-				return new Source(null, src);
-			}
-		}
-		
-		String srpn = getSourceRefPropertyName();
-		if (!Util.isBlank(srpn)) {
-			String ref = getProperty(source, srpn);
-			if (!Util.isBlank(ref)) {
-				URI refURI = URI.createURI(ref);
-				URI baseURI = getBaseURI(source);
-				if (baseURI != null && !baseURI.isRelative()) {
-					refURI = refURI.resolve(baseURI);
-				}
-				try {
-					DefaultConverter converter = DefaultConverter.INSTANCE;
-					Reader reader = converter.toReader(refURI);
-					return new Source(refURI, converter.toString(reader));
-				} catch (IOException e) {
-					throw new ConfigurationException("Error loading source from " + refURI, e, asMarked(source));
-				}
-			}
-		}
-		return null;
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -116,40 +133,28 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 		super.configureSemanticElement(eObj, semanticElement, registry, isPrototype, progressMonitor);
 		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.Consumer) {
-			String inputPropertyName = getInputPropertyName();
-			if (!Util.isBlank(inputPropertyName)) {
-				String input = getProperty(eObj, inputPropertyName);
-				if (!Util.isBlank(input)) {
-					((org.nasdanika.models.functionflow.Consumer) semanticElement).setInput(input);
-				}
+			String input = getInput(eObj);
+			if (!Util.isBlank(input)) {
+				((org.nasdanika.models.functionflow.Consumer) semanticElement).setInput(input);
 			}
 		}
 		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.Supplier) {
-			String outputPropertyName = getOutputPropertyName();
-			if (!Util.isBlank(outputPropertyName)) {
-				String output = getProperty(eObj, outputPropertyName);
-				if (!Util.isBlank(output)) {
-					((org.nasdanika.models.functionflow.Supplier) semanticElement).setOutput(output);
-				}
+			String output = getOutput(eObj);
+			if (!Util.isBlank(output)) {
+				((org.nasdanika.models.functionflow.Supplier) semanticElement).setOutput(output);
 			}
 		}
 				
 		if (semanticElement instanceof org.nasdanika.models.functionflow.Transition) {
-			String inputPropertyName = getInputPropertyName();
-			if (!Util.isBlank(inputPropertyName)) {
-				String input = getProperty(eObj, inputPropertyName);
-				if (!Util.isBlank(input)) {
-					((org.nasdanika.models.functionflow.Transition) semanticElement).setInput(input);
-				}
+			String input = getInput(eObj);
+			if (!Util.isBlank(input)) {
+				((org.nasdanika.models.functionflow.Transition) semanticElement).setInput(input);
 			}
 			
-			String outputPropertyName = getOutputPropertyName();
-			if (!Util.isBlank(outputPropertyName)) {
-				String output = getProperty(eObj, outputPropertyName);
-				if (!Util.isBlank(output)) {
-					((org.nasdanika.models.functionflow.Transition) semanticElement).setOutput(output);
-				}
+			String output = getOutput(eObj);
+			if (!Util.isBlank(output)) {
+				((org.nasdanika.models.functionflow.Transition) semanticElement).setOutput(output);
 			}
 			
 			String orderPropertyName = getOrderPropertyName();
@@ -160,30 +165,21 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 				}
 			}
 			
-			String conditionPropertyName = getConditionPropertyName();
-			if (!Util.isBlank(conditionPropertyName)) {
-				String condition = getProperty(eObj, conditionPropertyName);
-				if (!Util.isBlank(condition)) {
-					((org.nasdanika.models.functionflow.Transition) semanticElement).setCondition(condition);
-				}
+			String condition = getCondition(eObj);
+			if (!Util.isBlank(condition)) {
+				((org.nasdanika.models.functionflow.Transition) semanticElement).setCondition(condition);
 			}
 		}
 						
 		if (semanticElement instanceof org.nasdanika.models.functionflow.Call) {
-			String targetInputPropertyName = getTargetInputPropertyName();
-			if (!Util.isBlank(targetInputPropertyName)) {
-				String targetInput = getProperty(eObj, targetInputPropertyName);
-				if (!Util.isBlank(targetInput)) {
-					((org.nasdanika.models.functionflow.Call) semanticElement).setTargetInput(targetInput);
-				}
+			String targetInput = getTargetInput(eObj);
+			if (!Util.isBlank(targetInput)) {
+				((org.nasdanika.models.functionflow.Call) semanticElement).setTargetInput(targetInput);
 			}
 			
-			String targetOutputPropertyName = getTargetOutputPropertyName();
-			if (!Util.isBlank(targetOutputPropertyName)) {
-				String targetOutput = getProperty(eObj, targetOutputPropertyName);
-				if (!Util.isBlank(targetOutput)) {
-					((org.nasdanika.models.functionflow.Call) semanticElement).setTargetOutput(targetOutput);
-				}
+			String targetOutput = getTargetOutput(eObj);
+			if (!Util.isBlank(targetOutput)) {
+				((org.nasdanika.models.functionflow.Call) semanticElement).setTargetOutput(targetOutput);
 			}
 		}
 		
@@ -196,17 +192,14 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 				}
 			}
 			
-			String conditionPropertyName = getConditionPropertyName();
-			if (!Util.isBlank(conditionPropertyName)) {
-				String condition = getProperty(eObj, conditionPropertyName);
-				if (!Util.isBlank(condition)) {
-					((org.nasdanika.models.functionflow.Start) semanticElement).setCondition(condition);
-				}
+			String condition = getCondition(eObj);
+			if (!Util.isBlank(condition)) {
+				((org.nasdanika.models.functionflow.Start) semanticElement).setCondition(condition);
 			}
 		}
 		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.Source) {
-			Source source = getSource(eObj);
+			SourceRecord source = loadSource(eObj, getSourcePropertyName());
 			if (source != null) {
 				((org.nasdanika.models.functionflow.Source) semanticElement).setSource(source.source());
 				String baseURI = ((org.nasdanika.models.functionflow.Source) semanticElement).getBaseURI();
@@ -217,49 +210,37 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 		}
 		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.FlowElement) {
-			String errorsPropertyName = getErrorsPropertyName();
-			if (!Util.isBlank(errorsPropertyName)) {
-				String errors = getProperty(eObj, errorsPropertyName);
-				if (!Util.isBlank(errors)) {
-					Yaml yaml = new Yaml();
-					Object errorsSpecObj = yaml.load(errors);
-					if (errorsSpecObj instanceof String) {
-						((org.nasdanika.models.functionflow.FlowElement) semanticElement).getErrors().add((String) errorsSpecObj);						
-					} else if (errorsSpecObj instanceof Iterable) {
-						for (String error: (Iterable<String>) errorsSpecObj) {
-							((org.nasdanika.models.functionflow.FlowElement) semanticElement).getErrors().add(error);													
-						}
+			String errors = getErrors(eObj);
+			if (!Util.isBlank(errors)) {
+				Yaml yaml = new Yaml();
+				Object errorsSpecObj = yaml.load(errors);
+				if (errorsSpecObj instanceof String) {
+					((org.nasdanika.models.functionflow.FlowElement) semanticElement).getErrors().add((String) errorsSpecObj);						
+				} else if (errorsSpecObj instanceof Iterable) {
+					for (String error: (Iterable<String>) errorsSpecObj) {
+						((org.nasdanika.models.functionflow.FlowElement) semanticElement).getErrors().add(error);													
 					}
-					throw new ConfigurationException("Usupported errors type: " + errorsSpecObj, asMarked(eObj));
 				}
+				throw new ConfigurationException("Usupported errors type: " + errorsSpecObj, asMarked(eObj));
 			}
 			
-			String implementationPropertyName = getImplementationPropertyName();
-			if (!Util.isBlank(implementationPropertyName)) {
-				String implementation = getProperty(eObj, implementationPropertyName);
-				if (!Util.isBlank(implementation)) {
-					((org.nasdanika.models.functionflow.Transition) semanticElement).setImplementation(implementation);
-				}
+			String implementation = getImplementation(eObj);
+			if (!Util.isBlank(implementation)) {
+				((org.nasdanika.models.functionflow.Transition) semanticElement).setImplementation(implementation);
 			}
 		}	
 		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.Subscriber) {
-			String conditionPropertyName = getConditionPropertyName();
-			if (!Util.isBlank(conditionPropertyName)) {
-				String condition = getProperty(eObj, conditionPropertyName);
-				if (!Util.isBlank(condition)) {
-					((org.nasdanika.models.functionflow.Subscriber) semanticElement).setCondition(condition);
-				}
+			String condition = getCondition(eObj);
+			if (!Util.isBlank(condition)) {
+				((org.nasdanika.models.functionflow.Subscriber) semanticElement).setCondition(condition);
 			}
 		}
 		
 		if (semanticElement instanceof org.nasdanika.models.functionflow.Publisher) {
-			String conditionPropertyName = getConditionPropertyName();
-			if (!Util.isBlank(conditionPropertyName)) {
-				String condition = getProperty(eObj, conditionPropertyName);
-				if (!Util.isBlank(condition)) {
-					((org.nasdanika.models.functionflow.Publisher) semanticElement).setCondition(condition);
-				}
+			String condition = getCondition(eObj);
+			if (!Util.isBlank(condition)) {
+				((org.nasdanika.models.functionflow.Publisher) semanticElement).setCondition(condition);
 			}
 		}
 				
