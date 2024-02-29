@@ -59,6 +59,11 @@ public class FunctionFlowDrawioResource extends ResourceImpl {
 				return FunctionFlowDrawioResource.this.getURIConverter();
 			}
 			
+			@Override
+			protected String getProperty(String name) {
+				return FunctionFlowDrawioResource.this.getProperty(name);
+			}
+			
 		};
 		
 		diagramResource.load(inputStream, options);
@@ -111,6 +116,11 @@ public class FunctionFlowDrawioResource extends ResourceImpl {
 				return FunctionFlowDrawioResource.this.getVariables(context);
 			}
 			
+			@Override
+			protected String getProperty(String name) {
+				return FunctionFlowDrawioResource.this.getProperty(name);
+			}
+			
 		};
 		
 		Transformer<EObject,EObject> functionFlowFactory = new Transformer<>(functionFlowDrawioFactory);
@@ -127,6 +137,10 @@ public class FunctionFlowDrawioResource extends ResourceImpl {
 		Map<EObject, EObject> functionFlowElements = functionFlowFactory.transform(diagramModelContents, false, getProgressMonitor());
 		
 		diagramResource.getContents().stream().map(functionFlowElements::get).forEach(getContents()::add);
+	}
+
+	protected String getProperty(String name) {
+		return null;
 	}
 
 	protected ProgressMonitor getProgressMonitor() {

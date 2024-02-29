@@ -60,9 +60,18 @@ public class FunctionFlowDrawioResourceFactory implements Resource.Factory {
 				return FunctionFlowDrawioResourceFactory.this.getVariables(this, context);
 			};
 			
+			@Override
+			protected String getProperty(String name) {
+				return FunctionFlowDrawioResourceFactory.this.getProperty(this, name);
+			}
+			
 		};
 	}
 	
+	protected String getProperty(FunctionFlowDrawioResource functionFlowDrawioResource, String name) {
+		return null;
+	}
+
 	protected Function<Marker, org.nasdanika.ncore.Marker> getMarkerFactory() {
 		return null;
 	}
