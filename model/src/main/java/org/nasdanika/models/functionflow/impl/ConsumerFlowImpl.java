@@ -16,11 +16,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.graph.model.ConnectionTarget;
 import org.nasdanika.graph.model.DocumentedNamedConnectionTarget;
 import org.nasdanika.graph.model.ModelPackage;
-
-import org.nasdanika.models.architecture.CompositeRelationshipTarget;
 import org.nasdanika.models.architecture.Relationship;
 import org.nasdanika.models.architecture.RelationshipTarget;
 
+import org.nasdanika.models.functionflow.Consumer;
 import org.nasdanika.models.functionflow.ConsumerFlow;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
@@ -33,11 +32,22 @@ import org.nasdanika.models.functionflow.FunctionFlowPackage;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.functionflow.impl.ConsumerFlowImpl#getIncomingConnections <em>Incoming Connections</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.impl.ConsumerFlowImpl#getInput <em>Input</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ConsumerFlowImpl extends FlowImpl implements ConsumerFlow {
+	/**
+	 * The default value of the '{@link #getInput() <em>Input</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInput()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INPUT_EDEFAULT = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,6 +76,26 @@ public class ConsumerFlowImpl extends FlowImpl implements ConsumerFlow {
 	@Override
 	public EList<Relationship> getIncomingConnections() {
 		return (EList<Relationship>)eDynamicGet(FunctionFlowPackage.CONSUMER_FLOW__INCOMING_CONNECTIONS, ModelPackage.Literals.CONNECTION_TARGET__INCOMING_CONNECTIONS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getInput() {
+		return (String)eDynamicGet(FunctionFlowPackage.CONSUMER_FLOW__INPUT, FunctionFlowPackage.Literals.CONSUMER__INPUT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInput(String newInput) {
+		eDynamicSet(FunctionFlowPackage.CONSUMER_FLOW__INPUT, FunctionFlowPackage.Literals.CONSUMER__INPUT, newInput);
 	}
 
 	/**
@@ -107,6 +137,8 @@ public class ConsumerFlowImpl extends FlowImpl implements ConsumerFlow {
 		switch (featureID) {
 			case FunctionFlowPackage.CONSUMER_FLOW__INCOMING_CONNECTIONS:
 				return getIncomingConnections();
+			case FunctionFlowPackage.CONSUMER_FLOW__INPUT:
+				return getInput();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -124,6 +156,9 @@ public class ConsumerFlowImpl extends FlowImpl implements ConsumerFlow {
 				getIncomingConnections().clear();
 				getIncomingConnections().addAll((Collection<? extends Relationship>)newValue);
 				return;
+			case FunctionFlowPackage.CONSUMER_FLOW__INPUT:
+				setInput((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -139,6 +174,9 @@ public class ConsumerFlowImpl extends FlowImpl implements ConsumerFlow {
 			case FunctionFlowPackage.CONSUMER_FLOW__INCOMING_CONNECTIONS:
 				getIncomingConnections().clear();
 				return;
+			case FunctionFlowPackage.CONSUMER_FLOW__INPUT:
+				setInput(INPUT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -153,6 +191,8 @@ public class ConsumerFlowImpl extends FlowImpl implements ConsumerFlow {
 		switch (featureID) {
 			case FunctionFlowPackage.CONSUMER_FLOW__INCOMING_CONNECTIONS:
 				return !getIncomingConnections().isEmpty();
+			case FunctionFlowPackage.CONSUMER_FLOW__INPUT:
+				return INPUT_EDEFAULT == null ? getInput() != null : !INPUT_EDEFAULT.equals(getInput());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -180,8 +220,9 @@ public class ConsumerFlowImpl extends FlowImpl implements ConsumerFlow {
 				default: return -1;
 			}
 		}
-		if (baseClass == CompositeRelationshipTarget.class) {
+		if (baseClass == Consumer.class) {
 			switch (derivedFeatureID) {
+				case FunctionFlowPackage.CONSUMER_FLOW__INPUT: return FunctionFlowPackage.CONSUMER__INPUT;
 				default: return -1;
 			}
 		}
@@ -211,8 +252,9 @@ public class ConsumerFlowImpl extends FlowImpl implements ConsumerFlow {
 				default: return -1;
 			}
 		}
-		if (baseClass == CompositeRelationshipTarget.class) {
+		if (baseClass == Consumer.class) {
 			switch (baseFeatureID) {
+				case FunctionFlowPackage.CONSUMER__INPUT: return FunctionFlowPackage.CONSUMER_FLOW__INPUT;
 				default: return -1;
 			}
 		}

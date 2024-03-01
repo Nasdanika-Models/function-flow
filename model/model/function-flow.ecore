@@ -71,9 +71,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ErrorTransition" eSuperTypes="#//Transition"/>
   <eClassifiers xsi:type="ecore:EClass" name="Flow" eSuperTypes="#//FlowElement ../../org.nasdanika.models.architecture/model/architecture.ecore#//Domain"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplierFlow" eSuperTypes="#//Flow ../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeRelationshipSource"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConsumerFlow" eSuperTypes="#//Flow ../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeRelationshipTarget"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionFlow" eSuperTypes="../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeNode #//SupplierFlow #//ConsumerFlow"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SupplierFlow" eSuperTypes="#//Flow #//Supplier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConsumerFlow" eSuperTypes="#//Flow #//Consumer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionFlow" eSuperTypes="#//Function ../../org.nasdanika.models.architecture/model/architecture.ecore#//CompositeNode #//SupplierFlow #//ConsumerFlow"/>
   <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true" interface="true"
       eSuperTypes="#//FlowElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

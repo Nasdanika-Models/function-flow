@@ -842,9 +842,10 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		flowEClass.getESuperTypes().add(this.getFlowElement());
 		flowEClass.getESuperTypes().add(theArchitecturePackage.getDomain());
 		supplierFlowEClass.getESuperTypes().add(this.getFlow());
-		supplierFlowEClass.getESuperTypes().add(theArchitecturePackage.getCompositeRelationshipSource());
+		supplierFlowEClass.getESuperTypes().add(this.getSupplier());
 		consumerFlowEClass.getESuperTypes().add(this.getFlow());
-		consumerFlowEClass.getESuperTypes().add(theArchitecturePackage.getCompositeRelationshipTarget());
+		consumerFlowEClass.getESuperTypes().add(this.getConsumer());
+		functionFlowEClass.getESuperTypes().add(this.getFunction());
 		functionFlowEClass.getESuperTypes().add(theArchitecturePackage.getCompositeNode());
 		functionFlowEClass.getESuperTypes().add(this.getSupplierFlow());
 		functionFlowEClass.getESuperTypes().add(this.getConsumerFlow());

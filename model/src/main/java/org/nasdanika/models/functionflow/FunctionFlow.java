@@ -15,5 +15,5 @@ import org.nasdanika.models.architecture.CompositeNode;
  * @model
  * @generated
  */
-public interface FunctionFlow extends CompositeNode, SupplierFlow, ConsumerFlow {
+public interface FunctionFlow extends Function, CompositeNode, SupplierFlow, ConsumerFlow {
 } // FunctionFlow

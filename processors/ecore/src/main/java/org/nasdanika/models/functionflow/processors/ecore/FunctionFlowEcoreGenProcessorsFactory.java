@@ -67,6 +67,9 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 	public final SourceTransitionProcessorFactory sourceTransitionProcessorFactory;	
 	
 	@Factory
+	public final SourceCallProcessorFactory sourceCallProcessorFactory;	
+	
+	@Factory
 	public final StartProcessorFactory startProcessorFactory;	
 	
 	@Factory
@@ -106,6 +109,7 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 		sourceFunctionProcessorFactory = new SourceFunctionProcessorFactory(context); 	
 		sourceSupplierProcessorFactory = new SourceSupplierProcessorFactory(context); 	
 		sourceTransitionProcessorFactory = new SourceTransitionProcessorFactory(context); 	
+		sourceCallProcessorFactory = new SourceCallProcessorFactory(context); 	
 		startProcessorFactory = new StartProcessorFactory(context); 	
 		supplierProcessorFactory = new SupplierProcessorFactory(context); 	
 		supplierFlowProcessorFactory = new SupplierFlowProcessorFactory(context); 	

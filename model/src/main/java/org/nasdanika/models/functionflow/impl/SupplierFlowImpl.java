@@ -16,12 +16,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.graph.model.ConnectionSource;
 import org.nasdanika.graph.model.DocumentedNamedConnectionSource;
 import org.nasdanika.graph.model.ModelPackage;
-
-import org.nasdanika.models.architecture.CompositeRelationshipSource;
 import org.nasdanika.models.architecture.Relationship;
 import org.nasdanika.models.architecture.RelationshipSource;
 
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
+import org.nasdanika.models.functionflow.Supplier;
 import org.nasdanika.models.functionflow.SupplierFlow;
 
 /**
@@ -33,11 +32,22 @@ import org.nasdanika.models.functionflow.SupplierFlow;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.functionflow.impl.SupplierFlowImpl#getOutgoingConnections <em>Outgoing Connections</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.impl.SupplierFlowImpl#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SupplierFlowImpl extends FlowImpl implements SupplierFlow {
+	/**
+	 * The default value of the '{@link #getOutput() <em>Output</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutput()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OUTPUT_EDEFAULT = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +84,26 @@ public class SupplierFlowImpl extends FlowImpl implements SupplierFlow {
 	 * @generated
 	 */
 	@Override
+	public String getOutput() {
+		return (String)eDynamicGet(FunctionFlowPackage.SUPPLIER_FLOW__OUTPUT, FunctionFlowPackage.Literals.SUPPLIER__OUTPUT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOutput(String newOutput) {
+		eDynamicSet(FunctionFlowPackage.SUPPLIER_FLOW__OUTPUT, FunctionFlowPackage.Literals.SUPPLIER__OUTPUT, newOutput);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case FunctionFlowPackage.SUPPLIER_FLOW__OUTGOING_CONNECTIONS:
@@ -92,6 +122,8 @@ public class SupplierFlowImpl extends FlowImpl implements SupplierFlow {
 		switch (featureID) {
 			case FunctionFlowPackage.SUPPLIER_FLOW__OUTGOING_CONNECTIONS:
 				return getOutgoingConnections();
+			case FunctionFlowPackage.SUPPLIER_FLOW__OUTPUT:
+				return getOutput();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,6 +141,9 @@ public class SupplierFlowImpl extends FlowImpl implements SupplierFlow {
 				getOutgoingConnections().clear();
 				getOutgoingConnections().addAll((Collection<? extends Relationship>)newValue);
 				return;
+			case FunctionFlowPackage.SUPPLIER_FLOW__OUTPUT:
+				setOutput((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -124,6 +159,9 @@ public class SupplierFlowImpl extends FlowImpl implements SupplierFlow {
 			case FunctionFlowPackage.SUPPLIER_FLOW__OUTGOING_CONNECTIONS:
 				getOutgoingConnections().clear();
 				return;
+			case FunctionFlowPackage.SUPPLIER_FLOW__OUTPUT:
+				setOutput(OUTPUT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -138,6 +176,8 @@ public class SupplierFlowImpl extends FlowImpl implements SupplierFlow {
 		switch (featureID) {
 			case FunctionFlowPackage.SUPPLIER_FLOW__OUTGOING_CONNECTIONS:
 				return !getOutgoingConnections().isEmpty();
+			case FunctionFlowPackage.SUPPLIER_FLOW__OUTPUT:
+				return OUTPUT_EDEFAULT == null ? getOutput() != null : !OUTPUT_EDEFAULT.equals(getOutput());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -165,8 +205,9 @@ public class SupplierFlowImpl extends FlowImpl implements SupplierFlow {
 				default: return -1;
 			}
 		}
-		if (baseClass == CompositeRelationshipSource.class) {
+		if (baseClass == Supplier.class) {
 			switch (derivedFeatureID) {
+				case FunctionFlowPackage.SUPPLIER_FLOW__OUTPUT: return FunctionFlowPackage.SUPPLIER__OUTPUT;
 				default: return -1;
 			}
 		}
@@ -196,8 +237,9 @@ public class SupplierFlowImpl extends FlowImpl implements SupplierFlow {
 				default: return -1;
 			}
 		}
-		if (baseClass == CompositeRelationshipSource.class) {
+		if (baseClass == Supplier.class) {
 			switch (baseFeatureID) {
+				case FunctionFlowPackage.SUPPLIER__OUTPUT: return FunctionFlowPackage.SUPPLIER_FLOW__OUTPUT;
 				default: return -1;
 			}
 		}

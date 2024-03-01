@@ -2,8 +2,6 @@
  */
 package org.nasdanika.models.functionflow;
 
-import org.nasdanika.models.architecture.CompositeRelationshipSource;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Supplier Flow</b></em>'.
@@ -14,5 +12,5 @@ import org.nasdanika.models.architecture.CompositeRelationshipSource;
  * @model
  * @generated
  */
-public interface SupplierFlow extends Flow, CompositeRelationshipSource {
+public interface SupplierFlow extends Flow, Supplier {
 } // SupplierFlow

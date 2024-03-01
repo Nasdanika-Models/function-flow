@@ -2,8 +2,6 @@
  */
 package org.nasdanika.models.functionflow;
 
-import org.nasdanika.models.architecture.CompositeRelationshipTarget;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Consumer Flow</b></em>'.
@@ -14,5 +12,5 @@ import org.nasdanika.models.architecture.CompositeRelationshipTarget;
  * @model
  * @generated
  */
-public interface ConsumerFlow extends Flow, CompositeRelationshipTarget {
+public interface ConsumerFlow extends Flow, Consumer {
 } // ConsumerFlow

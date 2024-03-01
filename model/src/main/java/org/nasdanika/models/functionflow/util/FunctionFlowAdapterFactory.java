@@ -28,8 +28,6 @@ import org.nasdanika.models.architecture.ArchitectureDescription;
 import org.nasdanika.models.architecture.ArchitectureDescriptionElement;
 import org.nasdanika.models.architecture.ArchitectureElement;
 import org.nasdanika.models.architecture.CompositeNode;
-import org.nasdanika.models.architecture.CompositeRelationshipSource;
-import org.nasdanika.models.architecture.CompositeRelationshipTarget;
 import org.nasdanika.models.architecture.Domain;
 import org.nasdanika.models.architecture.Node;
 import org.nasdanika.models.architecture.Relationship;
@@ -320,14 +318,6 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDomain(Domain object) {
 				return createDomainAdapter();
-			}
-			@Override
-			public Adapter caseCompositeRelationshipSource(CompositeRelationshipSource object) {
-				return createCompositeRelationshipSourceAdapter();
-			}
-			@Override
-			public Adapter caseCompositeRelationshipTarget(CompositeRelationshipTarget object) {
-				return createCompositeRelationshipTargetAdapter();
 			}
 			@Override
 			public Adapter caseCompositeNode(CompositeNode object) {
@@ -1106,34 +1096,6 @@ public class FunctionFlowAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.architecture.CompositeRelationshipSource <em>Composite Relationship Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.architecture.CompositeRelationshipSource
-	 * @generated
-	 */
-	public Adapter createCompositeRelationshipSourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.architecture.CompositeRelationshipTarget <em>Composite Relationship Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.architecture.CompositeRelationshipTarget
-	 * @generated
-	 */
-	public Adapter createCompositeRelationshipTargetAdapter() {
 		return null;
 	}
 

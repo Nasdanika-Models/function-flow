@@ -14,7 +14,7 @@ import org.nasdanika.persistence.ConfigurationException;
 import org.yaml.snakeyaml.Yaml;
 
 /**
- * Factory for mapping drawio model to graph model
+ * Factory for mapping drawio model to function flow model
  * @param <G>
  * @param <E>
  */
@@ -123,7 +123,6 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 		return getPropertyNamespace() + "source";
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Override
 	protected void configureSemanticElement(
 			EObject eObj, 
@@ -214,12 +213,17 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 			if (!Util.isBlank(errors)) {
 				Yaml yaml = new Yaml();
 				Object errorsSpecObj = yaml.load(errors);
-				if (errorsSpecObj instanceof String) {
-					((org.nasdanika.models.functionflow.FlowElement) semanticElement).getErrors().add((String) errorsSpecObj);						
-				} else if (errorsSpecObj instanceof Iterable) {
-					for (String error: (Iterable<String>) errorsSpecObj) {
-						((org.nasdanika.models.functionflow.FlowElement) semanticElement).getErrors().add(error);													
+				org.nasdanika.models.functionflow.FlowElement flowElement = (org.nasdanika.models.functionflow.FlowElement) semanticElement;
+				if (errorsSpecObj instanceof Iterable) {
+					for (Object error: (Iterable<?>) errorsSpecObj) {
+						if (error instanceof String) {
+							flowElement.getErrors().add((String) error);
+						} else {
+							flowElement.getErrors().add(yaml.dump(error));							
+						}
 					}
+				} else {
+					flowElement.getErrors().add(errors);
 				}
 				throw new ConfigurationException("Usupported errors type: " + errorsSpecObj, asMarked(eObj));
 			}

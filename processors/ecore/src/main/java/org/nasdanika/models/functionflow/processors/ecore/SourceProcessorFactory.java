@@ -34,7 +34,7 @@ public class SourceProcessorFactory extends FlowElementProcessorFactory {
 					For a Java generation target it might be Java code and for a JavaScript generation target it might be JavaScript.
 					However, depending on the implementation it might be some scripting language supported by Java scripting.
 					It may also be a template which generates actual source code. 
-					E.g.  [Apache FreeMarker](https://freemarker.apache.org/index.html).
+					E.g.  [Apache FreeMarker](https://freemarker.apache.org/index.html) or [Mustache.java](https://github.com/spullara/mustache.java).
                     """
 	)
 	public EClassNodeProcessor createSourceProcessor(

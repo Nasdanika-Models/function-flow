@@ -3196,13 +3196,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int SUPPLIER_FLOW__OUTGOING_CONNECTIONS = FLOW_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Output</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLIER_FLOW__OUTPUT = FLOW_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Supplier Flow</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLIER_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 1;
+	int SUPPLIER_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Supplier Flow</em>' class.
@@ -3422,13 +3431,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int CONSUMER_FLOW__INCOMING_CONNECTIONS = FLOW_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER_FLOW__INPUT = FLOW_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Consumer Flow</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSUMER_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 1;
+	int CONSUMER_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Consumer Flow</em>' class.
@@ -3456,7 +3474,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ID = ArchitecturePackage.COMPOSITE_NODE__ID;
+	int FUNCTION_FLOW__ID = FUNCTION__ID;
 
 	/**
 	 * The feature id for the '<em><b>Semantic Mappings</b></em>' containment reference list.
@@ -3465,7 +3483,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__SEMANTIC_MAPPINGS = ArchitecturePackage.COMPOSITE_NODE__SEMANTIC_MAPPINGS;
+	int FUNCTION_FLOW__SEMANTIC_MAPPINGS = FUNCTION__SEMANTIC_MAPPINGS;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -3474,7 +3492,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__MARKERS = ArchitecturePackage.COMPOSITE_NODE__MARKERS;
+	int FUNCTION_FLOW__MARKERS = FUNCTION__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -3483,7 +3501,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__URIS = ArchitecturePackage.COMPOSITE_NODE__URIS;
+	int FUNCTION_FLOW__URIS = FUNCTION__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3492,7 +3510,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__DESCRIPTION = ArchitecturePackage.COMPOSITE_NODE__DESCRIPTION;
+	int FUNCTION_FLOW__DESCRIPTION = FUNCTION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -3501,7 +3519,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__UUID = ArchitecturePackage.COMPOSITE_NODE__UUID;
+	int FUNCTION_FLOW__UUID = FUNCTION__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
@@ -3510,7 +3528,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__LABEL_PROTOTYPE = ArchitecturePackage.COMPOSITE_NODE__LABEL_PROTOTYPE;
+	int FUNCTION_FLOW__LABEL_PROTOTYPE = FUNCTION__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -3519,7 +3537,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__REPRESENTATIONS = ArchitecturePackage.COMPOSITE_NODE__REPRESENTATIONS;
+	int FUNCTION_FLOW__REPRESENTATIONS = FUNCTION__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -3528,7 +3546,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ANNOTATIONS = ArchitecturePackage.COMPOSITE_NODE__ANNOTATIONS;
+	int FUNCTION_FLOW__ANNOTATIONS = FUNCTION__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3537,7 +3555,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__NAME = ArchitecturePackage.COMPOSITE_NODE__NAME;
+	int FUNCTION_FLOW__NAME = FUNCTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -3546,7 +3564,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__DOCUMENTATION = ArchitecturePackage.COMPOSITE_NODE__DOCUMENTATION;
+	int FUNCTION_FLOW__DOCUMENTATION = FUNCTION__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
@@ -3555,70 +3573,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__CONTEXT_HELP = ArchitecturePackage.COMPOSITE_NODE__CONTEXT_HELP;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FLOW__START = ArchitecturePackage.COMPOSITE_NODE__START;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FLOW__END = ArchitecturePackage.COMPOSITE_NODE__END;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FLOW__DURATION = ArchitecturePackage.COMPOSITE_NODE__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Icon</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FLOW__ICON = ArchitecturePackage.COMPOSITE_NODE__ICON;
-
-	/**
-	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FLOW__ROLES = ArchitecturePackage.COMPOSITE_NODE__ROLES;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FLOW__ELEMENTS = ArchitecturePackage.COMPOSITE_NODE__ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FLOW__ACTORS = ArchitecturePackage.COMPOSITE_NODE__ACTORS;
+	int FUNCTION_FLOW__CONTEXT_HELP = FUNCTION__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
@@ -3627,7 +3582,52 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__OUTGOING_CONNECTIONS = ArchitecturePackage.COMPOSITE_NODE__OUTGOING_CONNECTIONS;
+	int FUNCTION_FLOW__OUTGOING_CONNECTIONS = FUNCTION__OUTGOING_CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__START = FUNCTION__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__END = FUNCTION__END;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__DURATION = FUNCTION__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__ICON = FUNCTION__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__ROLES = FUNCTION__ROLES;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
@@ -3636,7 +3636,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__INCOMING_CONNECTIONS = ArchitecturePackage.COMPOSITE_NODE__INCOMING_CONNECTIONS;
+	int FUNCTION_FLOW__INCOMING_CONNECTIONS = FUNCTION__INCOMING_CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
@@ -3645,7 +3645,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__IMPLEMENTATION = ArchitecturePackage.COMPOSITE_NODE_FEATURE_COUNT + 0;
+	int FUNCTION_FLOW__IMPLEMENTATION = FUNCTION__IMPLEMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
@@ -3654,7 +3654,43 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW__ERRORS = ArchitecturePackage.COMPOSITE_NODE_FEATURE_COUNT + 1;
+	int FUNCTION_FLOW__ERRORS = FUNCTION__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__OUTPUT = FUNCTION__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__INPUT = FUNCTION__INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__ELEMENTS = FUNCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__ACTORS = FUNCTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Function Flow</em>' class.
@@ -3663,7 +3699,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW_FEATURE_COUNT = ArchitecturePackage.COMPOSITE_NODE_FEATURE_COUNT + 2;
+	int FUNCTION_FLOW_FEATURE_COUNT = FUNCTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Function Flow</em>' class.
@@ -3672,7 +3708,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FLOW_OPERATION_COUNT = ArchitecturePackage.COMPOSITE_NODE_OPERATION_COUNT + 0;
+	int FUNCTION_FLOW_OPERATION_COUNT = FUNCTION_OPERATION_COUNT + 0;
 
 
 	/**

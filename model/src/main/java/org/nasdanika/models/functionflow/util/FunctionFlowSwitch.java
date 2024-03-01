@@ -26,8 +26,6 @@ import org.nasdanika.models.architecture.ArchitectureDescription;
 import org.nasdanika.models.architecture.ArchitectureDescriptionElement;
 import org.nasdanika.models.architecture.ArchitectureElement;
 import org.nasdanika.models.architecture.CompositeNode;
-import org.nasdanika.models.architecture.CompositeRelationshipSource;
-import org.nasdanika.models.architecture.CompositeRelationshipTarget;
 import org.nasdanika.models.architecture.Domain;
 import org.nasdanika.models.architecture.Node;
 import org.nasdanika.models.architecture.Relationship;
@@ -451,7 +449,7 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				SupplierFlow supplierFlow = (SupplierFlow)theEObject;
 				T1 result = caseSupplierFlow(supplierFlow);
 				if (result == null) result = caseFlow(supplierFlow);
-				if (result == null) result = caseCompositeRelationshipSource(supplierFlow);
+				if (result == null) result = caseSupplier(supplierFlow);
 				if (result == null) result = caseFlowElement(supplierFlow);
 				if (result == null) result = caseDomain(supplierFlow);
 				if (result == null) result = caseRelationshipSource(supplierFlow);
@@ -483,7 +481,7 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 				ConsumerFlow consumerFlow = (ConsumerFlow)theEObject;
 				T1 result = caseConsumerFlow(consumerFlow);
 				if (result == null) result = caseFlow(consumerFlow);
-				if (result == null) result = caseCompositeRelationshipTarget(consumerFlow);
+				if (result == null) result = caseConsumer(consumerFlow);
 				if (result == null) result = caseFlowElement(consumerFlow);
 				if (result == null) result = caseDomain(consumerFlow);
 				if (result == null) result = caseRelationshipTarget(consumerFlow);
@@ -514,31 +512,32 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 			case FunctionFlowPackage.FUNCTION_FLOW: {
 				FunctionFlow functionFlow = (FunctionFlow)theEObject;
 				T1 result = caseFunctionFlow(functionFlow);
+				if (result == null) result = caseFunction(functionFlow);
 				if (result == null) result = caseCompositeNode(functionFlow);
 				if (result == null) result = caseSupplierFlow(functionFlow);
 				if (result == null) result = caseConsumerFlow(functionFlow);
 				if (result == null) result = caseNode(functionFlow);
+				if (result == null) result = caseSupplier(functionFlow);
+				if (result == null) result = caseConsumer(functionFlow);
 				if (result == null) result = caseFlow(functionFlow);
-				if (result == null) result = caseCompositeRelationshipSource(functionFlow);
-				if (result == null) result = caseCompositeRelationshipTarget(functionFlow);
-				if (result == null) result = caseDomain(functionFlow);
-				if (result == null) result = caseArchitectureDescription(functionFlow);
 				if (result == null) result = caseRelationshipSource(functionFlow);
 				if (result == null) result = caseRelationshipTarget(functionFlow);
 				if (result == null) result = caseFlowElement(functionFlow);
+				if (result == null) result = caseDomain(functionFlow);
+				if (result == null) result = caseArchitectureDescription(functionFlow);
+				if (result == null) result = caseDocumentedNamedConnectionSource(functionFlow);
 				if (result == null) result = caseArchitectureDescriptionElement(functionFlow);
+				if (result == null) result = caseDocumentedNamedConnectionTarget(functionFlow);
+				if (result == null) result = caseDocumentedNamedGraph(functionFlow);
+				if (result == null) result = caseDocumentedNamedGraphElement(functionFlow);
+				if (result == null) result = caseConnectionSource(functionFlow);
 				if (result == null) result = caseArchitectureElement(functionFlow);
 				if (result == null) result = caseUndergoer(functionFlow);
-				if (result == null) result = caseDocumentedNamedGraph(functionFlow);
-				if (result == null) result = caseDocumentedNamedConnectionSource(functionFlow);
-				if (result == null) result = caseDocumentedNamedConnectionTarget(functionFlow);
-				if (result == null) result = caseDocumentedNamedGraphElement(functionFlow);
+				if (result == null) result = caseConnectionTarget(functionFlow);
+				if (result == null) result = caseGraph(functionFlow);
+				if (result == null) result = caseGraphElement(functionFlow);
 				if (result == null) result = caseDocumentedNamedStringIdentity(functionFlow);
 				if (result == null) result = casePeriod(functionFlow);
-				if (result == null) result = caseGraph(functionFlow);
-				if (result == null) result = caseConnectionSource(functionFlow);
-				if (result == null) result = caseConnectionTarget(functionFlow);
-				if (result == null) result = caseGraphElement(functionFlow);
 				if (result == null) result = caseStringIdentity(functionFlow);
 				if (result == null) result = caseSemanticElement(functionFlow);
 				if (result == null) result = caseDocumentedNamedElement(functionFlow);
@@ -1589,36 +1588,6 @@ public class FunctionFlowSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseDomain(Domain object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Composite Relationship Source</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Composite Relationship Source</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseCompositeRelationshipSource(CompositeRelationshipSource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Composite Relationship Target</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Composite Relationship Target</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseCompositeRelationshipTarget(CompositeRelationshipTarget object) {
 		return null;
 	}
 
