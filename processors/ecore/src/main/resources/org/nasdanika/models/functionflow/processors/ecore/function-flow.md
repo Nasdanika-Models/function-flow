@@ -151,7 +151,10 @@ In Java a generator may:
 * Add ``context`` parameter to allow flow elements to set/get shared flow state and lookup services. E.g. [Context](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/Context.html) or [MutableContext](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/MutableContext.html).
 * Add progress monitor parameter
 * Reuse flow elements for multiple inputs or create a new instance of the top-level flow for every input, or use a pool of instances.
-* Merge generated code with existing code preserving manual modifications. This would allow to have evolve the flow/implementations, flow configuration, and generated code in parallel and then merge the three lines of evolution. E.g. upgrade to a new flow version or change implementation or configuration for a flow element.
+* Merge generated code with existing code preserving manual modifications. This would allow to have evolve the flow/implementations, flow configuration, and generated code in parallel and then merge the three lines of evolution. E.g. upgrade to a new flow version or change implementation or configuration for a flow element. Java generation and merging can be done using the [Java model](https://github.com/Nasdanika-Models/java).
+* Generate suppliers, functions, and consumers as [SupplierFactory](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/SupplierFactory.html), [FunctionFactory](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/FunctionFactory.html), and [ConsumerFactory](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/ConsumerFactory.html) respectively
+* Generate multiple code flavors. For example, a simple synchronous flavor, which is easy to trace and debug, and [reactive streams](https://www.reactive-streams.org/) implementation for non-blocking asynchronous processing.
+* Transitions might be generated as communication channels, e.g. [Netty channels](https://netty.io/4.1/api/io/netty/channel/Channel.html). It would allow to have multiple options to distribute generated code to processing nodes such as cloud VM's. This could possibly be combined with reactive code generation by leveraging [Reactor Netty](https://projectreactor.io/docs/netty/snapshot/reference/index.html).
 
 ## Interpretation
 
@@ -173,5 +176,8 @@ Flows may define [actors](https://architecture.models.nasdanika.org/references/e
 Flows and flow elements may have a single or multiple implementations as well as multiple sets of configuration properties.
 This allows to have a multiple embodiments of the same flow for different use cases. 
 Implementations may be bespoke or reusable. 
+Diagram elements mapped to reusable implementations may be distributed as custom libraries[^custom-library].
+
+[^custom-library]: [Create your own custom library](https://drawio-app.com/blog/draw-io-training-exercise-9-create-your-own-custom-library/)
 
 Flows can form a hierarchy and flow element implementations can be flows or generated from flows.
