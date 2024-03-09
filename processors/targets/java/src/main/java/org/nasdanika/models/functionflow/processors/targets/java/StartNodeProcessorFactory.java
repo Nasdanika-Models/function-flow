@@ -16,15 +16,16 @@ import org.nasdanika.graph.processor.ProcessorConfig;
 import org.nasdanika.graph.processor.ProcessorInfo;
 import org.nasdanika.graph.processor.function.BiFunctionProcessorFactory.NodeProcessor;
 import org.nasdanika.models.functionflow.FunctionFlow;
+import org.nasdanika.models.functionflow.Start;
 
 /**
- * Creates node processor for {@link FunctionFlow}
+ * Creates node processor for {@link Start}
  */
-public class FunctionFlowNodeProcessorFactory implements NodeProcessorFactory {
+public class StartNodeProcessorFactory implements NodeProcessorFactory {
 
 	@Override
 	public boolean canHandle(EObject node) {
-		return node instanceof FunctionFlow;
+		return node instanceof Start;
 	}
 
 	@Override
@@ -36,11 +37,13 @@ public class FunctionFlowNodeProcessorFactory implements NodeProcessorFactory {
 			Map<Connection, BiFunction<Object, ProgressMonitor, Object>> outgoingEndpoints, Context context,
 			ProgressMonitor progressMonitor) {
 		
-		// Wire incoming endpoints to starts and outgoing to ends 
+		/* Pass to outgoing if condition matches, return true if so.
+		 * SpEL conditions  
+		 */
 		return new NodeProcessor<Object, Object, Object, Object>() {
 
 			@Override
-			public Object apply(Object t, ProgressMonitor u) {
+			public Object apply(Object input, ProgressMonitor pm) {
 				// Call starts
 				return null;
 			}

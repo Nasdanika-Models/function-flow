@@ -1,5 +1,6 @@
 import org.nasdanika.graph.model.util.NodeProcessorFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.FunctionFlowNodeProcessorFactory;
+import org.nasdanika.models.functionflow.processors.targets.java.StartNodeProcessorFactory;
 
 module org.nasdanika.models.functionflow.processors.targets.java {
 		
@@ -11,6 +12,8 @@ module org.nasdanika.models.functionflow.processors.targets.java {
 	opens org.nasdanika.models.functionflow.processors.targets.java; // For loading resources
 
 
-	provides NodeProcessorFactory with FunctionFlowNodeProcessorFactory;
+	provides NodeProcessorFactory with 
+		FunctionFlowNodeProcessorFactory,
+		StartNodeProcessorFactory;
 	
 }

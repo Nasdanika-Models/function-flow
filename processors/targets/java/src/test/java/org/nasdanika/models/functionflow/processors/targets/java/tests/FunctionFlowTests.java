@@ -12,15 +12,13 @@ import org.junit.jupiter.api.Test;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.graph.processor.ProcessorInfo;
-import org.nasdanika.models.functionflow.Flow;
+import org.nasdanika.models.functionflow.FunctionFlow;
 import org.nasdanika.models.functionflow.util.FunctionFlowDrawioResourceFactory;
 
 public class FunctionFlowTests {
-	
-	
+		
 	@Test
-	public void testProcessors() throws IOException {
+	public void testFunctionFlowProcessors() throws IOException {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("drawio", new FunctionFlowDrawioResourceFactory(uri -> resourceSet.getEObject(uri, true)));
 		File processDiagramFile = new File("process.drawio").getCanonicalFile();
@@ -28,9 +26,11 @@ public class FunctionFlowTests {
 				
 		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
 		Context context = Context.EMPTY_CONTEXT;
-		Flow flow = (Flow) processResource.getContents().get(0);
-		ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>> processorInfo = flow.createProcessor(context, progressMonitor);
+		FunctionFlow functionFlow = (FunctionFlow) processResource.getContents().get(0);
 		
+		BiFunction<Object, ProgressMonitor, Object> function = functionFlow.createFunction(context, progressMonitor);
+		Object result = function.apply("Hello", progressMonitor);
+		System.out.println(result);
 	}
 
 }
