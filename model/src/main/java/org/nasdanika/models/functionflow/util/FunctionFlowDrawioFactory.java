@@ -43,6 +43,18 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 		return source.source();		
 	}
 	
+	protected String getConfigurationPropertyName() {
+		return getPropertyNamespace() + "configuration";
+	}
+	
+	protected String getConfiguration(EObject eObj) {
+		SourceRecord source = loadSource(eObj, getConfigurationPropertyName());
+		if (source == null) {
+			return null;
+		}
+		return source.source();		
+	}
+	
 	protected String getOutputPropertyName() {
 		return getPropertyNamespace() + "output";
 	}
@@ -230,7 +242,12 @@ public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactor
 			
 			String implementation = getImplementation(eObj);
 			if (!Util.isBlank(implementation)) {
-				((org.nasdanika.models.functionflow.Transition) semanticElement).setImplementation(implementation);
+				((org.nasdanika.models.functionflow.FlowElement) semanticElement).setImplementation(implementation);
+			}
+			
+			String configuration = getConfiguration(eObj);
+			if (!Util.isBlank(implementation)) {
+				((org.nasdanika.models.functionflow.FlowElement) semanticElement).setImplementation(implementation);
 			}
 		}	
 		

@@ -22,6 +22,7 @@ import org.nasdanika.models.functionflow.Supplier;
  * <ul>
  *   <li>{@link org.nasdanika.models.functionflow.impl.FunctionImpl#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.nasdanika.models.functionflow.impl.FunctionImpl#getErrors <em>Errors</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.impl.FunctionImpl#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link org.nasdanika.models.functionflow.impl.FunctionImpl#getOutput <em>Output</em>}</li>
  *   <li>{@link org.nasdanika.models.functionflow.impl.FunctionImpl#getInput <em>Input</em>}</li>
  * </ul>
@@ -38,6 +39,15 @@ public class FunctionImpl extends NodeImpl implements Function {
 	 * @ordered
 	 */
 	protected static final String IMPLEMENTATION_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getConfiguration() <em>Configuration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConfiguration()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONFIGURATION_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getOutput() <em>Output</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -113,6 +123,26 @@ public class FunctionImpl extends NodeImpl implements Function {
 	 * @generated
 	 */
 	@Override
+	public String getConfiguration() {
+		return (String)eDynamicGet(FunctionFlowPackage.FUNCTION__CONFIGURATION, FunctionFlowPackage.Literals.FLOW_ELEMENT__CONFIGURATION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setConfiguration(String newConfiguration) {
+		eDynamicSet(FunctionFlowPackage.FUNCTION__CONFIGURATION, FunctionFlowPackage.Literals.FLOW_ELEMENT__CONFIGURATION, newConfiguration);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getOutput() {
 		return (String)eDynamicGet(FunctionFlowPackage.FUNCTION__OUTPUT, FunctionFlowPackage.Literals.SUPPLIER__OUTPUT, true, true);
 	}
@@ -159,6 +189,8 @@ public class FunctionImpl extends NodeImpl implements Function {
 				return getImplementation();
 			case FunctionFlowPackage.FUNCTION__ERRORS:
 				return getErrors();
+			case FunctionFlowPackage.FUNCTION__CONFIGURATION:
+				return getConfiguration();
 			case FunctionFlowPackage.FUNCTION__OUTPUT:
 				return getOutput();
 			case FunctionFlowPackage.FUNCTION__INPUT:
@@ -182,6 +214,9 @@ public class FunctionImpl extends NodeImpl implements Function {
 			case FunctionFlowPackage.FUNCTION__ERRORS:
 				getErrors().clear();
 				getErrors().addAll((Collection<? extends String>)newValue);
+				return;
+			case FunctionFlowPackage.FUNCTION__CONFIGURATION:
+				setConfiguration((String)newValue);
 				return;
 			case FunctionFlowPackage.FUNCTION__OUTPUT:
 				setOutput((String)newValue);
@@ -207,6 +242,9 @@ public class FunctionImpl extends NodeImpl implements Function {
 			case FunctionFlowPackage.FUNCTION__ERRORS:
 				getErrors().clear();
 				return;
+			case FunctionFlowPackage.FUNCTION__CONFIGURATION:
+				setConfiguration(CONFIGURATION_EDEFAULT);
+				return;
 			case FunctionFlowPackage.FUNCTION__OUTPUT:
 				setOutput(OUTPUT_EDEFAULT);
 				return;
@@ -229,6 +267,8 @@ public class FunctionImpl extends NodeImpl implements Function {
 				return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null : !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
 			case FunctionFlowPackage.FUNCTION__ERRORS:
 				return !getErrors().isEmpty();
+			case FunctionFlowPackage.FUNCTION__CONFIGURATION:
+				return CONFIGURATION_EDEFAULT == null ? getConfiguration() != null : !CONFIGURATION_EDEFAULT.equals(getConfiguration());
 			case FunctionFlowPackage.FUNCTION__OUTPUT:
 				return OUTPUT_EDEFAULT == null ? getOutput() != null : !OUTPUT_EDEFAULT.equals(getOutput());
 			case FunctionFlowPackage.FUNCTION__INPUT:
@@ -248,6 +288,7 @@ public class FunctionImpl extends NodeImpl implements Function {
 			switch (derivedFeatureID) {
 				case FunctionFlowPackage.FUNCTION__IMPLEMENTATION: return FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION;
 				case FunctionFlowPackage.FUNCTION__ERRORS: return FunctionFlowPackage.FLOW_ELEMENT__ERRORS;
+				case FunctionFlowPackage.FUNCTION__CONFIGURATION: return FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION;
 				default: return -1;
 			}
 		}
@@ -277,6 +318,7 @@ public class FunctionImpl extends NodeImpl implements Function {
 			switch (baseFeatureID) {
 				case FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION: return FunctionFlowPackage.FUNCTION__IMPLEMENTATION;
 				case FunctionFlowPackage.FLOW_ELEMENT__ERRORS: return FunctionFlowPackage.FUNCTION__ERRORS;
+				case FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION: return FunctionFlowPackage.FUNCTION__CONFIGURATION;
 				default: return -1;
 			}
 		}

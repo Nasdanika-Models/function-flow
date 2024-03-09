@@ -88,6 +88,34 @@ public class FlowElementProcessorFactory  {
 	@EStructuralFeatureNodeProcessorFactory(
 			nsURI = FunctionFlowPackage.eNS_URI,
 			classID = FunctionFlowPackage.FLOW_ELEMENT,
+			featureID = FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION,
+			description = "Flow element configuration",
+			documentation = 
+					"""
+					Flow element configuration. 
+					"""
+	)
+	public EAttributeNodeProcessor createConfigurationProcessor(
+			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
+			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
+			BiConsumer<Label, ProgressMonitor> labelConfigurator,
+			ProgressMonitor progressMonitor) {		
+		return new EAttributeNodeProcessor(config, context, prototypeProvider) {
+			
+			@Override
+			public void configureLabel(Object source, Label label, ProgressMonitor progressMonitor) {
+				super.configureLabel(source, label, progressMonitor);
+				if (labelConfigurator != null) {
+					labelConfigurator.accept(label, progressMonitor);
+				}
+			}
+			
+		};
+	}
+
+	@EStructuralFeatureNodeProcessorFactory(
+			nsURI = FunctionFlowPackage.eNS_URI,
+			classID = FunctionFlowPackage.FLOW_ELEMENT,
 			featureID = FunctionFlowPackage.FLOW_ELEMENT__ERRORS,
 			description = "Errors either thrown by the element or handled by it",
 			documentation = 

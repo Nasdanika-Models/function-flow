@@ -70,6 +70,16 @@ For example, ``input`` property specifies input type, ``input-ref`` specifies a 
 The mapping logic just loads the below properties, what to do with them is up to the generation/execution logic. 
 As such, the below sections are guidelines/suggestions which might be followed, extended, or ignored by the generator/interpreter providers.
 
+### condition
+
+A condition for transitions, publishers, and subscribers.
+For generators it might be a boolean expression in the target language or a method body evaluating to boolean value.
+For a Java interpreter it might be a [SpEL](https://docs.spring.io/spring-framework/reference/core/expressions.html) expression. 
+
+### configuration
+
+Element configuration. E.g. YAML configuration. 
+
 ### errors
 
 A list of error types thrown by a given element.
@@ -101,19 +111,15 @@ For example in Java:
 * ``mypackage.HttpListener`` - service interface name. Service implementations are to be loaded by [ServiceLoader](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ServiceLoader.html)
 * ``mypackage.HttpListenerImpl`` - implementation class name to be instantiated.
 
+The string may also include Maven coordinates e.g. ``mypackage.HttpListenerImpl@my-group:my-artifact:my-version``.
+
 #### Map
 
 A map in YAML, JSON, properties, XML, or other format may specify:
 
 * Maven coordinates to add to dependencies in a generated ``pom.xml`` file or to create a classloader.
 * Implementation class or service interface name.
-* Configuration parameters. 
-
-### condition
-
-A condition for transitions, publishers, and subscribers.
-For generators it might be a boolean expression in the target language or a method body evaluating to boolean value.
-For a Java interpreter it might be a [SpEL](https://docs.spring.io/spring-framework/reference/core/expressions.html) expression. 
+* Configuration parameters as an alternative or addition to ``configuration``
 
 ### input
 
@@ -144,16 +150,17 @@ Output type for a call target. Defaults to the call output type if blank.
 
 ## Generation
 
-In Java a generator may:
+A generator for Java target may:
 
 * Generate a single input parameter for consumers and functions
 * Generate a list of parameters from maps
 * Add ``context`` parameter to allow flow elements to set/get shared flow state and lookup services. E.g. [Context](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/Context.html) or [MutableContext](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/MutableContext.html).
 * Add progress monitor parameter
 * Reuse flow elements for multiple inputs or create a new instance of the top-level flow for every input, or use a pool of instances.
-* Merge generated code with existing code preserving manual modifications. This would allow to have evolve the flow/implementations, flow configuration, and generated code in parallel and then merge the three lines of evolution. E.g. upgrade to a new flow version or change implementation or configuration for a flow element. Java generation and merging can be done using the [Java model](https://github.com/Nasdanika-Models/java).
+* Merge generated code with existing code preserving manual modifications. This would allow to have evolve the flow/implementations, flow configuration, and generated code in parallel and then merge the three lines of evolution. E.g. upgrade to a new flow version or change implementation or configuration for a flow element. Generation and merging can be done using the [Java model](https://github.com/Nasdanika-Models/java).
 * Generate suppliers, functions, and consumers as [SupplierFactory](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/SupplierFactory.html), [FunctionFactory](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/FunctionFactory.html), and [ConsumerFactory](https://javadoc.io/doc/org.nasdanika.core/common/latest/org.nasdanika.common/org/nasdanika/common/ConsumerFactory.html) respectively
 * Generate multiple code flavors. For example, a simple synchronous flavor, which is easy to trace and debug, and [reactive streams](https://www.reactive-streams.org/) implementation for non-blocking asynchronous processing.
+* Generate a compute (processors) graph. This can be done by an interpreter as well.
 * Transitions might be generated as communication channels, e.g. [Netty channels](https://netty.io/4.1/api/io/netty/channel/Channel.html). It would allow to have multiple options to distribute generated code to processing nodes such as cloud VM's. This could possibly be combined with reactive code generation by leveraging [Reactor Netty](https://projectreactor.io/docs/netty/snapshot/reference/index.html).
 
 ## Interpretation

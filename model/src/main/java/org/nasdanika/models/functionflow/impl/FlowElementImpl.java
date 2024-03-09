@@ -21,6 +21,7 @@ import org.nasdanika.models.functionflow.FunctionFlowPackage;
  * <ul>
  *   <li>{@link org.nasdanika.models.functionflow.impl.FlowElementImpl#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.nasdanika.models.functionflow.impl.FlowElementImpl#getErrors <em>Errors</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.impl.FlowElementImpl#getConfiguration <em>Configuration</em>}</li>
  * </ul>
  *
  * @generated
@@ -35,6 +36,16 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 	 * @ordered
 	 */
 	protected static final String IMPLEMENTATION_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getConfiguration() <em>Configuration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConfiguration()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONFIGURATION_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,12 +103,34 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 	 * @generated
 	 */
 	@Override
+	public String getConfiguration() {
+		return (String)eDynamicGet(FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION, FunctionFlowPackage.Literals.FLOW_ELEMENT__CONFIGURATION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setConfiguration(String newConfiguration) {
+		eDynamicSet(FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION, FunctionFlowPackage.Literals.FLOW_ELEMENT__CONFIGURATION, newConfiguration);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FunctionFlowPackage.FLOW_ELEMENT__IMPLEMENTATION:
 				return getImplementation();
 			case FunctionFlowPackage.FLOW_ELEMENT__ERRORS:
 				return getErrors();
+			case FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION:
+				return getConfiguration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,6 +151,9 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 				getErrors().clear();
 				getErrors().addAll((Collection<? extends String>)newValue);
 				return;
+			case FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION:
+				setConfiguration((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -136,6 +172,9 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 			case FunctionFlowPackage.FLOW_ELEMENT__ERRORS:
 				getErrors().clear();
 				return;
+			case FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION:
+				setConfiguration(CONFIGURATION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -152,6 +191,8 @@ public class FlowElementImpl extends ArchitectureDescriptionElementImpl implemen
 				return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null : !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
 			case FunctionFlowPackage.FLOW_ELEMENT__ERRORS:
 				return !getErrors().isEmpty();
+			case FunctionFlowPackage.FLOW_ELEMENT__CONFIGURATION:
+				return CONFIGURATION_EDEFAULT == null ? getConfiguration() != null : !CONFIGURATION_EDEFAULT.equals(getConfiguration());
 		}
 		return super.eIsSet(featureID);
 	}

@@ -16,6 +16,7 @@ import org.nasdanika.models.architecture.ArchitectureDescriptionElement;
  * <ul>
  *   <li>{@link org.nasdanika.models.functionflow.FlowElement#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.nasdanika.models.functionflow.FlowElement#getErrors <em>Errors</em>}</li>
+ *   <li>{@link org.nasdanika.models.functionflow.FlowElement#getConfiguration <em>Configuration</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.functionflow.FunctionFlowPackage#getFlowElement()
@@ -56,5 +57,27 @@ public interface FlowElement extends ArchitectureDescriptionElement {
 	 * @generated
 	 */
 	EList<String> getErrors();
+
+	/**
+	 * Returns the value of the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Configuration</em>' attribute.
+	 * @see #setConfiguration(String)
+	 * @see org.nasdanika.models.functionflow.FunctionFlowPackage#getFlowElement_Configuration()
+	 * @model
+	 * @generated
+	 */
+	String getConfiguration();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.functionflow.FlowElement#getConfiguration <em>Configuration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Configuration</em>' attribute.
+	 * @see #getConfiguration()
+	 * @generated
+	 */
+	void setConfiguration(String value);
 
 } // FlowElement

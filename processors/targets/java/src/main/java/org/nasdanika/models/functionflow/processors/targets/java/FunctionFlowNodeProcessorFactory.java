@@ -1,23 +1,64 @@
 package org.nasdanika.models.functionflow.processors.targets.java;
 
+import java.util.Map;
+import java.util.concurrent.CompletionStage;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+
+import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Context;
+import org.nasdanika.common.ProgressMonitor;
+import org.nasdanika.graph.Connection;
+import org.nasdanika.graph.Element;
+import org.nasdanika.graph.model.util.NodeProcessorFactory;
+import org.nasdanika.graph.processor.ProcessorConfig;
+import org.nasdanika.graph.processor.ProcessorInfo;
+import org.nasdanika.graph.processor.function.BiFunctionProcessorFactory.NodeProcessor;
+import org.nasdanika.models.functionflow.FunctionFlow;
 
 /**
- * Node processor factory to use with {@link EObjectReflectiveProcessorFactory} to generate Java sources from functon flow models.
- * @author Pavel
- *
+ * Creates node processor for {@link FunctionFlow}
  */
-public class FunctionFlowNodeProcessorFactory {
-			
-	private Context context;
+public class FunctionFlowNodeProcessorFactory implements NodeProcessorFactory {
 
-	/**
-	 * 
-	 * @param context
-	 * @param reflectiveFactories Objects with annotated methods for creating processors. 
-	 */
-	public FunctionFlowNodeProcessorFactory(Context context)  {
-		this.context = context;
+	@Override
+	public boolean canHandle(EObject node) {
+		return node instanceof FunctionFlow;
 	}
+
+	@Override
+	public NodeProcessor<Object, Object, Object, Object> createProcessor(
+			ProcessorConfig config,
+			BiConsumer<Element, BiConsumer<ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>>, ProgressMonitor>> infoProvider,
+			Consumer<CompletionStage<?>> endpointWiringStageConsumer,
+			Map<Connection, BiFunction<Object, ProgressMonitor, Object>> incomingEndpoints,
+			Map<Connection, BiFunction<Object, ProgressMonitor, Object>> outgoingEndpoints, Context context,
+			ProgressMonitor progressMonitor) {
+		
+		// Wire incoming endpoints to starts and outgoing to ends 
+		return new NodeProcessor<Object, Object, Object, Object>() {
+
+			@Override
+			public Object apply(Object t, ProgressMonitor u) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Object applyIncoming(Connection connection, Object input, ProgressMonitor progressMonitor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Object applyOutgoing(Connection connection, Object input, ProgressMonitor progressMonitor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			
+		};
+	}
+			
 	
 }

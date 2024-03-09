@@ -239,13 +239,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int FLOW_ELEMENT__ERRORS = ArchitecturePackage.ARCHITECTURE_DESCRIPTION_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_ELEMENT__CONFIGURATION = ArchitecturePackage.ARCHITECTURE_DESCRIPTION_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Flow Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW_ELEMENT_FEATURE_COUNT = ArchitecturePackage.ARCHITECTURE_DESCRIPTION_ELEMENT_FEATURE_COUNT + 2;
+	int FLOW_ELEMENT_FEATURE_COUNT = ArchitecturePackage.ARCHITECTURE_DESCRIPTION_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Flow Element</em>' class.
@@ -655,6 +664,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SUPPLIER__ERRORS = FLOW_ELEMENT__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLIER__CONFIGURATION = FLOW_ELEMENT__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -870,6 +888,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBSCRIBER__ERRORS = SUPPLIER__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBSCRIBER__CONFIGURATION = SUPPLIER__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
@@ -1096,6 +1123,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int ERROR_HANDLER__ERRORS = FLOW_ELEMENT__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_HANDLER__CONFIGURATION = FLOW_ELEMENT__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
@@ -1496,6 +1532,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int CONSUMER__ERRORS = FLOW_ELEMENT__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER__CONFIGURATION = FLOW_ELEMENT__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1711,6 +1756,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int PUBLISHER__ERRORS = CONSUMER__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLISHER__CONFIGURATION = CONSUMER__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
@@ -1957,13 +2011,22 @@ public interface FunctionFlowPackage extends EPackage {
 	int FUNCTION__ERRORS = ArchitecturePackage.NODE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__CONFIGURATION = ArchitecturePackage.NODE_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__OUTPUT = ArchitecturePackage.NODE_FEATURE_COUNT + 2;
+	int FUNCTION__OUTPUT = ArchitecturePackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -1972,7 +2035,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__INPUT = ArchitecturePackage.NODE_FEATURE_COUNT + 3;
+	int FUNCTION__INPUT = ArchitecturePackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Function</em>' class.
@@ -1981,7 +2044,7 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = ArchitecturePackage.NODE_FEATURE_COUNT + 4;
+	int FUNCTION_FEATURE_COUNT = ArchitecturePackage.NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -2173,6 +2236,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSITION__ERRORS = FLOW_ELEMENT__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__CONFIGURATION = FLOW_ELEMENT__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -2426,6 +2498,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALL__ERRORS = TRANSITION__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL__CONFIGURATION = TRANSITION__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -2699,6 +2780,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int ERROR_TRANSITION__ERRORS = TRANSITION__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_TRANSITION__CONFIGURATION = TRANSITION__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2952,6 +3042,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int FLOW__ERRORS = FLOW_ELEMENT__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW__CONFIGURATION = FLOW_ELEMENT__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3167,6 +3266,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUPPLIER_FLOW__ERRORS = FLOW__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLIER_FLOW__CONFIGURATION = FLOW__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -3402,6 +3510,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONSUMER_FLOW__ERRORS = FLOW__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER_FLOW__CONFIGURATION = FLOW__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -3657,6 +3774,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int FUNCTION_FLOW__ERRORS = FUNCTION__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_FLOW__CONFIGURATION = FUNCTION__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3893,6 +4019,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE__ERRORS = FLOW_ELEMENT__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE__CONFIGURATION = FLOW_ELEMENT__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4108,6 +4243,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOURCE_SUPPLIER__ERRORS = SUPPLIER__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_SUPPLIER__CONFIGURATION = SUPPLIER__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
@@ -4343,6 +4487,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOURCE_CONSUMER__ERRORS = CONSUMER__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_CONSUMER__CONFIGURATION = CONSUMER__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Connections</b></em>' reference list.
@@ -4598,6 +4751,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_FUNCTION__ERRORS = FUNCTION__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_FUNCTION__CONFIGURATION = FUNCTION__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4831,6 +4993,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOURCE_TRANSITION__ERRORS = TRANSITION__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_TRANSITION__CONFIGURATION = TRANSITION__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -5102,6 +5273,15 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOURCE_CALL__ERRORS = CALL__ERRORS;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_CALL__CONFIGURATION = CALL__CONFIGURATION;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -5393,6 +5573,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_ERROR_TRANSITION__ERRORS = ERROR_TRANSITION__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_TRANSITION__CONFIGURATION = ERROR_TRANSITION__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5664,6 +5853,15 @@ public interface FunctionFlowPackage extends EPackage {
 	int SOURCE_ERROR_HANDLER__ERRORS = ERROR_HANDLER__ERRORS;
 
 	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOURCE_ERROR_HANDLER__CONFIGURATION = ERROR_HANDLER__CONFIGURATION;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Connections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5739,6 +5937,17 @@ public interface FunctionFlowPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFlowElement_Errors();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.functionflow.FlowElement#getConfiguration <em>Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Configuration</em>'.
+	 * @see org.nasdanika.models.functionflow.FlowElement#getConfiguration()
+	 * @see #getFlowElement()
+	 * @generated
+	 */
+	EAttribute getFlowElement_Configuration();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.functionflow.Start <em>Start</em>}'.
@@ -6183,6 +6392,14 @@ public interface FunctionFlowPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FLOW_ELEMENT__ERRORS = eINSTANCE.getFlowElement_Errors();
+
+		/**
+		 * The meta object literal for the '<em><b>Configuration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FLOW_ELEMENT__CONFIGURATION = eINSTANCE.getFlowElement_Configuration();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.functionflow.impl.StartImpl <em>Start</em>}' class.

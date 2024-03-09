@@ -1,3 +1,6 @@
+import org.nasdanika.graph.model.util.NodeProcessorFactory;
+import org.nasdanika.models.functionflow.processors.targets.java.FunctionFlowNodeProcessorFactory;
+
 module org.nasdanika.models.functionflow.processors.targets.java {
 		
 	requires transitive org.nasdanika.models.functionflow;
@@ -6,5 +9,8 @@ module org.nasdanika.models.functionflow.processors.targets.java {
 	
 	exports org.nasdanika.models.functionflow.processors.targets.java;
 	opens org.nasdanika.models.functionflow.processors.targets.java; // For loading resources
+
+
+	provides NodeProcessorFactory with FunctionFlowNodeProcessorFactory;
 	
 }

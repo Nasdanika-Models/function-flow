@@ -321,6 +321,16 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFlowElement_Configuration() {
+		return (EAttribute)flowElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getStart() {
 		return startEClass;
 	}
@@ -727,6 +737,7 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		flowElementEClass = createEClass(FLOW_ELEMENT);
 		createEAttribute(flowElementEClass, FLOW_ELEMENT__IMPLEMENTATION);
 		createEAttribute(flowElementEClass, FLOW_ELEMENT__ERRORS);
+		createEAttribute(flowElementEClass, FLOW_ELEMENT__CONFIGURATION);
 
 		startEClass = createEClass(START);
 		createEAttribute(startEClass, START__CONDITION);
@@ -869,6 +880,7 @@ public class FunctionFlowPackageImpl extends EPackageImpl implements FunctionFlo
 		initEClass(flowElementEClass, FlowElement.class, "FlowElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFlowElement_Implementation(), ecorePackage.getEString(), "implementation", null, 0, 1, FlowElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFlowElement_Errors(), ecorePackage.getEString(), "errors", null, 0, -1, FlowElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFlowElement_Configuration(), ecorePackage.getEString(), "configuration", null, 0, 1, FlowElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(startEClass, Start.class, "Start", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStart_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Start.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -12,6 +12,7 @@
     <genClasses ecoreClass="function-flow.ecore#//FlowElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//FlowElement/implementation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//FlowElement/errors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//FlowElement/configuration"/>
     </genClasses>
     <genClasses ecoreClass="function-flow.ecore#//Start">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute function-flow.ecore#//Start/condition"/>
