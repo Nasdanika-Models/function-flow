@@ -165,6 +165,8 @@ A generator for Java target may:
 
 ## Interpretation
 
+TODO - explain ``createFunction()`` and ``createProcessor()`` (from Graph)
+
 In Java an interpreter may use SpEL expressions for conditions, scripting to evaluate sources
 and Maven classloader to load implementations.
 It may pass progress monitor and context variables between flow elements.

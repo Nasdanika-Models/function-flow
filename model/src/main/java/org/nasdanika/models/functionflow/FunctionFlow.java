@@ -39,8 +39,7 @@ public interface FunctionFlow extends Function, CompositeNode, SupplierFlow, Con
 			@Override
 			public Object apply(Object input, ProgressMonitor pm) {
 				// Ignoring input configuration - for documentation purposes
-				processor.apply(input, pm); // Ignoring result
-				return null; // TODO - from ends
+				return processor.apply(input, pm); // Ignoring result
 			}
 		};
 	}

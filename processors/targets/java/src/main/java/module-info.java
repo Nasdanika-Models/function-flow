@@ -1,6 +1,9 @@
+import org.nasdanika.graph.model.util.ConnectionProcessorFactory;
 import org.nasdanika.graph.model.util.NodeProcessorFactory;
+import org.nasdanika.models.functionflow.processors.targets.java.EndNodeProcessorFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.FunctionFlowNodeProcessorFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.StartNodeProcessorFactory;
+import org.nasdanika.models.functionflow.processors.targets.java.TransitionConnectionProcessorFactory;
 
 module org.nasdanika.models.functionflow.processors.targets.java {
 		
@@ -14,6 +17,9 @@ module org.nasdanika.models.functionflow.processors.targets.java {
 
 	provides NodeProcessorFactory with 
 		FunctionFlowNodeProcessorFactory,
-		StartNodeProcessorFactory;
+		StartNodeProcessorFactory,
+		EndNodeProcessorFactory;
+	
+	provides ConnectionProcessorFactory with TransitionConnectionProcessorFactory;
 	
 }
