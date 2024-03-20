@@ -1,5 +1,4 @@
-import org.nasdanika.graph.model.util.ConnectionProcessorFactory;
-import org.nasdanika.graph.model.util.NodeProcessorFactory;
+import org.nasdanika.capability.CapabilityFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.EndNodeProcessorFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.FunctionFlowNodeProcessorFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.StartNodeProcessorFactory;
@@ -14,12 +13,10 @@ module org.nasdanika.models.functionflow.processors.targets.java {
 	exports org.nasdanika.models.functionflow.processors.targets.java;
 	opens org.nasdanika.models.functionflow.processors.targets.java; // For loading resources
 
-
-	provides NodeProcessorFactory with 
+	provides CapabilityFactory with 
 		FunctionFlowNodeProcessorFactory,
 		StartNodeProcessorFactory,
-		EndNodeProcessorFactory;
-	
-	provides ConnectionProcessorFactory with TransitionConnectionProcessorFactory;
+		EndNodeProcessorFactory,
+		TransitionConnectionProcessorFactory;
 	
 }

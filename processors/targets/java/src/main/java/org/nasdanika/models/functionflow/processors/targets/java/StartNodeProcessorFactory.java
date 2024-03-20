@@ -25,10 +25,10 @@ import org.nasdanika.models.functionflow.Start;
 /**
  * Creates node processor for {@link Start}
  */
-public class StartNodeProcessorFactory implements NodeProcessorFactory {
+public class StartNodeProcessorFactory extends NodeProcessorFactory {
 
 	@Override
-	public boolean canHandle(EObject node) {
+	public boolean isForModelElement(EObject node) {
 		return node instanceof Start;
 	}
 
@@ -87,7 +87,11 @@ public class StartNodeProcessorFactory implements NodeProcessorFactory {
 			}
 			
 		};
+	}			
+
+	@Override
+	protected boolean canHandleRequirement(Object requirement) {
+		return requirement == null; // Default behavior - synchronous execution
 	}
-			
 	
 }

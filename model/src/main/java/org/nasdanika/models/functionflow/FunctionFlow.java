@@ -29,10 +29,11 @@ public interface FunctionFlow extends Function, CompositeNode, SupplierFlow, Con
 	 * @return
 	 */
 	default BiFunction<Object, ProgressMonitor, Object> createFunction(
+			Object requirement,
 			Context context,
 			ProgressMonitor progressMonitor) {
 		
-		NodeProcessorInfo<BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>> processorInfo = (NodeProcessorInfo<BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>>) createProcessor(context, progressMonitor);
+		NodeProcessorInfo<BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>> processorInfo = (NodeProcessorInfo<BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>>) createProcessor(requirement, context, progressMonitor);
 		BiFunction<Object, ProgressMonitor, Object> processor = processorInfo.getProcessor();
 		return new BiFunction<Object, ProgressMonitor, Object>() {
 			

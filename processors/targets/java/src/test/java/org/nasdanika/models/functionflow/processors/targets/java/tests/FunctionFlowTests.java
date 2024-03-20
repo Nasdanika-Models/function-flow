@@ -28,7 +28,7 @@ public class FunctionFlowTests {
 		Context context = Context.EMPTY_CONTEXT;
 		FunctionFlow functionFlow = (FunctionFlow) processResource.getContents().get(0);
 		
-		BiFunction<Object, ProgressMonitor, Object> function = functionFlow.createFunction(context, progressMonitor);
+		BiFunction<Object, ProgressMonitor, Object> function = functionFlow.createFunction(null, context, progressMonitor);
 		Object result = function.apply("Hello", progressMonitor);
 		System.out.println(result);
 	}

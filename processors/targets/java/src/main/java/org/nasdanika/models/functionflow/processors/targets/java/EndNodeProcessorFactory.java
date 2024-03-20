@@ -19,18 +19,18 @@ import org.nasdanika.graph.processor.function.BiFunctionProcessorFactory.NodePro
 import org.nasdanika.models.functionflow.End;
 import org.nasdanika.models.functionflow.Start;
 
+
 /**
  * Creates node processor for {@link Start}
  */
-public class EndNodeProcessorFactory implements NodeProcessorFactory {
+public class EndNodeProcessorFactory extends NodeProcessorFactory {
 
 	@Override
-	public boolean canHandle(EObject node) {
-		return node instanceof End;
+	protected boolean isForModelElement(EObject eObj) {
+		return eObj instanceof End;
 	}
 
-	@Override
-	public NodeProcessor<Object, Object, Object, Object> createProcessor(
+	protected NodeProcessor<Object, Object, Object, Object> createProcessor(
 			NodeProcessorConfig<BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>> config,
 			BiConsumer<Element, BiConsumer<ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>>, ProgressMonitor>> infoProvider,
 			Consumer<CompletionStage<?>> endpointWiringStageConsumer,
@@ -70,6 +70,10 @@ public class EndNodeProcessorFactory implements NodeProcessorFactory {
 			
 		};
 	}
-			
-	
+
+	@Override
+	protected boolean canHandleRequirement(Object requirement) {
+		return requirement == null; // Default behavior - synchronous execution
+	}
+				
 }

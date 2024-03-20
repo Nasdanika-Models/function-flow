@@ -6,11 +6,11 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Util;
 import org.nasdanika.graph.Element;
-import org.nasdanika.graph.model.Connection;
 import org.nasdanika.graph.model.util.ConnectionProcessorFactory;
 import org.nasdanika.graph.processor.ConnectionProcessorConfig;
 import org.nasdanika.graph.processor.ProcessorInfo;
@@ -21,10 +21,10 @@ import org.nasdanika.models.functionflow.Transition;
 /**
  * Creates a simple pass-through connection if implementation is blank
  */
-public class TransitionConnectionProcessorFactory implements ConnectionProcessorFactory {
+public class TransitionConnectionProcessorFactory extends ConnectionProcessorFactory {
 
 	@Override
-	public boolean canHandle(Connection<?> connection) {
+	public boolean isForModelElement(EObject connection) {
 		return connection != null && connection.eClass() == FunctionFlowPackage.Literals.TRANSITION;
 	}
 
@@ -61,6 +61,11 @@ public class TransitionConnectionProcessorFactory implements ConnectionProcessor
 			}
 			
 		};
+	}
+
+	@Override
+	protected boolean canHandleRequirement(Object requirement) {
+		return requirement == null; // Default behavior - synchronous execution
 	}
 
 }
