@@ -122,7 +122,7 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 
 	@EPackageNodeProcessorFactory(
 			label = "Function Flow",
-			description = "A graph of functional elements - suppliers, functions, consumers - exchanging objects via transitions",
+			description = "A graph of functional elements - suppliers, functions, consumers - exchanging objects via transitions and calls",
 			actionPrototype = """
             app-action:
               content:
