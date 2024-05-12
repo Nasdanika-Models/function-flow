@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.SourceRecord;
 import org.nasdanika.common.Util;
@@ -19,6 +20,10 @@ import org.yaml.snakeyaml.Yaml;
  * @param <E>
  */
 public abstract class FunctionFlowDrawioFactory extends ArchitectureDrawioFactory {
+
+	public FunctionFlowDrawioFactory(ResourceSet resourceSet) {
+		super(resourceSet);
+	}
 
 	/**
 	 * Returns a map with graph and ncore entries.

@@ -68,7 +68,7 @@ public class FunctionFlowDrawioResource extends ResourceImpl {
 		
 		diagramResource.load(inputStream, options);
 		
-		FunctionFlowDrawioFactory functionFlowDrawioFactory = new FunctionFlowDrawioFactory() {
+		FunctionFlowDrawioFactory functionFlowDrawioFactory = new FunctionFlowDrawioFactory(getResourceSet()) {
 
 			@Override
 			protected EObject getByRefId(EObject eObj, String refId, int pass, Map<EObject, EObject> registry) {				
