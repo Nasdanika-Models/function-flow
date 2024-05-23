@@ -89,7 +89,6 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 	
 	@Factory
 	public final SubscriberProcessorFactory subscriberProcessorFactory;		
-
 	
 	public FunctionFlowEcoreGenProcessorsFactory(Context context) {
 		this.context = context;
@@ -119,7 +118,6 @@ public class FunctionFlowEcoreGenProcessorsFactory {
 		subscriberProcessorFactory = new SubscriberProcessorFactory(context); 		
 	}
 	
-
 	@EPackageNodeProcessorFactory(
 			label = "Function Flow",
 			description = "A graph of functional elements - suppliers, functions, consumers - exchanging objects via transitions and calls",
