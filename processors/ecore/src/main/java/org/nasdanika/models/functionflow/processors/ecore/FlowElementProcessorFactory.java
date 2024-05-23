@@ -17,7 +17,7 @@ import org.nasdanika.models.ecore.graph.processors.EStructuralFeatureNodeProcess
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
 
 @EClassifierNodeProcessorFactory(classifierID = FunctionFlowPackage.FLOW_ELEMENT)
-public class FlowElementProcessorFactory  {
+public class FlowElementProcessorFactory {
 	
 	protected Context context;
 
