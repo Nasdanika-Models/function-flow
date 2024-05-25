@@ -172,7 +172,7 @@ public class FunctionFlowDrawioResource extends ResourceImpl {
 	}
 	
 	protected ClassLoader getClassLoader(EObject context, URI baseURI, Supplier<ClassLoader> logicalParentClassLoaderSupplier) {
-		return logicalParentClassLoaderSupplier == null ? getClass().getClassLoader() : logicalParentClassLoaderSupplier.get();
+		return logicalParentClassLoaderSupplier == null ? Thread.currentThread().getContextClassLoader() : logicalParentClassLoaderSupplier.get();
 	}	
 	
 	protected URI getAppBase() {
