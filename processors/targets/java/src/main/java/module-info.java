@@ -1,6 +1,7 @@
 import org.nasdanika.capability.CapabilityFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.EndNodeProcessorFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.FunctionFlowNodeProcessorFactory;
+import org.nasdanika.models.functionflow.processors.targets.java.JavaReflectiveBiFunctionProcessorServiceFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.StartNodeProcessorFactory;
 import org.nasdanika.models.functionflow.processors.targets.java.TransitionConnectionProcessorFactory;
 
@@ -17,6 +18,7 @@ module org.nasdanika.models.functionflow.processors.targets.java {
 		FunctionFlowNodeProcessorFactory,
 		StartNodeProcessorFactory,
 		EndNodeProcessorFactory,
-		TransitionConnectionProcessorFactory;
+		TransitionConnectionProcessorFactory,
+		JavaReflectiveBiFunctionProcessorServiceFactory;
 	
 }
