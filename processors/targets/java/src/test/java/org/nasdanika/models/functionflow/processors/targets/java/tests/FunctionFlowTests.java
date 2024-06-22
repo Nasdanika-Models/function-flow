@@ -31,22 +31,6 @@ import org.nasdanika.models.functionflow.util.FunctionFlowDrawioResourceFactory;
 
 public class FunctionFlowTests {
 		
-//	@Test
-//	public void testFunctionFlowProcessors() throws IOException {
-//		ResourceSet resourceSet = new ResourceSetImpl();
-//		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("drawio", new FunctionFlowDrawioResourceFactory(uri -> resourceSet.getEObject(uri, true)));
-//		File processDiagramFile = new File("process.drawio").getCanonicalFile();
-//		Resource processResource = resourceSet.getResource(URI.createFileURI(processDiagramFile.getAbsolutePath()), true);
-//				
-//		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
-//		Context context = Context.EMPTY_CONTEXT;
-//		FunctionFlow functionFlow = (FunctionFlow) processResource.getContents().get(0);
-//		
-//		BiFunction<Object, ProgressMonitor, Object> function = functionFlow.createFunction(null, context, progressMonitor);
-//		Object result = function.apply("Hello", progressMonitor);
-//		System.out.println(result);
-//	}
-	
 	@Test
 	public void testFunctionFlowCapabilityProcessors() throws IOException {
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -72,39 +56,6 @@ public class FunctionFlowTests {
 		Object result = function.apply("Hello", progressMonitor);
 		System.out.println(result);
 	}
-	
-//	@SuppressWarnings("unchecked")
-//	protected ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>> createProcessor(EObject graph, Object requirement, Context context, ProgressMonitor progressMonitor) {				
-//		// Creating adapters
-//		GraphAdapterFactory graphAdapterFactory = new GraphAdapterFactory();  
-//		Transformer<EObject,ElementAdapter<?>> graphFactory = new Transformer<>(graphAdapterFactory); 
-//		Map<EObject, ElementAdapter<?>> registry = graphFactory.transform(Collections.singleton(graph), false, progressMonitor);
-//		
-//		// Configs and processors
-//		NopEndpointProcessorConfigFactory<Function<Object,Object>> processorConfigFactory = new NopEndpointProcessorConfigFactory<>() {
-//			
-//			protected boolean isPassThrough(org.nasdanika.graph.Connection connection) {
-//				return false;
-//			};
-//			
-//		};
-//		
-//		Transformer<org.nasdanika.graph.Element, ProcessorConfig> transformer = new Transformer<>(processorConfigFactory);
-//		Map<org.nasdanika.graph.Element, ProcessorConfig> configs = transformer.transform(registry.values(), false, progressMonitor);
-//
-//		ReflectiveProcessorFactory reflectiveTarget = new ReflectiveProcessorFactory(requirement, context);
-//		ReflectiveBiFunctionProcessorFactoryProvider<Object, Object, Object, Object> processorFactoryProvider = new ReflectiveBiFunctionProcessorFactoryProvider<>(reflectiveTarget);
-//		BiFunctionProcessorFactory<Object, Object, Object, Object> processorFactory = processorFactoryProvider.getFactory();
-//		Map<org.nasdanika.graph.Element, ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>>> processors = processorFactory.createProcessors(configs.values(), true, progressMonitor);
-//
-//		return processors
-//				.entrySet()
-//				.stream()
-//				.filter(e -> ((Supplier<EObject>) e.getKey()).get() == this)
-//				.map(Map.Entry::getValue)
-//				.findAny()
-//				.get();
-//	}
 		
 	@SuppressWarnings("unchecked")
 	protected ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>> createCapabilityProcessor(EObject graph, Object requirement, Context context, ProgressMonitor progressMonitor) {				
@@ -143,45 +94,5 @@ public class FunctionFlowTests {
 				.findAny()
 				.get();
 	}
-	
-//	/**
-//	 * Creates processors for this flow and its child elements and returns processor info for interacting with the flow
-//	 * @param context
-//	 * @param progressMonitor
-//	 * @return
-//	 */
-//	@SuppressWarnings("unchecked")
-//	default ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>> createProcessor(Object requirement, Context context, ProgressMonitor progressMonitor) {				
-//		// Creating adapters
-//		GraphAdapterFactory graphAdapterFactory = new GraphAdapterFactory();  
-//		Transformer<EObject,ElementAdapter<?>> graphFactory = new Transformer<>(graphAdapterFactory); 
-//		Map<EObject, ElementAdapter<?>> registry = graphFactory.transform(Collections.singleton(this), false, progressMonitor);
-//		
-//		// Configs and processors
-//		NopEndpointProcessorConfigFactory<Function<Object,Object>> processorConfigFactory = new NopEndpointProcessorConfigFactory<>() {
-//			
-//			protected boolean isPassThrough(org.nasdanika.graph.Connection connection) {
-//				return false;
-//			};
-//			
-//		};
-//		
-//		Transformer<org.nasdanika.graph.Element, ProcessorConfig> transformer = new Transformer<>(processorConfigFactory);
-//		Map<org.nasdanika.graph.Element, ProcessorConfig> configs = transformer.transform(registry.values(), false, progressMonitor);
-//
-//		ReflectiveProcessorFactory reflectiveTarget = new ReflectiveProcessorFactory(requirement, context);
-//		ReflectiveBiFunctionProcessorFactoryProvider<Object, Object, Object, Object> processorFactoryProvider = new ReflectiveBiFunctionProcessorFactoryProvider<>(reflectiveTarget);
-//		BiFunctionProcessorFactory<Object, Object, Object, Object> processorFactory = processorFactoryProvider.getFactory();
-//		Map<org.nasdanika.graph.Element, ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>>> processors = processorFactory.createProcessors(configs.values(), true, progressMonitor);
-//
-//		return processors
-//				.entrySet()
-//				.stream()
-//				.filter(e -> ((Supplier<EObject>) e.getKey()).get() == this)
-//				.map(Map.Entry::getValue)
-//				.findAny()
-//				.get();
-//	}	
-	
 	
 }
