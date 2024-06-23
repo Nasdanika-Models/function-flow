@@ -44,20 +44,10 @@ public class FunctionFlowTests {
 		
 		NodeProcessorInfo<BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>> processorInfo = (NodeProcessorInfo<BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>, BiFunction<Object, ProgressMonitor, Object>>) createCapabilityProcessor(functionFlow, null, context, progressMonitor);
 		BiFunction<Object, ProgressMonitor, Object> processor = processorInfo.getProcessor();
-		BiFunction<Object, ProgressMonitor, Object> function = new BiFunction<Object, ProgressMonitor, Object>() {
-			
-			@Override
-			public Object apply(Object input, ProgressMonitor pm) {
-				// Ignoring input configuration - for documentation purposes
-				return processor.apply(input, pm); // Ignoring result
-			}
-		};				
-		
-		Object result = function.apply("Hello", progressMonitor);
+		Object result = processor.apply("Hello", progressMonitor);
 		System.out.println(result);
 	}
 		
-	@SuppressWarnings("unchecked")
 	protected ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>> createCapabilityProcessor(EObject graph, Object requirement, Context context, ProgressMonitor progressMonitor) {				
 		// Creating adapters
 		GraphAdapterFactory graphAdapterFactory = new GraphAdapterFactory();  
@@ -67,9 +57,9 @@ public class FunctionFlowTests {
 		// Configs and processors
 		NopEndpointProcessorConfigFactory<Function<Object,Object>> processorConfigFactory = new NopEndpointProcessorConfigFactory<>() {
 			
-			protected boolean isPassThrough(org.nasdanika.graph.Connection connection) {
-				return false;
-			};
+//			protected boolean isPassThrough(org.nasdanika.graph.Connection connection) {
+//				return false;
+//			};
 			
 		};
 		
@@ -86,11 +76,11 @@ public class FunctionFlowTests {
 		
 		Map<org.nasdanika.graph.Element, ProcessorInfo<BiFunction<Object, ProgressMonitor, Object>>> processors = processorFactory.createProcessors(configs.values(), false, progressMonitor);
 
+		// Root element processor
 		return processors
-				.entrySet()
+				.values()
 				.stream()
-				.filter(e -> ((Supplier<EObject>) e.getKey()).get() == this)
-				.map(Map.Entry::getValue)
+				.filter(v -> v.getParentProcessorConfig() == null)
 				.findAny()
 				.get();
 	}
