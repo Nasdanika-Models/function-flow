@@ -10,7 +10,6 @@ module org.nasdanika.models.functionflow.processors.targets.java {
 	exports org.nasdanika.models.functionflow.processors.targets.java.sync;
 	opens org.nasdanika.models.functionflow.processors.targets.java.sync to org.nasdanika.common; // For loading resources
 
-	provides CapabilityFactory with 
-		SyncCapabilityFactory;
+	provides CapabilityFactory with SyncCapabilityFactory;
 	
 }

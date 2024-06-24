@@ -1,4 +1,4 @@
-package org.nasdanika.models.architecture.generator.tests;
+package org.nasdanika.models.functionflow.generator.tests;
 
 import java.io.File;
 import java.io.IOException;
