@@ -117,7 +117,7 @@ public class FunctionFlowDrawioResource extends ResourceImpl {
 			}
 			
 			@Override
-			protected String getProperty(String name) {
+			protected String getProperty(String name, URI sourceURI, ProgressMonitor progressMonitor) {
 				return FunctionFlowDrawioResource.this.getProperty(name);
 			}
 			
