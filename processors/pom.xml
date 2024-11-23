@@ -24,7 +24,7 @@
 	<modules>
 		<module>doc</module>
 		<module>ecore</module>
-		<module>targets</module>
+		<module>runtime</module>
 	</modules>
 </project>
 

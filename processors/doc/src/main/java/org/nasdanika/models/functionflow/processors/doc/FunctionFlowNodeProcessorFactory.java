@@ -5,7 +5,7 @@ import java.util.function.BiFunction;
 import org.eclipse.emf.common.util.URI;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.html.model.app.Label;
+import org.nasdanika.models.app.Label;
 import org.nasdanika.models.architecture.processors.doc.ArchitectureNodeProcessorFactory;
 
 /**

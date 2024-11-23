@@ -7,9 +7,9 @@ import java.util.function.BiConsumer;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.graph.processor.NodeProcessorConfig;
-import org.nasdanika.html.model.app.Action;
-import org.nasdanika.html.model.app.Label;
-import org.nasdanika.html.model.app.graph.WidgetFactory;
+import org.nasdanika.models.app.Action;
+import org.nasdanika.models.app.Label;
+import org.nasdanika.models.app.graph.WidgetFactory;
 import org.nasdanika.models.ecore.graph.processors.EClassNodeProcessor;
 import org.nasdanika.models.ecore.graph.processors.EClassifierNodeProcessorFactory;
 import org.nasdanika.models.functionflow.FunctionFlowPackage;
@@ -24,7 +24,7 @@ public class EndProcessorFactory {
 	}
 	
 	@EClassifierNodeProcessorFactory(
-			description = "Passes its intput to the containing flow as output",
+			description = "Passes its input to the containing flow as output",
 			documentation = 
                     """
 					End input is used as an output of the containing flow.
