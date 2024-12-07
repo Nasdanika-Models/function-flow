@@ -1,9 +1,11 @@
 package org.nasdanika.models.functionflow.processors.runtime;
 
-public class TransitionProcessor extends ConnectionProcessor {
+import org.nasdanika.models.functionflow.Transition;
+
+public class TransitionProcessor<T extends Transition> extends ConnectionProcessor<T> {
 	
-	public TransitionProcessor(ProcessorFactory factory) {
-		super(factory);
+	public TransitionProcessor(ProcessorFactory factory, T transition) {
+		super(factory, transition);
 	}
 
 }

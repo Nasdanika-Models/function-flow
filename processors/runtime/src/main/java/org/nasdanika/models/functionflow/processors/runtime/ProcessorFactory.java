@@ -14,6 +14,9 @@ import org.nasdanika.graph.processor.NodeProcessorConfig;
 import org.nasdanika.graph.processor.Processor;
 import org.nasdanika.graph.processor.ProcessorInfo;
 import org.nasdanika.models.functionflow.End;
+import org.nasdanika.models.functionflow.FunctionFlow;
+import org.nasdanika.models.functionflow.Start;
+import org.nasdanika.models.functionflow.Transition;
 
 /**
  * Reflective target to create {@link Invocable} processors.
@@ -43,7 +46,7 @@ public class ProcessorFactory {
 		Function<ProgressMonitor, Object> next,		
 		ProgressMonitor progressMonitor) {
 		
-		return new FunctionFlowProcessor(this);
+		return new FlowProcessor<FunctionFlow>(this, (FunctionFlow) ((NodeAdapter) config.getElement()).get());
 	}
 	
 	@Processor(
@@ -56,7 +59,7 @@ public class ProcessorFactory {
 		Function<ProgressMonitor, Object> next,		
 		ProgressMonitor progressMonitor) {
 		
-		return new StartProcessor(this);
+		return new StartProcessor(this, (Start) ((NodeAdapter) config.getElement()).get());
 	}
 	
 	
@@ -71,7 +74,7 @@ public class ProcessorFactory {
 		ProgressMonitor progressMonitor) {
 		
 		NodeAdapter element = (NodeAdapter) config.getElement();
-		return new EndProcessor(this, endResolver == null ? null : endResolver.apply((End) element.get()));
+		return new EndProcessor(this, (End) ((NodeAdapter) config.getElement()).get(), endResolver == null ? null : endResolver.apply((End) element.get()));
 	}
 		
 	@Processor(
@@ -84,7 +87,7 @@ public class ProcessorFactory {
 			Function<ProgressMonitor, Object> next,		
 			ProgressMonitor progressMonitor) {
 		
-		return new TransitionProcessor(this);
+		return new TransitionProcessor<Transition>(this, (Transition) ((ConnectionAdapter) config.getElement()).get());
 	}	
 		
 	// =====

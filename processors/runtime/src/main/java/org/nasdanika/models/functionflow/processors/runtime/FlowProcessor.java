@@ -10,16 +10,16 @@ import org.nasdanika.common.Invocable;
 import org.nasdanika.graph.processor.ChildProcessor;
 import org.nasdanika.graph.processor.IncomingHandler;
 import org.nasdanika.graph.processor.OutgoingEndpoint;
+import org.nasdanika.models.functionflow.Flow;
 import org.nasdanika.models.functionflow.FunctionFlow;
 
 /**
  * {@link FunctionFlow} synchronous processor
  */
-public class FunctionFlowProcessor extends FlowElementProcessor {
+public class FlowProcessor<T extends Flow> extends NodeProcessor<T> {
 	
-	protected FunctionFlowProcessor(ProcessorFactory factory) {
-		super(factory);
-		// TODO Auto-generated constructor stub
+	protected FlowProcessor(ProcessorFactory factory, T flow) {
+		super(factory, flow);
 	}
 
 	protected Collection<Invocable> startProcessors = Collections.synchronizedCollection(new ArrayList<>());
@@ -35,13 +35,13 @@ public class FunctionFlowProcessor extends FlowElementProcessor {
 
 			@SuppressWarnings("unchecked")
 			@Override
-			public <T> T invoke(Object... args) {
+			public <V> V invoke(Object... args) {
 				// TODO - parallel and join?
 				Map<Invocable, Object> outgoingEndpointsResults = new LinkedHashMap<>();
 				for (Invocable e: outgoingEndpoints) {
 					outgoingEndpointsResults.put(e, e.invoke(args));
 				}
-				return (T) outgoingEndpointsResults;			
+				return (V) outgoingEndpointsResults;			
 			}
 			
 		};

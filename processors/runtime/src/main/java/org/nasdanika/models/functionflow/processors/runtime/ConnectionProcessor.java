@@ -1,5 +1,6 @@
 package org.nasdanika.models.functionflow.processors.runtime;
 
+import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.graph.processor.SourceHandler;
 import org.nasdanika.graph.processor.TargetEndpoint;
@@ -7,10 +8,10 @@ import org.nasdanika.graph.processor.TargetEndpoint;
 /**
  * Base class for processors - wiring, gstart, invoke, close
  */
-public class ConnectionProcessor extends FlowElementProcessor {
+public class ConnectionProcessor<T extends EObject> extends FlowElementProcessor<T> {
 	
-	public ConnectionProcessor(ProcessorFactory factory) {
-		super(factory);
+	public ConnectionProcessor(ProcessorFactory factory, T modelElement) {
+		super(factory, modelElement);
 	}
 
 	@SourceHandler
@@ -25,7 +26,7 @@ public class ConnectionProcessor extends FlowElementProcessor {
 	 * @param args
 	 * @return
 	 */
-	protected <T> T sourceInvoke(Object... args) {
+	protected <V> V sourceInvoke(Object... args) {
 		if (targetEndpoint == null) {
 			throw new IllegalStateException("Target endpoint is not set");
 		}

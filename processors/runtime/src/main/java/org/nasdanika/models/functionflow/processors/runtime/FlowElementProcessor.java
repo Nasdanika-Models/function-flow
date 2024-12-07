@@ -2,6 +2,7 @@ package org.nasdanika.models.functionflow.processors.runtime;
 
 import java.util.Map;
 
+import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Component;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.common.ProgressMonitor;
@@ -14,19 +15,26 @@ import org.nasdanika.graph.processor.ProcessorInfo;
 /**
  * Base class for processors - wiring, gstart, invoke, close
  */
-public class FlowElementProcessor implements Invocable, Component {
+public class FlowElementProcessor<T extends EObject> implements Invocable, Component {
 	
 	protected ProcessorFactory factory;
 
-	protected FlowElementProcessor(ProcessorFactory factory) {
+	private T modelElement;
+
+	protected FlowElementProcessor(ProcessorFactory factory, T modelElement) {
 		this.factory = factory;
+		this.modelElement = modelElement;
+	}
+	
+	public T getModelElement() {
+		return modelElement;
 	}
 	
 	@ParentProcessor
-	public FlowElementProcessor parentProcessor;
+	public FlowElementProcessor<?> parentProcessor;
 	
 	@ChildProcessors
-	public Map<org.nasdanika.graph.Element, ProcessorInfo<FlowElementProcessor>> childProcessors;	
+	public Map<org.nasdanika.graph.Element, ProcessorInfo<FlowElementProcessor<?>>> childProcessors;	
 	
 	@ProcessorElement
 	public Element element;
@@ -54,7 +62,7 @@ public class FlowElementProcessor implements Invocable, Component {
 	public void start(ProgressMonitor progressMonitor) {
 		doStart(progressMonitor);
 		if (childProcessors != null) {
-			for (ProcessorInfo<FlowElementProcessor> childProcessorInfo: childProcessors.values()) {
+			for (ProcessorInfo<FlowElementProcessor<?>> childProcessorInfo: childProcessors.values()) {
 				FlowElementProcessor childProcessor = childProcessorInfo.getProcessor();
 				if (childProcessor != null) {
 					childProcessor.start(progressMonitor);
@@ -66,8 +74,8 @@ public class FlowElementProcessor implements Invocable, Component {
 	@Override
 	public void stop(ProgressMonitor progressMonitor) {		
 		if (childProcessors != null) {
-			for (ProcessorInfo<FlowElementProcessor> childProcessorInfo: childProcessors.values()) {
-				FlowElementProcessor childProcessor = childProcessorInfo.getProcessor();
+			for (ProcessorInfo<FlowElementProcessor<?>> childProcessorInfo: childProcessors.values()) {
+				FlowElementProcessor<?> childProcessor = childProcessorInfo.getProcessor();
 				if (childProcessor != null) {
 					childProcessor.stop(progressMonitor); 
 				}
@@ -90,6 +98,30 @@ public class FlowElementProcessor implements Invocable, Component {
 	@Override
 	public <T> T invoke(Object... args) {
 		throw new UnsupportedOperationException(this + " shall not be invoked directly");
+	}
+	
+	@Override
+	public void close(ProgressMonitor progressMonitor) {		
+		if (childProcessors != null) {
+			for (ProcessorInfo<FlowElementProcessor<?>> childProcessorInfo: childProcessors.values()) {
+				FlowElementProcessor<?> childProcessor = childProcessorInfo.getProcessor();
+				if (childProcessor != null) {
+					childProcessor.close(progressMonitor); 
+				}
+			}
+		}		
+		doClose(progressMonitor);
 	}	
+	
+	/**
+	 * Override to stop this processor
+	 * @param progressMonitor
+	 */
+	protected void doClose(ProgressMonitor progressMonitor) {
+		Invocable impl = getImplementation();
+		if (impl instanceof Component) {
+			((Component) impl).close(progressMonitor);
+		}		
+	}
 
 }
