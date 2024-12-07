@@ -69,10 +69,8 @@ public class ProcessorFactory {
 		NodeAdapter element = (NodeAdapter) config.getElement();
 		return new EndProcessor(endResolver == null ? null : endResolver.apply((End) element.get()));
 	}
-	
-	
-	// -----
-	
+		
+	// -----	
 	
 	@Processor(
 			type = NodeAdapter.class,

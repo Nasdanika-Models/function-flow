@@ -3,7 +3,7 @@ package org.nasdanika.models.functionflow.processors.runtime;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.graph.processor.IncomingHandler;
 
-public class EndProcessor implements Invocable {
+public class EndProcessor implements FlowElementProcessor {
 	
 	private Invocable target;
 

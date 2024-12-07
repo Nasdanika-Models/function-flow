@@ -15,7 +15,7 @@ import org.nasdanika.models.functionflow.FunctionFlow;
 /**
  * {@link FunctionFlow} synchronous processor
  */
-public class FunctionFlowProcessor implements Invocable {
+public class FunctionFlowProcessor implements FlowElementProcessor {
 	
 	protected Collection<Invocable> startProcessors = Collections.synchronizedCollection(new ArrayList<>());
 	

@@ -87,7 +87,7 @@ public class TestFunctionFlowModelDocGen {
 		AppSiteGenerator actionSiteGenerator = new AppSiteGenerator() {
 			
 			protected boolean isDeleteOutputPath(String path) {
-				return !"CNAME".equals(path) && !path.startsWith("demo/");				
+				return !"CNAME".equals(path) && !path.startsWith("resources/");				
 			};
 			
 		};		
