@@ -9,7 +9,11 @@ import java.util.Map;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.graph.processor.OutgoingEndpoint;
 
-public class StartProcessor implements FlowElementProcessor {
+public class StartProcessor extends NodeProcessor {
+
+	public StartProcessor(ProcessorFactory factory) {
+		super(factory);
+	}
 
 	protected Collection<Invocable> outgoingEndpoints = Collections.synchronizedCollection(new ArrayList<>());	
 	

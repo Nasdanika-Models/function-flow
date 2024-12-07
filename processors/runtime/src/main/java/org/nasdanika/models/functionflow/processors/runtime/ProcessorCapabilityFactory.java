@@ -19,7 +19,7 @@ public class ProcessorCapabilityFactory implements CapabilityFactory<ReflectiveP
 	public boolean canHandle(Object requirement) {
 		if (requirement instanceof ReflectiveProcessorFactoryProviderTargetRequirement) {
 			ReflectiveProcessorFactoryProviderTargetRequirement<?,?> targetRequirement = (ReflectiveProcessorFactoryProviderTargetRequirement<?,?>) requirement;
-			if (targetRequirement.processorType() == Invocable.class) { 
+			if (targetRequirement.processorType() == FlowElementProcessor.class) { 
 				ProcessorRequirement<?, ?> processorRequiremment = targetRequirement.processorRequirement();
 				if (processorRequiremment.handlerType() == Invocable.class && processorRequiremment.endpointType() == Invocable.class) {
 					Object req = processorRequiremment.requirement();

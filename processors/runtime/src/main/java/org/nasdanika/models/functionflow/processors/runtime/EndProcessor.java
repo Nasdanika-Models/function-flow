@@ -3,11 +3,12 @@ package org.nasdanika.models.functionflow.processors.runtime;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.graph.processor.IncomingHandler;
 
-public class EndProcessor implements FlowElementProcessor {
+public class EndProcessor extends FlowElementProcessor {
 	
 	private Invocable target;
 
-	public EndProcessor(Invocable target) {
+	public EndProcessor(ProcessorFactory factory, Invocable target) {
+		super(factory);
 		this.target = target;;
 	}
 	
@@ -22,11 +23,6 @@ public class EndProcessor implements FlowElementProcessor {
 	@IncomingHandler
 	public Invocable getIncomingHandler() {
 		return target;
-	}
-
-	@Override
-	public <T> T invoke(Object... args) {
-		throw new UnsupportedOperationException("End shall not be invoked directly");
 	}
 
 }

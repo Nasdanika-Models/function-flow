@@ -7,7 +7,7 @@ import org.nasdanika.capability.CapabilityLoader;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.graph.Element;
-import org.nasdanika.graph.Node;
+import org.nasdanika.graph.model.adapters.ConnectionAdapter;
 import org.nasdanika.graph.model.adapters.NodeAdapter;
 import org.nasdanika.graph.processor.ConnectionProcessorConfig;
 import org.nasdanika.graph.processor.NodeProcessorConfig;
@@ -28,6 +28,10 @@ public class ProcessorFactory {
 		this.endResolver = endResolver;
 	}
 	
+	public CapabilityLoader getCapabilityLoader() {
+		return capabilityLoader;
+	}
+	
 	@Processor(
 			type = NodeAdapter.class,
 			priority = 2,
@@ -39,7 +43,7 @@ public class ProcessorFactory {
 		Function<ProgressMonitor, Object> next,		
 		ProgressMonitor progressMonitor) {
 		
-		return new FunctionFlowProcessor();
+		return new FunctionFlowProcessor(this);
 	}
 	
 	@Processor(
@@ -52,7 +56,7 @@ public class ProcessorFactory {
 		Function<ProgressMonitor, Object> next,		
 		ProgressMonitor progressMonitor) {
 		
-		return new StartProcessor();
+		return new StartProcessor(this);
 	}
 	
 	
@@ -67,10 +71,23 @@ public class ProcessorFactory {
 		ProgressMonitor progressMonitor) {
 		
 		NodeAdapter element = (NodeAdapter) config.getElement();
-		return new EndProcessor(endResolver == null ? null : endResolver.apply((End) element.get()));
+		return new EndProcessor(this, endResolver == null ? null : endResolver.apply((End) element.get()));
 	}
 		
-	// -----	
+	@Processor(
+			type = ConnectionAdapter.class,
+			value = "get() instanceof T(org.nasdanika.models.functionflow.Transition)")
+	public Object createTransitionProcessor(
+			ConnectionProcessorConfig<?,?> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
+			Function<ProgressMonitor, Object> next,		
+			ProgressMonitor progressMonitor) {
+		
+		return new TransitionProcessor(this);
+	}	
+		
+	// =====
 	
 	@Processor(
 			type = NodeAdapter.class,
@@ -312,19 +329,6 @@ public class ProcessorFactory {
 			value = "get() instanceof T(org.nasdanika.models.functionflow.SupplierFlow)")
 	public Object createSupplierFlowProcessor(
 			NodeProcessorConfig<?,?> config, 
-			boolean parallel, 
-			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
-			Function<ProgressMonitor, Object> next,		
-			ProgressMonitor progressMonitor) {
-		
-		throw new UnsupportedOperationException();
-	}
-		
-	@Processor(
-			type = NodeAdapter.class,
-			value = "get() instanceof T(org.nasdanika.models.functionflow.Transition)")
-	public Object createTransitionProcessor(
-			ConnectionProcessorConfig<?,?> config, 
 			boolean parallel, 
 			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
 			Function<ProgressMonitor, Object> next,		

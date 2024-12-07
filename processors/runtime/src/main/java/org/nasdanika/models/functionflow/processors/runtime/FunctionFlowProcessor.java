@@ -15,8 +15,13 @@ import org.nasdanika.models.functionflow.FunctionFlow;
 /**
  * {@link FunctionFlow} synchronous processor
  */
-public class FunctionFlowProcessor implements FlowElementProcessor {
+public class FunctionFlowProcessor extends FlowElementProcessor {
 	
+	protected FunctionFlowProcessor(ProcessorFactory factory) {
+		super(factory);
+		// TODO Auto-generated constructor stub
+	}
+
 	protected Collection<Invocable> startProcessors = Collections.synchronizedCollection(new ArrayList<>());
 	
 	@ChildProcessor("get() instanceof T(org.nasdanika.models.functionflow.Start)")
