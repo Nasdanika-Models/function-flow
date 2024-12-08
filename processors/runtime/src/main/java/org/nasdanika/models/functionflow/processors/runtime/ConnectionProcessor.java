@@ -2,6 +2,7 @@ package org.nasdanika.models.functionflow.processors.runtime;
 
 import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Invocable;
+import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.graph.processor.SourceHandler;
 import org.nasdanika.graph.processor.TargetEndpoint;
 
@@ -10,14 +11,19 @@ import org.nasdanika.graph.processor.TargetEndpoint;
  */
 public class ConnectionProcessor<T extends EObject> extends FlowElementProcessor<T> {
 	
-	public ConnectionProcessor(ProcessorFactory factory, T modelElement) {
-		super(factory, modelElement);
+	public ConnectionProcessor(ProcessorFactory factory, T modelElement, ProgressMonitor progressMonitor) {
+		super(factory, modelElement, progressMonitor);
 	}
 
 	@SourceHandler
 	public Invocable getSourceHandler() {
+		Invocable impl = getImplementation();
+		if (impl != null) {
+			return impl;
+		}
+		
 		Invocable invocable = this::sourceInvoke;
-		return invocable.asAsync();
+		return invocable;
 	}
 	
 	/**
@@ -36,8 +42,12 @@ public class ConnectionProcessor<T extends EObject> extends FlowElementProcessor
 	protected Invocable targetEndpoint; 	
 	
 	@TargetEndpoint
-	public void setTargetEndpoint(Invocable targetEndpoint) {
+	public final void setTargetEndpoint(Invocable targetEndpoint) {
 		this.targetEndpoint = targetEndpoint;
+	}
+	
+	public Invocable getTargetEndpoint() {
+		return targetEndpoint;
 	}
 
 }

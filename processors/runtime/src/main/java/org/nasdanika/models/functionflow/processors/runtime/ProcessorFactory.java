@@ -46,7 +46,10 @@ public class ProcessorFactory {
 		Function<ProgressMonitor, Object> next,		
 		ProgressMonitor progressMonitor) {
 		
-		return new FlowProcessor<FunctionFlow>(this, (FunctionFlow) ((NodeAdapter) config.getElement()).get());
+		return new FlowProcessor<FunctionFlow>(
+				this, 
+				(FunctionFlow) ((NodeAdapter) config.getElement()).get(),
+				progressMonitor);
 	}
 	
 	@Processor(
@@ -59,7 +62,10 @@ public class ProcessorFactory {
 		Function<ProgressMonitor, Object> next,		
 		ProgressMonitor progressMonitor) {
 		
-		return new StartProcessor(this, (Start) ((NodeAdapter) config.getElement()).get());
+		return new StartProcessor(
+				this, 
+				(Start) ((NodeAdapter) config.getElement()).get(),
+				progressMonitor);
 	}
 	
 	
@@ -74,7 +80,10 @@ public class ProcessorFactory {
 		ProgressMonitor progressMonitor) {
 		
 		NodeAdapter element = (NodeAdapter) config.getElement();
-		return new EndProcessor(this, (End) ((NodeAdapter) config.getElement()).get(), endResolver == null ? null : endResolver.apply((End) element.get()));
+		return new EndProcessor(
+				this, 
+				(End) ((NodeAdapter) config.getElement()).get(), endResolver == null ? null : endResolver.apply((End) element.get()),
+				progressMonitor);
 	}
 		
 	@Processor(
@@ -87,7 +96,10 @@ public class ProcessorFactory {
 			Function<ProgressMonitor, Object> next,		
 			ProgressMonitor progressMonitor) {
 		
-		return new TransitionProcessor<Transition>(this, (Transition) ((ConnectionAdapter) config.getElement()).get());
+		return new TransitionProcessor<Transition>(
+				this, 
+				(Transition) ((ConnectionAdapter) config.getElement()).get(),
+				progressMonitor);
 	}	
 		
 	// =====

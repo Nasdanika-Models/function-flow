@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.nasdanika.common.Invocable;
+import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.graph.processor.ChildProcessor;
 import org.nasdanika.graph.processor.IncomingHandler;
 import org.nasdanika.graph.processor.OutgoingEndpoint;
@@ -18,8 +19,8 @@ import org.nasdanika.models.functionflow.FunctionFlow;
  */
 public class FlowProcessor<T extends Flow> extends NodeProcessor<T> {
 	
-	protected FlowProcessor(ProcessorFactory factory, T flow) {
-		super(factory, flow);
+	protected FlowProcessor(ProcessorFactory factory, T flow, ProgressMonitor progressMonitor) {
+		super(factory, flow, progressMonitor);
 	}
 
 	protected Collection<Invocable> startProcessors = Collections.synchronizedCollection(new ArrayList<>());
