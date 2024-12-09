@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.graph.Connection;
+import org.nasdanika.graph.processor.IncomingHandler;
 import org.nasdanika.graph.processor.OutgoingEndpoint;
 
 /**
@@ -25,5 +26,28 @@ public class NodeProcessor<N extends EObject> extends FlowElementProcessor<N> {
 	public final void addOutgoingEndpoint(Connection connection, Invocable endpoint) {
 		outgoingEndpoints.put(connection, endpoint);
 	}
+	
+	@IncomingHandler
+	public Invocable getIncomingHandler(Connection connection) {
+		Invocable ret = new Invocable() {
 
+			@Override
+			public <T> T invoke(Object... args) {
+				return NodeProcessor.this.invoke(connection, args);
+			}
+			
+		};
+		return ret;
+	}	
+	
+	protected <T> T invoke(Connection connection, Object[] args) {
+		Invocable impl = getImplementation();
+		if (impl == null) {
+			return null; // Throw exception?
+		}
+		
+		// TODO - error handling - error transitions and to parent
+		return impl.bind(connection).invoke(args);
+	}
+	
 }

@@ -14,16 +14,18 @@ public class ConnectionProcessor<T extends EObject> extends FlowElementProcessor
 	public ConnectionProcessor(ProcessorFactory factory, T modelElement, ProgressMonitor progressMonitor) {
 		super(factory, modelElement, progressMonitor);
 	}
+	
+	public boolean isAsync() {
+		return false;
+	}
 
 	@SourceHandler
 	public Invocable getSourceHandler() {
-		Invocable impl = getImplementation();
-		if (impl != null) {
-			return impl;
+		Invocable invocable = getImplementation();
+		if (invocable == null) {
+			invocable = this::sourceInvoke;
 		}
-		
-		Invocable invocable = this::sourceInvoke;
-		return invocable;
+		return isAsync() ? invocable.asAsync() : invocable;
 	}
 	
 	/**

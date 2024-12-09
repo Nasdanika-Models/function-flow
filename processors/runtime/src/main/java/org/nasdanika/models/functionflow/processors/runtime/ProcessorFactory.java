@@ -13,6 +13,7 @@ import org.nasdanika.graph.processor.ConnectionProcessorConfig;
 import org.nasdanika.graph.processor.NodeProcessorConfig;
 import org.nasdanika.graph.processor.Processor;
 import org.nasdanika.graph.processor.ProcessorInfo;
+import org.nasdanika.models.functionflow.Call;
 import org.nasdanika.models.functionflow.End;
 import org.nasdanika.models.functionflow.FunctionFlow;
 import org.nasdanika.models.functionflow.Start;
@@ -101,11 +102,9 @@ public class ProcessorFactory {
 				(Transition) ((ConnectionAdapter) config.getElement()).get(),
 				progressMonitor);
 	}	
-		
-	// =====
 	
 	@Processor(
-			type = NodeAdapter.class,
+			type = ConnectionAdapter.class,
 			priority = 1,
 			value = "get() instanceof T(org.nasdanika.models.functionflow.Call)")
 	public Object createCallProcessor(
@@ -115,8 +114,13 @@ public class ProcessorFactory {
 			Function<ProgressMonitor, Object> next,		
 			ProgressMonitor progressMonitor) {
 		
-		throw new UnsupportedOperationException();
+		return new CallProcessor<Call>(
+				this, 
+				(Call) ((ConnectionAdapter) config.getElement()).get(),
+				progressMonitor);
 	}
+		
+	// =====
 		
 	@Processor(
 			type = NodeAdapter.class,
