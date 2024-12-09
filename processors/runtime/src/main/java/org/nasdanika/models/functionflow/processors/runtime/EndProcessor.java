@@ -9,9 +9,8 @@ public class EndProcessor extends FlowElementProcessor<End> {
 	
 	private Invocable target;
 
-	public EndProcessor(ProcessorFactory factory, End end, Invocable target, ProgressMonitor progressMonitor) {
+	public EndProcessor(ProcessorFactory factory, End end, ProgressMonitor progressMonitor) {
 		super(factory, end, progressMonitor);
-		this.target = target;;
 	}
 	
 	/**
@@ -24,7 +23,17 @@ public class EndProcessor extends FlowElementProcessor<End> {
 	
 	@IncomingHandler
 	public Invocable getIncomingHandler() {
-		return target;
+		return this::sourceInvoke;
 	}
+	
+	/**
+	 * Invocation by the source
+	 * @param <T>
+	 * @param args
+	 * @return
+	 */
+	protected <V> V sourceInvoke(Object... args) {
+		return target == null ? null : target.invoke(args);
+	}	
 
 }

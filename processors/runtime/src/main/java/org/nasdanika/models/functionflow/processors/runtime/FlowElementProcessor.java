@@ -175,5 +175,7 @@ public class FlowElementProcessor<T extends EObject> implements Invocable, Compo
 			((Component) impl).close(progressMonitor);
 		}		
 	}
+	
+	// publish
 
 }

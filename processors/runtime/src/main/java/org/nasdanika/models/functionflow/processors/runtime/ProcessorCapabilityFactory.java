@@ -23,7 +23,7 @@ public class ProcessorCapabilityFactory implements CapabilityFactory<ReflectiveP
 				ProcessorRequirement<?, ?> processorRequiremment = targetRequirement.processorRequirement();
 				if (processorRequiremment.handlerType() == Invocable.class && processorRequiremment.endpointType() == Invocable.class) {
 					Object req = processorRequiremment.requirement();
-					return req == null || req instanceof Function; 
+					return req == null; 
 				}
 			}
 		}
@@ -36,8 +36,7 @@ public class ProcessorCapabilityFactory implements CapabilityFactory<ReflectiveP
 			Loader loader, 
 			ProgressMonitor progressMonitor) {
 		
-		ProcessorRequirement<Function<End, Invocable>, Invocable> processorRequirement = requirement.processorRequirement();
-		ProcessorFactory processorFactory = new ProcessorFactory(loader.getCapabilityLoader(), processorRequirement.requirement());
+		ProcessorFactory processorFactory = new ProcessorFactory(loader.getCapabilityLoader());
 		return CompletableFuture.completedStage(Collections.singleton(CapabilityProvider.of(processorFactory)));	
 	}
 

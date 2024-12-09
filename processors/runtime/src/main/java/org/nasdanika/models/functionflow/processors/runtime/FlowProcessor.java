@@ -8,9 +8,8 @@ import java.util.Map;
 
 import org.nasdanika.common.Invocable;
 import org.nasdanika.common.ProgressMonitor;
+import org.nasdanika.graph.Connection;
 import org.nasdanika.graph.processor.ChildProcessor;
-import org.nasdanika.graph.processor.IncomingHandler;
-import org.nasdanika.graph.processor.OutgoingEndpoint;
 import org.nasdanika.models.functionflow.Flow;
 import org.nasdanika.models.functionflow.FunctionFlow;
 
@@ -32,51 +31,41 @@ public class FlowProcessor<T extends Flow> extends NodeProcessor<T> {
 	
 	@ChildProcessor("get() instanceof T(org.nasdanika.models.functionflow.End)")
 	public void addEndProcessor(EndProcessor endProcessor) {
-		Invocable target = new Invocable() {
+		Invocable endTarget = new Invocable() {
 
 			@SuppressWarnings("unchecked")
 			@Override
 			public <V> V invoke(Object... args) {
-				// TODO - parallel and join?
-				Map<Invocable, Object> outgoingEndpointsResults = new LinkedHashMap<>();
-				for (Invocable e: outgoingEndpoints) {
-					outgoingEndpointsResults.put(e, e.invoke(args));
-				}
-				return (V) outgoingEndpointsResults;			
+				return (V) FlowProcessor.this.dispatch(args);			
 			}
 			
 		};
-		endProcessor.setTarget(target);
-	}
-
-	protected Collection<Invocable> outgoingEndpoints = Collections.synchronizedCollection(new ArrayList<>());	
-	
-	@OutgoingEndpoint
-	public void addOutgoingEndpoint(Invocable endpoint) {
-		outgoingEndpoints.add(endpoint);
-	}
-	
-	@IncomingHandler
-	public Invocable getIncomingHandler() {
-		return new Invocable() {
-			
-			@SuppressWarnings("unchecked")
-			@Override
-			public <T> T invoke(Object... args) {
-				// TODO - parallel and join?
-				Map<Invocable, Object> startProcessorResults = new LinkedHashMap<>();
-				for (Invocable startProcessor: startProcessors) {
-					startProcessorResults.put(startProcessor, startProcessor.invoke(args));
-				}
-				return (T) startProcessorResults;
-			}
-		};
-		
+		endProcessor.setTarget(endTarget);
 	}
 	
 	@Override
-	public <T> T invoke(Object... args) {
-		throw new UnsupportedOperationException("Function flow processor shall not be invoked directly");
+	protected <V> Map<Connection, V> dispatch(Object[] args) {
+		Map<Connection, V> result = super.dispatch(args);
+		if (target != null) {
+			result.put(null, target.invoke(args));			
+		}
+		return result;
+	}
+	
+	private Invocable target;
+	
+	public void setTarget(Invocable target) {
+		this.target = target;
+	}	
+		
+	@SuppressWarnings("unchecked")
+	@Override
+	public <V> V invoke(Object... args) {
+		Map<Invocable, Object> startProcessorResults = new LinkedHashMap<>();
+		for (Invocable startProcessor: startProcessors) {
+			startProcessorResults.put(startProcessor, startProcessor.invoke(args));
+		}
+		return (V) startProcessorResults;
 	}
 
 }

@@ -1,6 +1,5 @@
 package org.nasdanika.models.functionflow.processors.runtime;
 
-import org.apache.poi.ss.formula.functions.T;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.models.functionflow.Call;
 
@@ -13,6 +12,11 @@ public class CallProcessor<T extends Call> extends TransitionProcessor<T> {
 	@Override
 	public boolean isAsync() {
 		return false;
+	}
+	
+	@Override
+	public boolean isCall() {
+		return true;
 	}
 	
 }

@@ -14,4 +14,8 @@ public class TransitionProcessor<T extends Transition> extends ConnectionProcess
 		return true;
 	}
 	
+	public boolean isCall() {
+		return false;
+	}
+	
 }

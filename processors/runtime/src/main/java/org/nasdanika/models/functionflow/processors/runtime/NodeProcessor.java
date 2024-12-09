@@ -49,5 +49,23 @@ public class NodeProcessor<N extends EObject> extends FlowElementProcessor<N> {
 		// TODO - error handling - error transitions and to parent
 		return impl.bind(connection).invoke(args);
 	}
+		
+	/**
+	 * Dispatches to transitions
+	 * @param <T>
+	 * @param connection
+	 * @param args
+	 * @return
+	 */
+	protected <T> Map<Connection, T> dispatch(Object[] args) {
+		Map<Connection, T> result = new LinkedHashMap<>();
+
+		// TODO - sort, match, ...
+		
+		return result;
+	}
+	
+	
+	// submit - to transitions
 	
 }
