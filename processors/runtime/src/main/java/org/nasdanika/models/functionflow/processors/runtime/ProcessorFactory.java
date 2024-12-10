@@ -15,6 +15,8 @@ import org.nasdanika.graph.processor.Processor;
 import org.nasdanika.graph.processor.ProcessorInfo;
 import org.nasdanika.models.functionflow.Call;
 import org.nasdanika.models.functionflow.End;
+import org.nasdanika.models.functionflow.ErrorHandler;
+import org.nasdanika.models.functionflow.ErrorTransition;
 import org.nasdanika.models.functionflow.Flow;
 import org.nasdanika.models.functionflow.Start;
 import org.nasdanika.models.functionflow.Transition;
@@ -64,8 +66,7 @@ public class ProcessorFactory {
 				this, 
 				(Start) ((NodeAdapter) config.getElement()).get(),
 				progressMonitor);
-	}
-	
+	}	
 	
 	@Processor(
 			type = NodeAdapter.class,
@@ -116,6 +117,39 @@ public class ProcessorFactory {
 				progressMonitor);
 	}
 		
+	@Processor(
+			type = ConnectionAdapter.class,
+			priority = 1, 
+			value = "get() instanceof T(org.nasdanika.models.functionflow.ErrorTransition)")
+	public Object createErrorTransitionProcessor(
+			ConnectionProcessorConfig<?,?> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
+			Function<ProgressMonitor, Object> next,		
+			ProgressMonitor progressMonitor) {
+				
+		return new ErrorTransitionProcessor(
+				this, 
+				(ErrorTransition) ((ConnectionAdapter) config.getElement()).get(),
+				progressMonitor);
+	}
+		
+	@Processor(
+			type = NodeAdapter.class,
+			value = "get() instanceof T(org.nasdanika.models.functionflow.ErrorHandler)")
+	public Object createErrorHandlerProcessor(
+			NodeProcessorConfig<?,?> config, 
+			boolean parallel, 
+			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
+			Function<ProgressMonitor, Object> next,		
+			ProgressMonitor progressMonitor) {
+				
+		return new ErrorHandlerProcessor(
+				this, 
+				(ErrorHandler) ((NodeAdapter) config.getElement()).get(),
+				progressMonitor);
+	}
+		
 	// =====
 		
 	@Processor(
@@ -137,33 +171,6 @@ public class ProcessorFactory {
 			value = "get() instanceof T(org.nasdanika.models.functionflow.ConsumerFlow)")
 	public Object createConsumerFlowProcessor(
 			NodeProcessorConfig<?,?> config, 
-			boolean parallel, 
-			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
-			Function<ProgressMonitor, Object> next,		
-			ProgressMonitor progressMonitor) {
-		
-		throw new UnsupportedOperationException();
-	}
-		
-	@Processor(
-			type = NodeAdapter.class,
-			value = "get() instanceof T(org.nasdanika.models.functionflow.ErrorHandler)")
-	public Object createErrorHandlerProcessor(
-			NodeProcessorConfig<?,?> config, 
-			boolean parallel, 
-			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
-			Function<ProgressMonitor, Object> next,		
-			ProgressMonitor progressMonitor) {
-		
-		throw new UnsupportedOperationException();
-	}
-		
-	@Processor(
-			type = NodeAdapter.class,
-			priority = 1, 
-			value = "get() instanceof T(org.nasdanika.models.functionflow.ErrorTransition)")
-	public Object createErrorTransitionProcessor(
-			ConnectionProcessorConfig<?,?> config, 
 			boolean parallel, 
 			BiConsumer<Element,BiConsumer<ProcessorInfo<Object>,ProgressMonitor>> infoProvider,
 			Function<ProgressMonitor, Object> next,		

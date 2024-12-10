@@ -1,5 +1,7 @@
 package org.nasdanika.models.functionflow.processors.runtime;
 
+import java.time.Instant;
+
 import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.common.ProgressMonitor;
@@ -38,9 +40,15 @@ public class ConnectionProcessor<T extends EObject> extends FlowElementProcessor
 		if (targetEndpoint == null) {
 			throw new IllegalStateException("Target endpoint is not set");
 		}
-		return targetEndpoint.invoke(args);
+		Instant start = Instant.now();
+		try {
+			return onResult(start, this, null, args, targetEndpoint.invoke(args));
+		} catch (RuntimeException e) {
+			onException(start, this, null, args, e);
+			return handleException(this, null, args, e);
+		}
 	}	
-	
+
 	protected Invocable targetEndpoint; 	
 	
 	@TargetEndpoint

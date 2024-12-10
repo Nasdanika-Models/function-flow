@@ -1,7 +1,10 @@
 package org.nasdanika.models.functionflow.processors.runtime;
 
+import java.time.Instant;
+
 import org.nasdanika.common.Invocable;
 import org.nasdanika.common.ProgressMonitor;
+import org.nasdanika.graph.Connection;
 import org.nasdanika.graph.processor.IncomingHandler;
 import org.nasdanika.models.functionflow.End;
 
@@ -22,18 +25,21 @@ public class EndProcessor extends FlowElementProcessor<End> {
 	}	
 	
 	@IncomingHandler
-	public Invocable getIncomingHandler() {
-		return this::sourceInvoke;
-	}
-	
-	/**
-	 * Invocation by the source
-	 * @param <T>
-	 * @param args
-	 * @return
-	 */
-	protected <V> V sourceInvoke(Object... args) {
-		return target == null ? null : target.invoke(args);
-	}	
+	public Invocable getIncomingHandler(Connection connection) {
+		return new Invocable() {
+
+			@Override
+			public <T> T invoke(Object... args) {
+				Instant start = Instant.now();
+				try {
+					return onResult(start, EndProcessor.this,  connection, args, target == null ? null : target.invoke(args));
+				} catch (RuntimeException e) {
+					onException(start, EndProcessor.this, connection, args, e);
+					return handleException(EndProcessor.this, connection, args, e);
+				}
+			}
+			
+		};
+	}		
 
 }

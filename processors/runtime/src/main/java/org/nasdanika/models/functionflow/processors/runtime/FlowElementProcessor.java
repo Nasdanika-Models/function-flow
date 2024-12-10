@@ -1,5 +1,6 @@
 package org.nasdanika.models.functionflow.processors.runtime;
 
+import java.time.Instant;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -10,6 +11,7 @@ import org.nasdanika.common.Component;
 import org.nasdanika.common.Invocable;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Util;
+import org.nasdanika.graph.Connection;
 import org.nasdanika.graph.Element;
 import org.nasdanika.graph.processor.ChildProcessors;
 import org.nasdanika.graph.processor.ParentProcessor;
@@ -20,14 +22,14 @@ import org.nasdanika.models.functionflow.FlowElement;
 /**
  * Base class for processors - wiring, gstart, invoke, close
  */
-public class FlowElementProcessor<T extends EObject> implements Invocable, Component {
+public class FlowElementProcessor<T extends EObject> implements Invocable, Component, ExceptionHandler {
 	
 	protected ProcessorFactory factory;
 
 	private T modelElement;
 
 	protected Invocable implementation;
-
+		
 	protected FlowElementProcessor(
 			ProcessorFactory factory, 
 			T modelElement, 
@@ -41,6 +43,16 @@ public class FlowElementProcessor<T extends EObject> implements Invocable, Compo
 					factory, 
 					progressMonitor);
 		}
+	}
+	
+	protected ExecutionListener executionListener;
+	
+	public void setExecutionListener(ExecutionListener executionListener) {
+		this.executionListener = executionListener;
+	}
+	
+	public ExecutionListener getExecutionListener() {
+		return executionListener;
 	}
 	
 	/**
@@ -175,6 +187,41 @@ public class FlowElementProcessor<T extends EObject> implements Invocable, Compo
 			((Component) impl).close(progressMonitor);
 		}		
 	}
+
+	/**
+	 * Delegates to the parent or rethrows if there is not parent
+	 */
+	@Override
+	public <V> V handleException(FlowElementProcessor<?> processor, Connection activator, Object[] args, RuntimeException exception) {
+		if (parentProcessor != null) {
+			return parentProcessor.handleException(processor, activator, args, exception);
+		}
+		
+		throw exception;
+	}
+		
+	public void onException(Instant start, FlowElementProcessor<?> source, Connection activator, Object[] args, RuntimeException e) {
+		ExecutionListener el = getExecutionListener();
+		if (el != null) {
+			el.onInvoke(start, Instant.now(), source, activator, args, null, e);
+		}
+		if (parentProcessor != null) {
+			parentProcessor.onException(start, source, activator, args, e);
+		}
+	}
+
+	protected <V> V onResult(Instant start, FlowElementProcessor<?> source, Connection activator, Object[] args, V result) {
+		ExecutionListener el = getExecutionListener();
+		if (el != null) {
+			el.onInvoke(start, Instant.now(), source, activator, args, result, null);
+		}
+		if (parentProcessor != null) {
+			parentProcessor.onResult(start, source, activator, args, result);
+		}
+		
+		return result;
+	}
+	
 	
 	// publish
 

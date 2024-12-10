@@ -1,5 +1,7 @@
 package org.nasdanika.models.functionflow.processors.runtime;
 
+import java.lang.reflect.Array;
+import java.time.Instant;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -33,21 +35,44 @@ public class NodeProcessor<N extends EObject> extends FlowElementProcessor<N> {
 
 			@Override
 			public <T> T invoke(Object... args) {
-				return NodeProcessor.this.invoke(connection, args);
+				return NodeProcessor.this.incomingInvoke(connection, args);
 			}
 			
 		};
 		return ret;
 	}	
 	
-	protected <T> T invoke(Connection connection, Object[] args) {
-		Invocable impl = getImplementation();
-		if (impl == null) {
-			return null; // Throw exception?
+	@SuppressWarnings("unchecked")
+	protected <T> T incomingInvoke(Connection connection, Object[] args) {
+		Instant start = Instant.now();
+		try {
+			Invocable impl = getImplementation();
+			if (impl == null) {
+				// Dispatching
+				return onResult(start, this, connection, args, (T) dispatch(args));
+			}
+			
+			T result = impl.bind(connection).invoke(args);
+			if (result != null && result.getClass().isArray()) {
+				Object[] dispatchArgs = new Object[Array.getLength(result)];
+				System.arraycopy(result, 0, dispatchArgs, 0, dispatchArgs.length);
+				return onResult(start, this, connection, args, (T) dispatch(dispatchArgs));
+			}
+			return onResult(start, this, connection, args, (T) dispatch(new Object[] { result }));
+		} catch (RuntimeException e) {
+			onException(start, this, connection, args, e);
+			return handleException(parentProcessor, connection, args, e);
 		}
-		
-		// TODO - error handling - error transitions and to parent
-		return impl.bind(connection).invoke(args);
+	}
+	
+	@Override
+	public <V> V handleException(
+			FlowElementProcessor<?> processor, 
+			Connection activator, 
+			Object[] args,
+			RuntimeException exception) {
+		// TODO Auto-generated method stub
+		return super.handleException(processor, activator, args, exception);
 	}
 		
 	/**
