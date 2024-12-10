@@ -17,7 +17,12 @@ import org.nasdanika.graph.processor.ChildProcessors;
 import org.nasdanika.graph.processor.ParentProcessor;
 import org.nasdanika.graph.processor.ProcessorElement;
 import org.nasdanika.graph.processor.ProcessorInfo;
+import org.nasdanika.graph.processor.Registry;
 import org.nasdanika.models.functionflow.FlowElement;
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
 
 /**
  * Base class for processors - wiring, gstart, invoke, close
@@ -102,6 +107,9 @@ public class FlowElementProcessor<T extends EObject> implements Invocable, Compo
 	
 	@ProcessorElement
 	public Element element;
+	
+	@Registry
+	public Map<Connection,ProcessorInfo<?>> registry;
 	
 	protected Invocable getImplementation() {
 		return implementation;
@@ -222,6 +230,16 @@ public class FlowElementProcessor<T extends EObject> implements Invocable, Compo
 		return result;
 	}
 	
+	public <V> V evaluate(String expr, Map<String, Object> variables, Class<V> resultType) {
+		ExpressionParser parser = new SpelExpressionParser();
+		Expression exp = parser.parseExpression(expr);		
+            
+		StandardEvaluationContext evaluationContext = new StandardEvaluationContext();
+		if (variables != null) {
+			variables.entrySet().forEach(ve -> evaluationContext.setVariable(ve.getKey(), ve.getValue()));
+		}
+		return exp.getValue(evaluationContext, this, resultType);
+	}	
 	
 	// publish
 

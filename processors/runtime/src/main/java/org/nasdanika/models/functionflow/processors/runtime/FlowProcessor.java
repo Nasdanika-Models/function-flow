@@ -14,6 +14,7 @@ import org.nasdanika.graph.processor.ChildProcessor;
 import org.nasdanika.graph.processor.ProcessorInfo;
 import org.nasdanika.models.functionflow.Flow;
 import org.nasdanika.models.functionflow.FunctionFlow;
+import org.nasdanika.models.functionflow.Transition;
 
 /**
  * {@link FunctionFlow} synchronous processor
@@ -38,7 +39,7 @@ public class FlowProcessor<T extends Flow> extends NodeProcessor<T> {
 			@SuppressWarnings("unchecked")
 			@Override
 			public <V> V invoke(Object... args) {
-				return (V) FlowProcessor.this.dispatch(args);			
+				return (V) FlowProcessor.this.dispatch(null, null, args);			
 			}
 			
 		};
@@ -46,12 +47,12 @@ public class FlowProcessor<T extends Flow> extends NodeProcessor<T> {
 	}
 	
 	@Override
-	protected <V> Map<Connection, V> dispatch(Object[] args) {
-		Map<Connection, V> result = super.dispatch(args);
+	protected <V> Map<TransitionProcessor<Transition>, V> dispatch(Connection activator, Object[] args, Object[] results) {
+		Map<TransitionProcessor<Transition>, V> dispatchResult = super.dispatch(activator, args, results);
 		if (target != null) {
-			result.put(null, target.invoke(args));			
+			dispatchResult.put(null, target.invoke(results));			
 		}
-		return result;
+		return dispatchResult;
 	}
 	
 	private Invocable target;
